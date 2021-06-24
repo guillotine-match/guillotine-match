@@ -1,3 +1,19 @@
 .center{text-align: center;}
-/* .contestBox{
-} */
+
+
+
+.imgbox{
+    width:1000px;
+}
+.imgbox img {
+    width:400px;
+    height:300px;
+    object-fit: cover;
+}
+
+.imgbox:first-child{
+    float:left;
+}
+.imgbox:last-child{
+    float:left;
+}
