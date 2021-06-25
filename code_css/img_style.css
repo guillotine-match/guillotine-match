@@ -1,0 +1,57 @@
+/* img_style */
+
+    .imgbundle {
+        position:absolute; 
+        width:550px;
+        height:340px;
+        left:50%; 
+        transform:translateX(-50%);
+    } 
+    .imgbox{
+        width:100%;
+        padding:2%;
+        text-align: center;
+    }
+    .imgbox img{
+        float:left;
+        max-width: 230px;
+        height: 310px;
+        object-fit: cover;
+    }
+    .box1 img{
+        margin-left:7px;
+        float:left;
+    }
+    .box2 img{
+        margin-left:50px;
+    }
+
+/* 화면 너비 0 ~ 768px */
+@media (max-width: 768px){
+    .imgbundle {
+        position:absolute; 
+        width:400px;
+        height:230px;
+        left:50%; 
+        transform:translateX(-50%);
+        background-color:#FFE082;
+    } 
+    .imgbox{
+        width:100%;
+        padding:2%;
+        text-align: center;
+    }
+    .imgbox img{
+        float:left;
+        max-width: 180px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .box1 img{
+        margin-left:7px;
+        float:left;
+    }
+    .box2 img{
+        margin-left:10px;
+    }
+}
