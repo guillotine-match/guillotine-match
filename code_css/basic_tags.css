@@ -25,10 +25,17 @@ a:active { color: red; text-decoration: none;}
     clear:both;
     position:relative; 
     width:1000px;
-    height:1230px;
+    height:1350px;
     margin-top: 350px;
     margin-left: -235px;
     font-size: 1.4rem;
     background: #fff9c4;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.chatting{
+    margin-left: -235px;
+    width:1000px;
+    height:480px;
+    background:lightcyan;
 }
