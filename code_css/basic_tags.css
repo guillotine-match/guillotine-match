@@ -5,14 +5,9 @@ a:visited { color: black; text-decoration: none;}
 a:hover { color: blue; text-decoration: none;} 
 a:active { color: red; text-decoration: none;} 
 
-.matchBox{
-    cursor:pointer;
+.links2{
+    font-size: 20px;
+    font-weight: 700;
     text-align: center;
-    line-height:170px ;
-}
-
-.menuBox{
-    cursor:pointer;
-    text-align: center;
-    line-height: 30px;
+    line-height: 170px;
 }
