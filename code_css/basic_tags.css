@@ -24,10 +24,8 @@ a:active { color: red; text-decoration: none;}
 .fight{
     clear:both;
     position:relative; 
-    left:0%; 
-    transform:translateX(0%);
     width:1000px;
-    height:500px;
+    height:1230px;
     margin-top: 350px;
     margin-left: -235px;
     font-size: 1.4rem;
