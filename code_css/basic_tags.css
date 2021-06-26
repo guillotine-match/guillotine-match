@@ -1,4 +1,6 @@
 .center{text-align: center;}
+.right{text-align: right;}
+
 
 a:link { color: red; text-decoration: none;}
 a:visited { color: black; text-decoration: none;}
@@ -19,23 +21,187 @@ a:active { color: red; text-decoration: none;}
 
 .battleTag{
     background: chartreuse;
-}
-
-.fight{
-    clear:both;
-    position:relative; 
-    width:1000px;
-    height:1350px;
-    margin-top: 350px;
-    margin-left: -235px;
-    font-size: 1.4rem;
-    background: #fff9c4;
     font-family: 'Courier New', Courier, monospace;
 }
 
+
+/* textrow : Lstatus + (questions + radioarea) Rstatus */
+
+:root{
+    --query-height:600px;
+}
+
+.textRow{
+    position:absolute; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:900px;
+
+    margin-top: 400px;
+    font-size: 1.4rem;
+}
+
+.LStatus{
+    float:left;
+    width:50px;
+    height:var(--query-height);
+    background-color: beige;
+
+}
+.questions{
+    float:left;
+    text-align: left;
+    width:600px;
+    height:var(--query-height);
+    background:cyan;
+    line-height:40px;
+
+}
+.radioArea{
+    float:left;
+    text-align: left;
+    width:200px;
+    height:var(--query-height);
+    background:bisque;
+}
+
+.RStatus{
+    float:left;
+    width:50px;
+    height:var(--query-height);
+    background-color: beige;
+}
+
+
+.results{
+    float:left;
+    margin-left: -185px;
+    background:lightpink;
+    width:900px;
+    height:450px;
+    display:none;
+}
 .chatting{
-    margin-left: -235px;
-    width:1000px;
-    height:480px;
+    float:left;
+    position:relative; 
+    margin-left: -185px;
+    width:900px;
+    height:450px;
     background:lightcyan;
+    display:none;
+
+}
+
+
+@media (max-width: 1220px){
+
+    .textRow{
+        width:700px;
+        margin-top: 400px;
+        font-size: 1.2rem;
+    }
+    
+    .LStatus{
+        width:33px;
+    }
+    .questions{
+        width:500px;
+        line-height:30px;
+    
+    }
+    .radioArea{
+        width:133px;
+    }
+    
+    .RStatus{
+        width:33px;
+    }
+    
+    .results{
+        margin-left: -185px;
+        width:900px;
+        height:450px;
+    }
+    .chatting{
+        margin-left: -185px;
+        width:900px;
+        height:450px;
+    }
+}
+
+
+
+@media (max-width: 768px){
+
+    .textRow{
+        width:400px;
+        margin-top: 290px;
+        font-size: 0.6rem;
+    }
+    
+    .LStatus{
+        width:30px;
+    }
+    .questions{
+        width:246px;
+        line-height:30px;
+    
+    }
+    .radioArea{
+        width:93px;
+    }
+    
+    .RStatus{
+        width:30px;
+    }
+    
+    .results{
+        margin-left: -185px;
+        width:900px;
+        height:450px;
+    }
+    .chatting{
+        margin-left: -185px;
+        width:900px;
+        height:450px;
+    }
+}
+
+
+@media (max-width: 480px){
+
+    .textRow{
+        width:400px;
+        margin-top: 290px;
+        font-size: 0.6rem;
+    }
+    
+    .LStatus{
+        width:30px;
+    }
+    .questions{
+        width:246px;
+        line-height:30px;
+    
+    }
+    .radioArea{
+        width:93px;
+    }
+    
+    .RStatus{
+        width:30px;
+    }
+    
+    .results{
+        margin-left: -185px;
+        width:900px;
+        height:450px;
+    }
+    .chatting{
+        margin-left: -185px;
+        width:900px;
+        height:450px;
+    }
 }
