@@ -10,10 +10,29 @@
     <link rel="stylesheet" type="text/css" href="../code_css/tabBtn.css">
     <script type="text/javascript" src="../code_js/winner.js"></script>
     <script type="text/javascript" src="../code_js/imageController.js"></script>
+    
+    <script>
+        // function winscript(){
+        //     if (window.screen.width > 780) {
+        //     document.write('<script src="../code_js/imageController.js"><\/script>')
+        //     }
+        // }
+
+        function loadmore(){
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+            if (!isMobile()) {
+                //place script you don't want to run on mobile here
+                document.write('<scr' + 'ipt type="text/javascript" src="="../code_js/imageController.js"></scr' + 'ipt>');
+            }
+        }
+    </script>
+
 </head>
 
 <body onload="init()">
-    <div id="wrap">
+    <div id="wrap" onload="loadmore()">
         <header><h1 class="center"><a href="../index.html">단두대 매치</a></h1></header>
         <nav>
             <div><h3> 공지사항</h3></div>

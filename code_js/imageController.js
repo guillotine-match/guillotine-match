@@ -13,6 +13,16 @@ function zoomOut(event) {
 	event.target.style.transition = "all 0.5s";
 }
 
+// var mql = window.matchMedia("screen and (max-width: 768px)");
+
+// mql.addListener(function(e) {
+//     if(e.matches) {
+//         console.log('모바일 화면 입니다.');
+//     } else {
+//         console.log('데스크탑 화면 입니다.');
+//     }
+// });
+
 
 
 	// 이미지 원본 띄우기 JS
