@@ -1,0 +1,28 @@
+/* 브라우저별 환경 (맞춰주면 됨) */
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+.contest {
+color: #fff;
+background: linear-gradient(to right, #7FFF00, #000000);
+background-size: 400% 400%;
+animation: AnimationName ease-out ;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+animation-iteration-count :1;
+height: 100vh;
+text-align: center;
+}
