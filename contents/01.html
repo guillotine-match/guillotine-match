@@ -8,9 +8,8 @@
     <link rel="stylesheet" type="text/css" href="../code_css/img_style.css">
     <link rel="stylesheet" type="text/css" href="../code_css/basic_tags.css">
     <link rel="stylesheet" type="text/css" href="../code_css/tabBtn.css">
-    <script type="text/javascript" src="../code_js/winner.js"></script>
     <script type="text/javascript" src="../code_js/imagePop.js"></script>
-
+    <script type="text/javascript" src="../code_js/winner.js"></script>
     <script>
         if (window.screen.width > 780) {
             document.write('<script type="text/javascript" src="../code_js/imageEnlarge.js"><\/script>');
@@ -20,7 +19,7 @@
 </head>
 
 <body onload="init()">
-    <div id="wrap" onload="winscript()">
+    <div id="wrap" >
         <header><h1 class="center"><a href="../index.html">단두대 매치</a></h1></header>
         <nav>
             <div><h3> 공지사항 </h3></div>
@@ -94,18 +93,31 @@
                     </div>
 
                     <div class="winner_text">
-                        결과창입니다. 선택을 완료했으면 선택 완료 버튼을 눌러주세요<br>
-                        <input type="button" id="resultbutton" value="선택 완료" >
+                        <input class="winner_text_btn" type="button" id="resultbutton" value="승자 확인" >
+                        <button class="winner_text_btn" onClick="window.location.reload()">새로고침</button>
                     </div>
                     <div class="winner_image">
+                        <div class="winner_portrait_box0" id="portrait_box0_ID">
+                            <img    class="winner_portrait0" 
+                                    id="winpic0"
+                                    src="../src/img/anon.jpg"
+                                    onclick="doImgPop('../src/img/anon.jpg')"/>
+                        </div>
                         <div class="winner_portrait_box1" id="portrait_box1_ID">
-                            <img class="winner_portrait1" src="../src/img/genji2.jpg">
+                            <img    class="winner_portrait1" 
+                                    id="winpic1"
+                                    src="../src/img/genji2.jpg"
+                                    onclick="doImgPop('../src/img/genji2.jpg')"/>
                         </div>
                         <div class="winner_portrait_box2" id="portrait_box2_ID">
-                            <img class="winner_portrait2" src="../src/img/reaper2.jpg" >
+                            <img    class="winner_portrait2" 
+                                    id="winpic2"
+                                    src="../src/img/reaper2.jpg" 
+                                    onclick="doImgPop('../src/img/reaper2.jpg')"/>
                         </div>
+                        <!-- onclick="doImgPop('../src/img/genji2.jpg'); imageScaleUp('event');"/> -->
                     </div>
-
+                    
                     <div class="chatting">
                         <hr><br>
                         댓글 API 영역입니다.

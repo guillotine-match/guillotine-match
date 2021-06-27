@@ -3,9 +3,21 @@
 
 var m1 = 0; 
 var m2 = 0;
+
 var result_obj;
+
 var result_message="";
+
 var ele;
+var winner="";
+
+var winImgobj1;
+var winImgobj2;
+
+//portrait_box1_ID objects
+var x
+var y
+
 
 // 문서 로드되었을 때 호출
 function init() { 
@@ -15,19 +27,30 @@ function init() {
 
     result_obj = document.getElementById("resultbutton");
 
+    winImgobj1 = document.getElementById("winpic1");
+    winImgobj2 = document.getElementById("winpic2");
+    
+    w = document.getElementById("portrait_box0_ID"); 
+    x = document.getElementById("portrait_box1_ID"); 
+    y = document.getElementById("portrait_box2_ID"); 
+
     // resultbutton 눌리면 아래 click event 리스너 함수들로 이동
-    // resultbutton 오브젝트 : result_obj
     
     // 다음 순서로 eventlistener 함수 실행!!
 	result_obj.addEventListener("click", eachMemberSum);
 	result_obj.addEventListener("click", showResult);
-    // result_obj.addEventListener("click", ImportGradientCSS);
-    result_obj.addEventListener("click", ImgLink);
-    result_obj.addEventListener("click", pointReset);
+    result_obj.addEventListener("click", ImportGradientCSS);
+    result_obj.addEventListener("click", deleter);
+    // result_obj.addEventListener("click", imageScaleUp);
 }
 
-// 사용자가 선택 완료 버튼 눌렀을 때
-// 이놈부터 실행
+
+
+
+
+
+// 사용자가 결과 선택 Click 
+// (radio / class / checked 여부로 멤버별 radio 클릭 수 조회)
 function eachMemberSum() {
     for(i = 0; i < ele.length; i++) {
         if(ele[i].type == "radio") {
@@ -46,9 +69,10 @@ function eachMemberSum() {
     }
 }
 
-// 사용자가 선택 완료 눌렀을 때
-// 두 번째 실행할 함수
-var winner="";
+
+
+
+
 
 
 // 사용자가 선택 완료 눌렀을 때
@@ -56,23 +80,23 @@ var winner="";
 function showResult(){
 
     if(m1==m2){
-        winner="please choose radio button again";
+        winner="승자를 다시 결정해야 합니다.";
+        alert(winner+"승리");
+
     } else if(m1>m2){
         
-        winner="Genji 승리!";
-        alert(winner);
-
-        var x = document.getElementById("portrait_box1_ID"); 
+        winner="member1";
+        w.style.display = "none";	
         x.style.display = "block";	
+        y.style.display = "none";	
 
         document.getElementById('portrait_box1_ID').scrollIntoView();
 
     } else if(m1<m2){
         
-        winner="Reaper 승리!";
-        alert(winner);
-
-        var y = document.getElementById("portrait_box2_ID"); 
+        winner="member2";
+        w.style.display = "none";	
+        x.style.display = "none";	
         y.style.display = "block";	
 
         document.getElementById('portrait_box2_ID').scrollIntoView();
@@ -80,28 +104,30 @@ function showResult(){
     } else {
         winner="else 값이 나올 수가 없는데 개발자가 코딩을 잘못했네"
     }
-
     m1=0;
     m2=0;
 }
 
-// onclick 시 승자 전용 gradition css 로딩하기
+var cssId = 'myCss';  
+function ImportGradientCSS(){
+    if (!document.getElementById(cssId))
+    {   
+        var head  = document.getElementsByTagName('head')[0];
+        var link  = document.createElement('link');
+        link.id   = cssId;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        
+        link.media = 'all';
 
-// function import_gradient_animation_cssfile (){
-//     var cssId = 'myCss';  
-//     if (!document.getElementById(cssId))
-//     {
-//         var head  = document.getElementsByTagName('head')[0];
-//         var link  = document.createElement('link');
-//         link.id   = cssId;
-//         link.rel  = 'stylesheet';
-//         link.type = 'text/css';
-//         link.href = '../code_css/gradientAnimation.css';
-//         link.media = 'all';
-//         head.appendChild(link);
-//     }
-// }
-
-function pointReset(){
-
+        if(winner=='member1'){
+            link.href = '../code_css/a.css';
+            
+        }
+        if(winner=='member2'){
+            link.href = '../code_css/b.css';
+            
+        }
+    }
+    head.appendChild(link);
 }
