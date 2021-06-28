@@ -1,31 +1,12 @@
-<div>
-    <audio id="audio1" controls src="../src/mp3/contest01_genji.mp3"></audio>
-    <button id="btn1" onclick="func1()">button_for_mute1</button><br>
-    <audio id="audio2" controls src="../src/mp3/contest01_reaper.mp3"></audio>
-    <button id="btn2" onclick="func2()">button_for_mute2</button>
-</div>
+<link rel="stylesheet" type="text/css" href="test1.css">
+<link rel="stylesheet" type="text/css" href="test2.css">
 <script>
-    var a1 = document.getElementById('audio1');
-    var a2 = document.getElementById('audio2');
-    
-    function func1(){
-        a1.muted=true;
-        a1.play();
-
-    }
-    function func2(){
-        a2.muted=true;
-        a2.play();
-    }
-
+    let s1 = document.styleSheets[0];
+    let s2 = document.styleSheets[1];
+    s2.disabled=true;
+    s2.disabled=true;
 </script>
-
-
-
-
-<!-- 
-var vid = document.getElementById("myVideo");
-
-function enableMute() {
-vid.setAttribute(muted,true);
-} -->
+<body>
+    <button class="buttons" id="btn1">버튼 1</button>
+    <button class="buttons" id="btn2">버튼 2</button>
+</body>

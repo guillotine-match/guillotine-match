@@ -1,8 +1,6 @@
-
-
 @-webkit-keyframes AnimationName {
-0%{background-position:0% 100%}
-    100%{background-position:100% 0%}
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
 }
 @-moz-keyframes AnimationName {
 0%{background-position:0% 100%}
@@ -13,11 +11,11 @@
     100%{background-position:100% 0%}
 }
 @keyframes AnimationName { 
-    0%{background-position:0% 100%}
-    100%{background-position:100% 0%}
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
 }
 .contest {
-background: linear-gradient(to right, white, #7FFF00);
+background: linear-gradient(to right, oldlace, #7FFF00);
 background-size: 400% 400%;
 animation: AnimationName ease-out ;
 animation-duration: 5s;

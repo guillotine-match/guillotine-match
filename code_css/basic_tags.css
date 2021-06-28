@@ -159,19 +159,6 @@ a:active { color: red; text-decoration: none;}
     object-fit: cover;
 }
 
-.newpage_button_area{
-    position:relative; 
-    left:50%; 
-    transform:translateX(-50%);
-    clear:both;
-    float:left;
-    width:900px;
-    height:100px;
-    background-color: wheat;
-    text-align: center;
-    line-height: 100px;
-}
-
 .chatting{
     float:left;
     position:relative; 
