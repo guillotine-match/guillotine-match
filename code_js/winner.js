@@ -1,6 +1,9 @@
 // 21.06.26 윤시준 tlwns5598@gmail.com
 // 사용자가 입력한 라디오 버튼을 조회하여 어떤 member가 승리했는지 알아냅니다.
 
+document.styleSheets[4].disabled = true; // member 1 승리 gradient
+document.styleSheets[5].disabled = true; // member 2 승리 gradient
+
 //m1 선택 수 
 //m2 선택 수 
 let m1 = 0; 
@@ -52,9 +55,9 @@ function init() {
     a1 = document.getElementById("audio1");
     a2 = document.getElementById("audio2");
 
-    w = document.getElementById("portrait_box0_ID"); 
-    x = document.getElementById("portrait_box1_ID"); 
-    y = document.getElementById("portrait_box2_ID"); 
+    x = document.getElementById("portrait_box0_ID"); 
+    y = document.getElementById("portrait_box1_ID"); 
+    z = document.getElementById("portrait_box2_ID"); 
 
     mem1s = document.getElementsByClassName("member1"); 
     mem2s = document.getElementsByClassName("member2"); 
@@ -67,7 +70,9 @@ function init() {
     result_obj.addEventListener("click", winnerMP3);
     
     // 새로고침 버튼 클릭 시
-    nwPage_obj.addEventListener("click", moveTop);
+    nwPage_obj.addEventListener("click", css_reset);
+    nwPage_obj.addEventListener("click", radio_reset);
+    nwPage_obj.addEventListener("click", m1_m2_winner_reset);
 }
 // 실시간 멤버 점수 조회
 function func(e){
@@ -109,18 +114,18 @@ function showResult(){
     } else if(m1>m2){
         
         winner="member1";
-        w.style.display = "none";	
-        x.style.display = "block";	
-        y.style.display = "none";	
+        x.style.display = "none";	
+        y.style.display = "block";	
+        z.style.display = "none";	
 
         document.getElementById('portrait_box1_ID').scrollIntoView();
 
     } else if(m1<m2){
         
         winner="member2";
-        w.style.display = "none";	
         x.style.display = "none";	
-        y.style.display = "block";	
+        y.style.display = "none";	
+        z.style.display = "block";	
 
         document.getElementById('portrait_box2_ID').scrollIntoView();
 
@@ -147,25 +152,40 @@ function winnerMP3() {
 
 var cssId = 'myCss';  
 function ImportGradientCSS(){
-    if (!document.getElementById(cssId))
-    {   
-        var head  = document.getElementsByTagName('head')[0];
-        var link  = document.createElement('link');
-        link.id   = cssId;
-        link.rel  = 'stylesheet';
-        link.type = 'text/css';
-        link.media = 'all';
 
         if(winner=='member1'){
-            link.href = '../code_css/a.css';
+            document.styleSheets[4].disabled = false; // member 1 승리 gradient
         }
         if(winner=='member2'){
-            link.href = '../code_css/b.css';
+            document.styleSheets[5].disabled = false; // member 2 승리 gradient
         }
-    }
+
     head.appendChild(link);
 }
 
-// function moveTop(){
-// document.getElementById('question_area').scrollIntoView();
-// }
+// reset 버튼 클릭 시
+function css_reset(){
+    
+    // gradient reset
+    document.styleSheets[4].disabled = true; 
+    document.styleSheets[5].disabled = true;
+    
+    // portrait reset
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+
+    // radio reset
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].type == "radio") {
+            ele [i] .checked = false;
+        }
+    }
+    
+    //m1 m2 winner reset
+    m1, m2=0; winner="";
+}
+
+
+
+

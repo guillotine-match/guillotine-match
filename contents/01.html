@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="../code_css/img_style.css">
     <link rel="stylesheet" type="text/css" href="../code_css/basic_tags.css">
     <link rel="stylesheet" type="text/css" href="../code_css/tabBtn.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/a.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/b.css">
     <script type="text/javascript" src="../code_js/imagePop.js"></script>
     <script type="text/javascript" src="../code_js/winner.js"></script>
     <script>
@@ -30,7 +32,7 @@
             <div><h3> Reference</h3></div>
         </nav>
         <article>
-            <div class="contest">
+            <div class="contest" id="contestarea">
                 
                 <div class="battleTag">
                     <br><h2 class="center">겐지 vs 리퍼</h2><br>
@@ -94,6 +96,7 @@
 
                     <div class="winner_text">
                         <input class="buttons" id="resultbutton" type="button" value="승자 확인">
+                        <button class="buttons" id="newPagebtn">새로고침</button>
                     </div>
                     <div class="winner_image">
                         <div class="winner_portrait_box0" id="portrait_box0_ID">
@@ -118,13 +121,15 @@
                         <!-- onclick="doImgPop('../src/img/genji2.jpg'); imageScaleUp('event');"/> -->
                     </div>
                     <div class="newpage_button_area">
-                        <button class="buttons" id="newPagebtn"onClick="window.location.reload(true)">새로고침</button>
+                        
                     </div>
                     <div>
                         <audio id="audio1" src="../src/mp3/contest01_genji.mp3"></audio>
                         <audio id="audio2" src="../src/mp3/contest01_reaper.mp3"></audio>
-                        <!-- <audio id="r_audio1" src="../src/mp3/contest01_genjiR.mp3"></audio>
-                        <audio id="r_audio2" src="../src/mp3/contest01_reaperR.mp3"></audio> -->
+                        <!-- 
+                        <audio id="r_audio1" src="../src/mp3/contest01_genjiR.mp3"></audio>
+                        <audio id="r_audio2" src="../src/mp3/contest01_reaperR.mp3"></audio> 
+                        -->
                     </div>
                     <div class="chatting">
                         <hr><br>

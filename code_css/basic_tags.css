@@ -11,7 +11,7 @@ a:hover { color: blue; text-decoration: none;}
 a:active { color: red; text-decoration: none;} 
 
 .contest{
-    background-color: oldlace;
+    background: oldlace;
 }
 .links2{
     font-size: 20px;
@@ -30,7 +30,6 @@ a:active { color: red; text-decoration: none;}
     font-family: 'Courier New', Courier, monospace;
 }
 
-
 /* textrow : Lstatus + (questions + radioarea) Rstatus */
 
 :root{
@@ -44,7 +43,6 @@ a:active { color: red; text-decoration: none;}
     clear:both;
     float:left;
     width:900px;
-
     margin-top: 400px;
     font-size: 1.4rem;
 }
@@ -173,7 +171,6 @@ a:active { color: red; text-decoration: none;}
     text-align: center;
     line-height: 100px;
 }
-
 
 .chatting{
     float:left;
