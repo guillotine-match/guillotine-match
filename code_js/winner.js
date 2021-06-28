@@ -57,6 +57,8 @@ function init() {
     a2 = document.getElementById("audio2");
     ra1 = document.getElementById("audio3");
     ra2 = document.getElementById("audio4");
+    ra1.load();
+    ra2.load();
 
     x = document.getElementById("portrait_box0_ID"); 
     y = document.getElementById("portrait_box1_ID"); 
