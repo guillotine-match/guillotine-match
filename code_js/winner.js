@@ -1,22 +1,41 @@
 // 21.06.26 윤시준 tlwns5598@gmail.com
 // 사용자가 입력한 라디오 버튼을 조회하여 어떤 member가 승리했는지 알아냅니다.
 
-var m1 = 0; 
-var m2 = 0;
+//m1 선택 수 
+//m2 선택 수 
+let m1 = 0; 
+let m2 = 0;
 
-var result_obj;
+// 버튼 객체
+let result_obj;
+let nwPage_obj;
 
-var result_message="";
+// 라디오 객체 저장 변수
+let ele;
 
-var ele;
-var winner="";
-
-var winImgobj1;
-var winImgobj2;
+// 승자 저장할 텍스트 변수
+let winner="";
 
 //portrait_box1_ID objects
-var x
-var y
+let x;
+let y;
+
+// ra 라디오 선택 오디오
+// let ra1;
+// let ra2;
+
+// a1 승리 오디오
+let a1;
+let a2;
+
+// 멤버 클래스 분류
+// 멤버 1,2 멤버 ~1, ~2 (not)
+let mem1s;
+let mem2s;
+let not1s;
+let not2s;
+
+
 
 
 // 문서 로드되었을 때 호출
@@ -26,62 +45,66 @@ function init() {
     // 모든 input 요소 ele 객체로 반환
 
     result_obj = document.getElementById("resultbutton");
+    nwPage_obj = document.getElementById('newPagebtn');
 
-    winImgobj1 = document.getElementById("winpic1");
-    winImgobj2 = document.getElementById("winpic2");
-    
+    // ra1 = document.getElementById("r_audio1");
+    // ra2 = document.getElementById("r_audio2");
+    a1 = document.getElementById("audio1");
+    a2 = document.getElementById("audio2");
+
     w = document.getElementById("portrait_box0_ID"); 
     x = document.getElementById("portrait_box1_ID"); 
     y = document.getElementById("portrait_box2_ID"); 
 
-    // resultbutton 눌리면 아래 click event 리스너 함수들로 이동
-    
-    // 다음 순서로 eventlistener 함수 실행!!
-	result_obj.addEventListener("click", eachMemberSum);
+    mem1s = document.getElementsByClassName("member1"); 
+    mem2s = document.getElementsByClassName("member2"); 
+    not1s = document.getElementsByClassName("not___1"); 
+    not2s = document.getElementsByClassName("not___2"); 
+
+    // result 버튼 클릭 시
 	result_obj.addEventListener("click", showResult);
     result_obj.addEventListener("click", ImportGradientCSS);
-    result_obj.addEventListener("click", deleter);
-    // result_obj.addEventListener("click", imageScaleUp);
+    result_obj.addEventListener("click", winnerMP3);
+    
+    // 새로고침 버튼 클릭 시
+    nwPage_obj.addEventListener("click", moveTop);
 }
-
-
-
-
-
-
-// 사용자가 결과 선택 Click 
-// (radio / class / checked 여부로 멤버별 radio 클릭 수 조회)
-function eachMemberSum() {
+// 실시간 멤버 점수 조회
+function func(e){
+    let k1=0;
+    let k2=0;
     for(i = 0; i < ele.length; i++) {
         if(ele[i].type == "radio") {
 
             if (ele[i].className == "member1"){
                 if((ele[i].checked)){
-                    m1++;
+                    k1++;
                 }
             }
             else if (ele[i].className == "member2"){
                 if((ele[i].checked)){
-                    m2++;
+                    k2++;
                 }
             }
         }
     }
+    m1=k1;
+    m2=k2;
+    // if(m1>m2){
+    //     ra1.load();
+    //     ra1.play();
+    // }
+    // if(m1<m2){
+    //     ra2.load();
+    //     ra2.play();
+    // }
 }
 
-
-
-
-
-
-
-// 사용자가 선택 완료 눌렀을 때
-// 세 번째 실행할 함수
+// 승자 저장 -   출력
 function showResult(){
 
     if(m1==m2){
         winner="승자를 다시 결정해야 합니다.";
-        alert(winner+"승리");
 
     } else if(m1>m2){
         
@@ -108,6 +131,20 @@ function showResult(){
     m2=0;
 }
 
+
+function winnerMP3() {
+    if(winner=='member1'){
+        a1.muted=false;
+        a1.load();
+        a1.play();
+    }
+    if(winner=='member2'){
+        a2.muted=false;
+        a2.load();
+        a2.play();
+    }
+}
+
 var cssId = 'myCss';  
 function ImportGradientCSS(){
     if (!document.getElementById(cssId))
@@ -117,17 +154,18 @@ function ImportGradientCSS(){
         link.id   = cssId;
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        
         link.media = 'all';
 
         if(winner=='member1'){
             link.href = '../code_css/a.css';
-            
         }
         if(winner=='member2'){
             link.href = '../code_css/b.css';
-            
         }
     }
     head.appendChild(link);
 }
+
+// function moveTop(){
+// document.getElementById('question_area').scrollIntoView();
+// }

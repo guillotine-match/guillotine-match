@@ -80,6 +80,8 @@ a:active { color: red; text-decoration: none;}
     background-color: #474747;
 }
 
+
+/* winner_text 아래 영역과 별개*/
 .winner_text{
     position:relative; 
     left:50%; 
@@ -92,7 +94,9 @@ a:active { color: red; text-decoration: none;}
     text-align: center;
     line-height: 100px;
 }
-.winner_text_btn{
+
+/* 여기 말고도 아래 하나 더 있는 버튼 */
+.buttons{
     background-color: darkorange;
     color:darkslategray;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -105,6 +109,8 @@ a:active { color: red; text-decoration: none;}
     margin: 4px 2px;
     cursor: pointer;
 }
+
+/* 교대로 나오는 초상화 3장 영역 */
 .winner_portrait_box0{
     position:relative; 
     left:50%; 
@@ -153,8 +159,21 @@ a:active { color: red; text-decoration: none;}
     max-height: 800px;
     vertical-align: middle;
     object-fit: cover;
-
 }
+
+.newpage_button_area{
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:900px;
+    height:100px;
+    background-color: wheat;
+    text-align: center;
+    line-height: 100px;
+}
+
 
 .chatting{
     float:left;

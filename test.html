@@ -1,12 +1,31 @@
-<html>
-<head>
-    <title>Java Script String anchor() Method</title>
-</head>
+<div>
+    <audio id="audio1" controls src="../src/mp3/contest01_genji.mp3"></audio>
+    <button id="btn1" onclick="func1()">button_for_mute1</button><br>
+    <audio id="audio2" controls src="../src/mp3/contest01_reaper.mp3"></audio>
+    <button id="btn2" onclick="func2()">button_for_mute2</button>
+</div>
+<script>
+    var a1 = document.getElementById('audio1');
+    var a2 = document.getElementById('audio2');
+    
+    function func1(){
+        a1.muted=true;
+        a1.play();
 
-<body>   
-    <script type = "text/javascript">
-        var str = new String("Hello world");
-        alert(str.anchor( "myanchor" ));
-    </script>      
-</body>
-</html>
+    }
+    function func2(){
+        a2.muted=true;
+        a2.play();
+    }
+
+</script>
+
+
+
+
+<!-- 
+var vid = document.getElementById("myVideo");
+
+function enableMute() {
+vid.setAttribute(muted,true);
+} -->
