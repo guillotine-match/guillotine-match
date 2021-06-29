@@ -1,0 +1,37 @@
+/* 
+<div class="audio_area">
+<button id="play" onclick="control(event)">play</button>
+<button id="pause" onclick="control(event)">pause</button>
+<button id="replay" onclick="control(event)">replay</button>
+<button id="vol-" onclick="control(event)">vol-</button>
+<button id="vol+" onclick="control(event)">vol+</button>
+<button id="mute on/off" onclick="control(event)">mute on/off</button>
+<audio id="audio1" src="../src/mp3/contest01_genji.mp3"></audio>
+<audio id="audio2" src="../src/mp3/contest01_reaper.mp3"></audio>
+<audio id="audio3" src="../src/mp3/contest01_genji_R.mp3"></audio>
+<audio id="audio4" src="../src/mp3/contest01_reaper_R.mp3"></audio> 
+</div>
+ */
+
+.audio_area{
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:900px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    display:block;
+    
+}
+
+.audio_area>button{
+    width:100px;
+    height:30px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    background:#ebc597 ;
+    color:black;
+}

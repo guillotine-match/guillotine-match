@@ -32,11 +32,11 @@ let y;
 let z;
 
 // radio 선택 오디오
-let ra1;
-let ra2;
-// a1 승리 오디오
-let a1;
-let a2;
+let p1_radioAudio;
+let p2_radioAudio;
+// p1_victoryAudio 승리 오디오
+let p1_victoryAudio;
+let p2_victoryAudio;
 
 // 멤버 클래스 분류
 // 멤버 1,2 멤버 ~1, ~2 (not)
@@ -53,12 +53,12 @@ function init() {
     result_obj = document.getElementById("resultbutton");
     nwPage_obj = document.getElementById('newPagebtn');
 
-    a1 = document.getElementById("audio1");
-    a2 = document.getElementById("audio2");
-    ra1 = document.getElementById("audio3");
-    ra2 = document.getElementById("audio4");
-    ra1.load();
-    ra2.load();
+    p1_victoryAudio = document.getElementById("audio1");
+    p2_victoryAudio = document.getElementById("audio2");
+    p1_radioAudio = document.getElementById("audio3");
+    p2_radioAudio = document.getElementById("audio4");
+    p1_radioAudio.load();
+    p2_radioAudio.load();
 
     x = document.getElementById("portrait_box0_ID"); 
     y = document.getElementById("portrait_box1_ID"); 
@@ -100,19 +100,19 @@ function func(e){
 }
 function func2(e){
     if(e=="member1"){
-        ra1.load();
-        ra1.play();
+        p1_radioAudio.load();
+        p1_radioAudio.play();
     }
     else if(e=="member2"){
-        ra2.load();
-        ra2.play();
+        p2_radioAudio.load();
+        p2_radioAudio.play();
     }
 }
 
 // 승자 저장 -   출력
 function showResult(){
-    a1.pause();
-    a2.pause();
+    p1_victoryAudio.pause();
+    p2_victoryAudio.pause();
     if(m1==m2){ // 무승부
         x.style.display = "block";	// anon 초상화
         y.style.display = "none";	// player1 초상화
@@ -154,12 +154,12 @@ function showResult(){
 
 function winnerMP3() {
     if(winner=='p1'){
-        a1.load();
-        a1.play();
+        p1_victoryAudio.load();
+        p1_victoryAudio.play();
     }
     if(winner=='p2'){
-        a2.load();
-        a2.play();
+        p2_victoryAudio.load();
+        p2_victoryAudio.play();
     }
 }
 
@@ -188,6 +188,6 @@ function resetClicked(){
     document.getElementById('contestarea').scrollIntoView();
 
     // audio stop
-    a1.pause();
-    a2.pause();
+    p1_victoryAudio.pause();
+    p2_victoryAudio.pause();
 }
