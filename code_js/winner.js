@@ -34,6 +34,8 @@ let z;
 // radio 선택 오디오
 let p1_radioAudio;
 let p2_radioAudio;
+let p1_radioNO;
+let p2_radioNO;
 
 // p1_victoryAudio 승리 오디오
 let p1_victoryAudio;
@@ -58,6 +60,8 @@ function init() {
     p2_victoryAudio = document.getElementById("audio2");
     p1_radioAudio = document.getElementById("audio3");
     p2_radioAudio = document.getElementById("audio4");
+    p1_radioNO = document.getElementById("audio5");
+    p2_radioNO = document.getElementById("audio6");
     p1_radioAudio.load();
     p2_radioAudio.load();
 
@@ -99,7 +103,9 @@ function func(e){
     m1=k1;
     m2=k2;
 }
-function func2(e){
+function func2(e){ //라디오버튼 클릭시 이벤트
+    
+    // 라디오버튼 클릭음
     if(e=="member1"){
         p1_radioAudio.load();
         p1_radioAudio.play();
@@ -107,8 +113,17 @@ function func2(e){
     else if(e=="member2"){
         p2_radioAudio.load();
         p2_radioAudio.play();
+    } 
+    else if(e=="not___1"){
+        p1_radioNO.load();
+        p1_radioNO.play();
     }
- 
+    else if(e=="not___2"){
+        p2_radioNO.load();
+        p2_radioNO.play();
+    }
+    
+    // 경기 결과 리셋
     // gradient reset
     s1.disabled = true;
     s2.disabled = true;
