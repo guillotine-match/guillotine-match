@@ -1,13 +1,18 @@
 
 
 function control(e) {
-	var id = e.target.id;
+	let id = e.target.id;
 	if(id == "play") { // play 버튼
+        alert(winner);
 		if(winner=="p1"){
             p1_victoryAudio.play(); 
         } else if(winner="p2"){
             p2_victoryAudio.play();
+        } else if(winner="anon"){
+            p1_victoryAudio.pause(); 
+            p2_victoryAudio.pause();
         }
+
 	}
 	else if(id == "pause") { // pause 버튼
         if(winner=="p1"){
