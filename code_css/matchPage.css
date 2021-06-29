@@ -36,7 +36,7 @@
     float:left;
     text-align: left;
     width:600px;
-    height:var(--query-height);
+    /* height:var(--query-height); */
     background:rgb(238, 217, 238);
     line-height:40px;
 
@@ -45,7 +45,7 @@
     float:left;
     text-align: left;
     width:300px;
-    height:var(--query-height);
+    /* height:var(--query-height); */
     background:bisque;
 }
 
@@ -133,6 +133,7 @@
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
+    margin-top: 40px;
     width:840px;
     padding:30px;
     height:700px;

@@ -130,18 +130,7 @@
                         <input class="buttons" id="resultbutton" type="button" value="승자 확인">
                         <button class="buttons" id="newPagebtn">경기 리셋</button>
                     </div>
-                    <div class="audio_area">
-                        <button id="play" onclick="control(event)">play</button>
-                        <button id="pause" onclick="control(event)">pause</button>
-                        <button id="replay" onclick="control(event)">replay</button>
-                        <button id="vol-" onclick="control(event)">vol-</button>
-                        <button id="vol+" onclick="control(event)">vol+</button>
-                        <button id="mute on/off" onclick="control(event)">mute</button>
-                        <audio id="audio1" src="../src/mp3/contest01_genji.mp3"></audio>
-                        <audio id="audio2" src="../src/mp3/contest01_reaper.mp3"></audio>
-                        <audio id="audio3" src="../src/mp3/contest01_genji_R.mp3"></audio>
-                        <audio id="audio4" src="../src/mp3/contest01_reaper_R.mp3"></audio> 
-                    </div>
+
                     <div class="winner_image" id="winner_image_area">
                         <div class="winner_portrait_box0" id="portrait_box0_ID">
                             <img    class="winner_portrait0" 
@@ -160,7 +149,20 @@
                                     id="winpic2"
                                     src="../src/img/reaper2.jpg" 
                                     onclick="doImgPop('../src/img/reaper2.jpg')"/>
-                            
+                        </div>
+                        <div class="audio_area">
+                            <div class="audio_area_inside">
+                                <button id="play" onclick="control(event)">play</button>
+                                <button id="pause" onclick="control(event)">pause</button>
+                                <button id="replay" onclick="control(event)">replay</button>
+                                <button id="vol-" onclick="control(event)">vol-</button>
+                                <button id="vol+" onclick="control(event)">vol+</button>
+                                <button id="mute on/off" onclick="control(event)">mute</button>
+                                <audio id="audio1" src="../src/mp3/contest01_genji.mp3"></audio>
+                                <audio id="audio2" src="../src/mp3/contest01_reaper.mp3"></audio>
+                                <audio id="audio3" src="../src/mp3/contest01_genji_R.mp3"></audio>
+                                <audio id="audio4" src="../src/mp3/contest01_reaper_R.mp3"></audio> 
+                            </div>
                         </div>
                     </div>
 
