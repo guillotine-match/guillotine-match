@@ -1,0 +1,228 @@
+.contest{
+    background: oldlace;
+}
+
+
+.battleTag{
+    background: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+.battleTag_sub{
+    background: rgb(228, 215, 199);
+    font-family: 'Courier New', Courier, monospace;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+}
+/* textrow : Lstatus + (questions + radioarea) Rstatus */
+
+:root{
+    --query-height:600px;
+}
+
+.textRow{
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:900px;
+    margin-top: 400px;
+    font-size: 1.4rem;
+}
+
+
+.questions{
+    float:left;
+    text-align: left;
+    width:600px;
+    height:var(--query-height);
+    background:rgb(238, 217, 238);
+    line-height:40px;
+
+}
+.radioArea{
+    float:left;
+    text-align: left;
+    width:300px;
+    height:var(--query-height);
+    background:bisque;
+}
+
+/* winner_text 아래 영역과 별개*/
+.winner_text{
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:900px;
+    height:100px;
+    background-color: oldlace;
+    text-align: center;
+    line-height: 100px;
+}
+
+.buttons{
+    background-color: darkorange;
+    color:darkslategray;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    border-style: ridge;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* 교대로 나오는 초상화 3장 영역 */
+.winner_portrait_box0{
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:900px;
+    height:1000px;
+    line-height:1000px;
+    text-align: center;
+    display:block;
+    background: #F0F0F0;
+}
+.winner_portrait_box1{
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:900px;
+    height:1000px;
+    line-height:1000px;
+    text-align: center;
+    display:none;
+}
+.winner_portrait_box2{
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:900px;
+    height:1000px;
+    line-height:1000px;
+    text-align: center;
+    display:none;
+}
+.winner_portrait_box1 img{
+    max-width:900px;
+    vertical-align: middle;
+    max-height: 800px;
+    object-fit: cover;
+}
+.winner_portrait_box2 img{
+    max-width:900px;
+    max-height: 800px;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.chatting{
+    float:left;
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    width:840px;
+    padding:30px;
+    height:700px;
+    background:#FAEBD7;
+}
+.chatting>div{
+    background:#ffe4c2;
+    height:700px;
+    width:860px;
+}
+
+@media (max-width: 1220px){
+
+    .textRow{
+        width:700px;
+        margin-top: 400px;
+        font-size: 1.2rem;
+    }
+    
+
+    .questions{
+        width:500px;
+        line-height:30px;
+    
+    }
+    .radioArea{
+        width:133px;
+    }
+    
+
+
+    .chatting{
+        margin-left: -185px;
+        width:900px;
+        height:450px;
+    }
+}
+
+
+
+@media (max-width: 768px){
+
+    .textRow{
+        width:400px;
+        margin-top: 290px;
+        font-size: 0.6rem;
+    }
+    
+
+    .questions{
+        width:246px;
+        line-height:30px;
+    
+    }
+    .radioArea{
+        width:93px;
+    }
+
+
+    .chatting{
+        margin-left: -185px;
+        width:900px;
+        height:450px;
+    }
+}
+
+
+@media (max-width: 480px){
+
+    .textRow{
+        width:400px;
+        margin-top: 290px;
+        margin-left:36px;
+        font-size: 0.6rem;
+    }
+    
+
+    .questions{
+        width:246px;
+        line-height:30px;
+    
+    }
+    .radioArea{
+        width:80px;
+    }
+
+
+    .chatting{
+        margin-left: 185px;
+        width:900px;
+        height:450px;
+    }
+}

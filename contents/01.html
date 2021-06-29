@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width,initialscale=1, minimum-scale=1, maximum-scale=1, user-scaleable=no">
     <title>Guillotine-Match</title>
     
-    <link rel="stylesheet" type="text/css" href="../code_css/basic_tags.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/matchPage.css">
     <link rel="stylesheet" type="text/css" href="../code_css/page1/an_p1.css">
     <link rel="stylesheet" type="text/css" href="../code_css/page1/an_p2.css">
     <link rel="stylesheet" type="text/css" href="../code_css/page1/_reset.css">
 
-    <link rel="stylesheet" type="text/css" href="../code_css/layout.css">
-    <link rel="stylesheet" type="text/css" href="../code_css/img_style.css">
-    <link rel="stylesheet" type="text/css" href="../code_css/tabBtn.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/baseLayout.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/matchPage_imgStyle.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/matchPage_radio.css">
 
     <script type="text/javascript" src="../code_js/imagePop.js"></script>
     <script type="text/javascript" src="../code_js/winner.js"></script>
@@ -42,6 +42,10 @@
                     <br><h2 class="center">겐지 vs 리퍼</h2><br>
                 </div>
 
+                <div class="battleTag_sub">
+                    <h3>나에게 적합한 영웅은?</h3>
+                </div>
+
                 <div class="imgbundle">
                     <div class="imgbox">
                         <div class="box1">
@@ -50,7 +54,7 @@
                             onmouseleave="zoomOut(event)" 
                             onclick="doImgPop('../src/img/genji.jpg')"/>
                         </div>
-                        <div class="box2">`
+                        <div class="box2">
                             <img src="../src/img/reaper.jpg" 
                             onmouseenter="zoomIn(event)" 
                             onmouseleave="zoomOut(event)" 
@@ -61,21 +65,17 @@
 
                 <div class="fight" id="question_area">
                     <div class="textRow">
-
-                        <div class="LStatus">
-                        </div>
-        
                         <div class="questions" >
-                            1. 중고감도 에임이 좋은 편이다<hr>
-                            2. 초고감도 에임이 좋은 편이다<hr>
-                            3. 소드마스터의 꿈이 있다<hr>
-                            4. 리퍼의 미소만큼 아름다운 게 없다<hr>
-                            5. 용검 판타지가 있다<hr>
-                            6. 적의 뒤통수를 노리는 게 짜릿하다<hr>
-                            7. 겐지가 함께한다<hr>
-                            8. 내 안에 어둠이 날뛰는군<hr>
-                            9. 정갈한 겐지 음성이 귀에 맞다 <hr>
-                            10. 다크한 리퍼 음성이 귀에 맞다<hr>
+                            &nbsp;1. 중고감도 에임이 좋은 편이다<hr>
+                            &nbsp;2. 초고감도 에임이 좋은 편이다<hr>
+                            &nbsp;3. 소드마스터의 꿈이 있다<hr>
+                            &nbsp;4. 리퍼의 미소만큼 아름다운 게 없다<hr>
+                            &nbsp;5. 용검 판타지가 있다<hr>
+                            &nbsp;6. 적의 뒤통수를 노리는 게 짜릿하다<hr>
+                            &nbsp;7. 겐지가 함께한다<hr>
+                            &nbsp;8. 내 안에 어둠이 날뛰는군<hr>
+                            &nbsp;9. 정갈한 겐지 음성이 귀에 맞다 <hr>
+                            &nbsp;10. 다크한 리퍼 음성이 귀에 맞다<hr>
                         </div>
                         <div class="radioArea">
                             <div class="tabButton">
@@ -119,8 +119,6 @@
                                 <li><input type="radio" name="qstion0" onclick="func(this.name); func2(this.className);" class="not___2" id="n9"><label for="n9">N</label></li>
                             </div><hr>
                         </div>
-                        <div class="RStatus">
-                        </div>
                     </div>
 
                     <div class="winner_text">
@@ -155,13 +153,14 @@
                         <audio id="audio4" src="../src/mp3/contest01_reaper_R.mp3"></audio> 
                     </div>
                     <div class="chatting">
-                        <hr><br>
-                        댓글 API 영역입니다.
+                        <div>
+                            <br><br>댓글 API 영역
+                        </div>
                     </div>
                 </div>
             </div>
         </article>
-        <footer></footer>
+        <footer><div></div></footer>
     </div>
 </body>
 </html>

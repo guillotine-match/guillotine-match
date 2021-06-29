@@ -31,12 +31,12 @@ let x;
 let y;
 let z;
 
-// a1 승리 오디오
-let a1;
-let a2;
 // radio 선택 오디오
 let ra1;
 let ra2;
+// a1 승리 오디오
+let a1;
+let a2;
 
 // 멤버 클래스 분류
 // 멤버 1,2 멤버 ~1, ~2 (not)
@@ -109,10 +109,10 @@ function func2(e){
     }
 }
 
-
 // 승자 저장 -   출력
 function showResult(){
-
+    a1.pause();
+    a2.pause();
     if(m1==m2){ // 무승부
         x.style.display = "block";	// anon 초상화
         y.style.display = "none";	// player1 초상화
@@ -182,6 +182,12 @@ function resetClicked(){
             ele [i] .checked = false;
         }
     }
+    m1, m2=0; winner="";
+    
     // scroll reset
     document.getElementById('contestarea').scrollIntoView();
+
+    // audio stop
+    a1.pause();
+    a2.pause();
 }

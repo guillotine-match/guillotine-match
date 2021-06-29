@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initialscale=1, minimum-scale=1, maximum-scale=1, user-scaleable=no">
     <title>Guillotine-Match</title>
-    <link rel="stylesheet" type="text/css" href="code_css/layout.css">
+    <link rel="stylesheet" type="text/css" href="code_css/baseLayout.css">
     <link rel="stylesheet" type="text/css" href="code_css/img_style.css">
-    <link rel="stylesheet" type="text/css" href="code_css/basic_tags.css">
+    <link rel="stylesheet" type="text/css" href="code_css/matchPage.css">
 </head>
-<body>
+<body onload="playThunder();">
     <div id="wrap">
-        <header><h1 class="center">단두대 매치</h1></header>
+        <header>
+            <a href="index.html"><h1 class="center">단두대 매치</h1></a>
+        </header>
         <nav class="wrapper">
             <div class="links" OnClick="location.href ='menues/01.html'"><h3>공지사항</h3></div>
             <div class="links" OnClick="location.href ='menues/02.html'"><h3>About Us</h3></div>
@@ -21,7 +23,7 @@
         </nav>
         <section class="wrapper">
             <div class="links2" OnClick="location.href='contents/01.html'">겐지 vs 리퍼</div>
-            <div class="links2" OnClick="location.href='contents/02.html'"></div>
+            <div class="links2" OnClick="location.href='contents/02.html'">오버워치 vs 탈론</div>
             <div class="links2" OnClick="location.href='contents/03.html'"></div>
             <div class="links2" OnClick="location.href='contents/04.html'"></div>
             <div class="links2" OnClick="location.href='contents/05.html'"></div>
@@ -31,7 +33,15 @@
             <div class="links2" OnClick="location.href='contents/09.html'"></div>
             <div class="links2" OnClick="location.href='contents/10.html'"></div>
         </section>
-        <footer></footer>
+        <footer><div></div></footer>
     </div>
+    <audio id="thudner" src="../src/mp3/thunder.mp3"></audio>
+    <script>
+        let thunder= document.getElementById("thudner");
+        function playThunder(){
+            thunder.load();
+            thunder.play();
+        }
+    </script>
 </body>
 </html>

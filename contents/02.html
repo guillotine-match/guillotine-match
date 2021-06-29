@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initialscale=1, minimum-scale=1, maximum-scale=1, user-scaleable=no">
+    <title>Guillotine-Match</title>
+    
+    <link rel="stylesheet" type="text/css" href="../code_css/matchPage.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/page2/an_p1.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/page2/an_p2.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/page2/_reset.css">
+
+    <link rel="stylesheet" type="text/css" href="../code_css/baseLayout.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/matchPage_imgStyle.css">
+    <link rel="stylesheet" type="text/css" href="../code_css/matchPage_radio.css">
+
+    <script type="text/javascript" src="../code_js/imagePop.js"></script>
+    <script type="text/javascript" src="../code_js/winner.js"></script>
+    <script>
+        if (window.screen.width > 780) {
+            document.write('<script type="text/javascript" src="../code_js/imageEnlarge.js"><\/script>');
+        }
+    </script>
+
+</head>
+
+<body onload="init()">
+    <div id="wrap" >
+        <header><h1 class="center"><a href="../index.html">단두대 매치</a></h1></header>
+        <nav>
+            <div><h3> 공지사항 </h3></div>
+            <div><h3> About Us</h3></div>
+            <div><h3> update 내역</h3></div>
+            <div><h3> update 예정</h3></div>
+            <div><h3> 건의 사항</h3></div>
+            <div><h3> Reference</h3></div>
+        </nav>
+        <article>
+            <div class="contest" id="contestarea">
+                
+                <div class="battleTag">
+                    <br><h2 class="center">오버워치 vs 탈론</h2><br>
+                </div>
+
+                <div class="battleTag_sub">
+                    <h3>나에게 적합한 팀은?</h3>
+                </div>
+
+                <div class="imgbundle">
+                    <div class="imgbox">
+                        <div class="box1">
+                            <img src="../src/img/match_ov.png" 
+                            onmouseenter="zoomIn(event)" 
+                            onmouseleave="zoomOut(event)" 
+                            onclick="doImgPop('../src/img/match_ov.png')"/>
+                        </div>
+                        <div class="box2">
+                            <img src="../src/img/match_tl.png" 
+                            onmouseenter="zoomIn(event)" 
+                            onmouseleave="zoomOut(event)" 
+                            onclick="doImgPop('../src/img/match_tl.png')"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fight" id="question_area">
+                    <div class="textRow">
+                        <div class="questions" >
+                            &nbsp;1. 솔져 vs 둠피스트<hr>
+                            &nbsp;2. 겐지 vs 리퍼<hr>
+                            &nbsp;3. 트레이서 vs 위도우<hr>
+                            &nbsp;4. 메이 vs 솜브라<hr>
+                            &nbsp;5. 메르시 vs모이라<hr>
+                            &nbsp;6. 윈스턴 vs 시그마<hr>
+                            &nbsp;7. 루시우 vs 바티스트<hr>
+                        </div>
+                        <div class="radioArea">
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion1" onclick="func(this.name); func2(this.className);" class="member1" id="y0"><label for="y0">솔져</label></li>
+                                <li><input type="radio" name="qstion1" onclick="func(this.name); func2(this.className);" class="member2" id="n0"><label for="n0">둠피스트</label></li>
+                            </div><hr>
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion2" onclick="func(this.name); func2(this.className);" class="member1" id="y1"><label for="y1">겐지</label></li>
+                                <li><input type="radio" name="qstion2" onclick="func(this.name); func2(this.className);" class="member2" id="n1"><label for="n1">리퍼</label></li>
+                            </div><hr>
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion3" onclick="func(this.name); func2(this.className);" class="member1" id="y2"><label for="y2">트레이서</label></li>
+                                <li><input type="radio" name="qstion3" onclick="func(this.name); func2(this.className);" class="member2" id="n2"><label for="n2">위도우</label></li>
+                            </div><hr>
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion4" onclick="func(this.name); func2(this.className);" class="member1" id="y3"><label for="y3">메이</label></li>
+                                <li><input type="radio" name="qstion4" onclick="func(this.name); func2(this.className);" class="member2" id="n3"><label for="n3">솜브라</label></li>
+                            </div><hr>
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion5" onclick="func(this.name); func2(this.className);" class="member1" id="y4"><label for="y4">메르시</label></li>
+                                <li><input type="radio" name="qstion5" onclick="func(this.name); func2(this.className);" class="member2" id="n4"><label for="n4">모이라</label></li>
+                            </div><hr>
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion6" onclick="func(this.name); func2(this.className);" class="member1" id="y5"><label for="y5">윈스턴</label></li>
+                                <li><input type="radio" name="qstion6" onclick="func(this.name); func2(this.className);" class="member2" id="n5"><label for="n5">시그마</label></li>
+                            </div><hr>
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion7" onclick="func(this.name); func2(this.className);" class="member1" id="y6"><label for="y6">루시우</label></li>
+                                <li><input type="radio" name="qstion7" onclick="func(this.name); func2(this.className);" class="member2" id="n6"><label for="n6">바티스트</label></li>
+                            </div><hr>
+                        </div>
+                    </div>
+
+                    <div class="winner_text">
+                        <input class="buttons" id="resultbutton" type="button" value="승자 확인">
+                        <button class="buttons" id="newPagebtn">경기 리셋</button>
+                    </div>
+                    <div class="winner_image" id="winner_image_area">
+                        <div class="winner_portrait_box0" id="portrait_box0_ID">
+                            <img    class="winner_portrait0" 
+                                    id="winpic0"
+                                    src="../src/img/anon.jpg"
+                                    onclick="doImgPop('../src/img/anon.jpg')"/>
+                        </div>
+                        <div class="winner_portrait_box1" id="portrait_box1_ID">
+                            <img    class="winner_portrait1" 
+                                    id="winpic1"
+                                    src="../src/img/ovwch.jpg"
+                                    onclick="doImgPop('../src/img/ovwch.jpg')"/>
+                        </div>
+                        <div class="winner_portrait_box2" id="portrait_box2_ID">
+                            <img    class="winner_portrait2" 
+                                    id="winpic2"
+                                    src="../src/img/talon.png" 
+                                    onclick="doImgPop('../src/img/talon.png')"/>
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <audio id="audio1" src="../src/mp3/contest02_overwatch.mp3"></audio>
+                        <audio id="audio2" src="../src/mp3/contest02_talon.mp3"></audio>
+                        <audio id="audio3" src="../src/mp3/clicked1.mp3"></audio>
+                        <audio id="audio4" src="../src/mp3/clicked2.mp3"></audio> 
+                    </div>
+                    <div class="chatting">
+                        <div>
+                            <br><br>댓글 API 영역입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer><div></div></footer>
+    </div>
+</body>
+</html>
