@@ -34,6 +34,7 @@ let z;
 // radio 선택 오디오
 let p1_radioAudio;
 let p2_radioAudio;
+
 // p1_victoryAudio 승리 오디오
 let p1_victoryAudio;
 let p2_victoryAudio;
@@ -107,6 +108,20 @@ function func2(e){
         p2_radioAudio.load();
         p2_radioAudio.play();
     }
+ 
+    // gradient reset
+    s1.disabled = true;
+    s2.disabled = true;
+    s3.disabled = false;
+    
+    // portrait reset
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+
+    // audio stop
+    p1_victoryAudio.pause();
+    p2_victoryAudio.pause();
 }
 
 // 승자 저장 -   출력
@@ -114,7 +129,7 @@ function showResult(){
     p1_victoryAudio.pause();
     p2_victoryAudio.pause();
     if(m1==m2){ // 무승부
-        x.style.display = "block";	// anon 초상화
+        x.style.display = "block";	//  초상화
         y.style.display = "none";	// player1 초상화
         z.style.display = "none";	// player2 초상화
         
@@ -163,7 +178,7 @@ function winnerMP3() {
     }
 }
 
-// reset 버튼 클릭 시
+// reset 버튼 클릭
 function resetClicked(){
     
     // gradient reset
@@ -176,18 +191,78 @@ function resetClicked(){
     y.style.display = "none";
     z.style.display = "none";
 
+    // audio stop
+    p1_victoryAudio.pause();
+    p2_victoryAudio.pause();
+
     // radio reset
     for(i = 0; i < ele.length; i++) {
         if(ele[i].type == "radio") {
             ele [i] .checked = false;
         }
     }
-    m1, m2=0; winner="";
-    
+    m1, m2=0; winner="an";
     // scroll reset
     document.getElementById('contestarea').scrollIntoView();
+}
 
-    // audio stop
-    p1_victoryAudio.pause();
-    p2_victoryAudio.pause();
+// audio control part
+function control(e) {
+	let id = e.target.id;
+	if(id == "play") { // play 버튼
+		if(m1>m2){
+            p1_victoryAudio.play(); 
+
+        } else if(m1<m2){
+            p2_victoryAudio.play();
+        } 
+	}
+	else if(id == "pause") { // pause 버튼
+        if(m1>m2){
+            p1_victoryAudio.pause(); 
+        } else if(m1<m2){
+            p2_victoryAudio.pause();
+        }
+	}
+	else if(id == "replay") { // replay 버튼
+        if(m1>m2){
+            p1_victoryAudio.load(); 
+            p1_victoryAudio.play(); 
+        } else if(m1<m2){
+            p2_victoryAudio.load();
+            p2_victoryAudio.play();
+        }
+	}
+	else if(id == "vol-") { // vol- 버튼
+        
+        // 음량 0.1 감소
+        if(m1>m2){
+            p1_victoryAudio.volume -= 0.1; 
+            if(p1_victoryAudio.volume < 0.1) p1_victoryAudio.volume = 0;
+        } else if(m1<m2){
+            p2_victoryAudio.volume -= 0.1; 
+            if(p2_victoryAudio.volume < 0.1) p2_victoryAudio.volume = 0;
+        }
+	}
+	else if(id == "vol+") { // vol+ 버튼
+        
+        // 음량 0.1 증가
+        if(m1>m2){
+            p1_victoryAudio.volume += 0.1; 
+            if(p1_victoryAudio.volume > 0.9) p1_victoryAudio.volume = 1.0;
+        } else if(m1<m2){
+            p2_victoryAudio.volume += 0.1; 
+            if(p2_victoryAudio.volume > 0.9) p2_victoryAudio.volume = 1.0;
+        }
+	}
+
+	else if(id == "mute on/off") { 
+        // mute on/off 버튼
+        if(winner=="p1"){
+            p1_victoryAudio.muted = !p1_victoryAudio.muted; // 음소거 토글
+        }
+		if(m1<m2){
+            p2_victoryAudio.muted = !p2_victoryAudio.muted; // 음소거 토글
+        }
+	}
 }
