@@ -54,16 +54,17 @@
     background:yellow;
 }
 .shifting_boxes .match_ImageBox img{
-    max-width: 330px;
     height: 420px;
     object-fit: cover;
 }
-.shifting_boxes .Left_match_Imgbox>img{
+.shifting_boxes .Left_match_Imgbox img{
     margin-left:85px;
     float:left;
+    width:300px;
 }
-.shifting_boxes .Right_match_Imgbox.img{
+.shifting_boxes .Right_match_Imgbox img{
     margin-left:30px;
+    width:300px;
 }
 .shifting_boxes .Left_palyer_name{
     float:left;
