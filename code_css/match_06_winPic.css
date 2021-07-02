@@ -1,0 +1,74 @@
+/* 무승부 */
+.winner_portrait_box0{ 
+    margin-top:40px;
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:1000px;
+    height:850px;
+    line-height:850px;
+    text-align: center;
+    display:block;
+    background: #F0F0F0;
+}
+
+/* player1 */
+.winner_portrait_box1{
+    margin-top:40px;
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:1000px;
+    height:850px;
+    line-height:850px;
+    text-align: center;
+    display:none;
+}
+
+/* player2 */
+.winner_portrait_box2{
+    margin-top:40px;
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:1000px;
+    height:850px;
+    line-height:850px;
+    text-align: center;
+    display:none;
+}
+.winner_portrait_box1 img{
+    max-width:900px;
+    vertical-align: middle;
+    max-height: 750px;
+    object-fit: cover;
+}
+.winner_portrait_box2 img{
+    max-width:900px;
+    max-height: 750px;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.chatting{
+    float:left;
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    margin-top: 40px;
+    width:840px;
+    padding:30px;
+    height:700px;
+    background:#FAEBD7;
+}
+.chatting>div{
+    background:#ffe4c2;
+    height:700px;
+    width:860px;
+}

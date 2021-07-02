@@ -27,7 +27,6 @@
   background:#ccc;
 }
 
-
 @media (max-width: 1220px){
   .tabButton{ 
     font-size: 1rem;
@@ -41,7 +40,6 @@
     line-height:30px;
   }
 }
-
 
 @media (max-width: 768px){
   .tabButton{ 

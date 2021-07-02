@@ -3,14 +3,6 @@
 // 사용자가 입력한 라디오 버튼을 조회하고
 // 승리한 member의 이벤트를 보여줍니다
 
-let s1 = document.styleSheets[1];
-let s2 = document.styleSheets[2];
-let s3 = document.styleSheets[3];
-
-s1.disabled = true;
-s2.disabled = true;
-s3.disabled = true;
-
 //m1 선택 수 
 //m2 선택 수 
 let m1 = 0; 
@@ -41,12 +33,6 @@ let p2_radioNO;
 let p1_victoryAudio;
 let p2_victoryAudio;
 
-// 멤버 클래스 분류
-// 멤버 1,2 멤버 ~1, ~2 (not)
-let mem1s;
-let mem2s;
-let not1s;
-let not2s;
 
 // 문서 로드되었을 때 호출
 function init() { 
@@ -68,11 +54,6 @@ function init() {
     x = document.getElementById("portrait_box0_ID"); 
     y = document.getElementById("portrait_box1_ID"); 
     z = document.getElementById("portrait_box2_ID"); 
-
-    mem1s = document.getElementsByClassName("member1"); 
-    mem2s = document.getElementsByClassName("member2"); 
-    not1s = document.getElementsByClassName("not___1"); 
-    not2s = document.getElementsByClassName("not___2"); 
 
     // result 버튼 클릭 시
 	result_obj.addEventListener("click", showResult);
@@ -123,12 +104,6 @@ function func2(e){ //라디오버튼 클릭시 이벤트
         p2_radioNO.play();
     }
     
-    // 경기 결과 리셋
-    // gradient reset
-    s1.disabled = true;
-    s2.disabled = true;
-    s3.disabled = false;
-    
     // portrait reset
     x.style.display = "block";
     y.style.display = "none";
@@ -147,11 +122,6 @@ function showResult(){
         x.style.display = "block";	//  초상화
         y.style.display = "none";	// player1 초상화
         z.style.display = "none";	// player2 초상화
-        
-        s1.disabled = true;
-        s2.disabled = true;
-        s3.disabled = false;
-
         winner="an"; 
 
     } else if(m1>m2){ // 1번 승
@@ -160,11 +130,6 @@ function showResult(){
         y.style.display = "block";	
         z.style.display = "none";	
         document.getElementById('portrait_box1_ID').scrollIntoView();
-
-        s1.disabled = false;
-        s2.disabled = true;
-        s3.disabled = true;
-        
         winner="p1";
 
     } else if(m1<m2){// 2번 승
@@ -173,11 +138,6 @@ function showResult(){
         y.style.display = "none";	
         z.style.display = "block";	
         document.getElementById('portrait_box2_ID').scrollIntoView();
-
-        s1.disabled = true;
-        s2.disabled = false;
-        s3.disabled = true;
-
         winner="p2";
     }
 }
@@ -195,11 +155,6 @@ function winnerMP3() {
 
 // reset 버튼 클릭
 function resetClicked(){
-    
-    // gradient reset
-    s1.disabled = true;
-    s2.disabled = true;
-    s3.disabled = false;
     
     // portrait reset
     x.style.display = "block";
