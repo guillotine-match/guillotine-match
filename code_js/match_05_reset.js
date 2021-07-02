@@ -17,7 +17,8 @@ function resetClicked(){
             ele [i] .checked = false;
         }
     }
-    m1, m2=0; winner="an";
+    // 변수 리셋
+    m1=0; m2=0; winner="an";
     
     // scroll reset
     document.getElementById('contestarea').scrollIntoView();
@@ -32,5 +33,6 @@ function resetClicked(){
     current_box = sboxList.item(0); 
     current_box.style.display="block";
     matchIndex=0;
+
 }
 

@@ -21,11 +21,11 @@ function select(clsname){ //선택 버튼 (L, R) 클릭 시
     for(i = 0; i < ele.length; i++) { 
         if(clsname=='tm1'){ // 왼쪽 멤버 선택 시
             ele[matchIndex*2].checked=true;
-            m1++;
+            func();
         }
         if(clsname=='tm2'){// 오른쪽 멤버 선택 시
             ele[(matchIndex*2)+1].checked=true;
-            m2++;
+            func();
         }
     }
     go_next();

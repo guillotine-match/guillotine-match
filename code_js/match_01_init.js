@@ -24,16 +24,6 @@ function init() {
     boxShifter();
 }
 
-// 전역변수 로딩
-// import {m1,m2, ele, winner} from "./match_00_main.mjs";
-// import {result_Btn, refresh_Btn} from "./match_00_main.mjs";
-// import {portBox1, portBox2, portBox3} from "./match_00_main.mjs";
-// import {clk_sound1, clk_sound2} from "./match_00_main.mjs";
-// import {vic_sound1, vic_sound2} from "./match_00_main.mjs";
-// import {total_player, total_match} from "./match_00_main.mjs";
-// import {sboxList} from "./match_00_main.mjs";
-
-
 function toGuillotine(){
     document.getElementById('Guillotine').scrollIntoView();
 }
