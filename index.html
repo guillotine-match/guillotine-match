@@ -11,6 +11,17 @@
     
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="code_css/baseLayout.css">
+    
+    <!-- JS -->
+    <script>
+        let thunder= document.getElementById("thudner");
+        function playThunder(){
+            thunder.load();
+            thunder.play();
+        }
+        playThunder();
+    </script>
+
 </head>
 <body>
     <div id="wrap">
@@ -40,12 +51,5 @@
         <footer><div></div></footer>
     </div>
     <audio id="thudner" src="src/mp3/thunder.mp3"></audio>
-    <script>
-        let thunder= document.getElementById("thudner");
-        function playThunder(){
-            thunder.load();
-            thunder.play();
-        }
-    </script>
 </body>
 </html>
