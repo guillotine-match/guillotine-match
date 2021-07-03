@@ -55,20 +55,3 @@
     vertical-align: middle;
     object-fit: cover;
 }
-
-.chatting{
-    float:left;
-    position:relative; 
-    left:50%; 
-    transform:translateX(-50%);
-    margin-top: 100px;
-    width:840px;
-    padding:30px;
-    height:700px;
-    background:#FAEBD7;
-}
-.chatting>div{
-    background:#ffe4c2;
-    height:700px;
-    width:860px;
-}

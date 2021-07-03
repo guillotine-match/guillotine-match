@@ -15,7 +15,7 @@
     100%{background-position:100% 100%}
 }
 .contest {
-background: linear-gradient(to right, oldlace, #7FFF00);
+background: linear-gradient(to right, oldlace, #baf57f);
 background-size: 400% 400%;
 animation: AnimationName ease-out ;
 animation-duration: 5s;
