@@ -1,35 +1,39 @@
 
 .contest{
     background: oldlace;
+    
 }
 
 .battleTag{
+    position:relative; 
+    transform:translateX(-50%);
+    left:50%; 
+
+    margin-top: 100px;
+    width: 700px;
+    line-height:40px;
+    height:100px;
     background: antiquewhite;
+
     font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    
+
 }
 .battleTag_sub{
-    background: rgb(228, 215, 199);
-    font-family: 'Courier New', Courier, monospace;
-    height:40px;
-    line-height: 40px;
-    text-align: center;
-}
 
-/* textrow : questions + radioarea  */
-
-.chatting{
-    float:left;
     position:relative; 
-    left:50%; 
     transform:translateX(-50%);
-    margin-top: 40px;
-    width:840px;
-    padding:30px;
-    height:700px;
-    background:#FAEBD7;
-}
-.chatting>div{
-    background:#ffe4c2;
-    height:700px;
-    width:860px;
+    left:50%; 
+
+    width: 700px;
+    height:40px;
+    line-height:40px;
+    background: rgb(228, 215, 199);
+
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
 }

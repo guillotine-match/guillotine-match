@@ -1,57 +1,57 @@
 /* 무승부 */
 .winner_portrait_box0{ 
-    margin-top:40px;
+    margin-top:200px;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
     clear:both;
     float:left;
     width:1000px;
-    height:850px;
-    line-height:850px;
+    height:900px;
+    line-height:900px;
     text-align: center;
     display:block;
-    background: #F0F0F0;
+    background: #FAEBD7;
 }
 
 /* player1 */
 .winner_portrait_box1{
-    margin-top:40px;
+    margin-top:200px;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
     clear:both;
     float:left;
     width:1000px;
-    height:850px;
-    line-height:850px;
+    height:900px;
+    line-height:900px;
     text-align: center;
     display:none;
 }
 
 /* player2 */
 .winner_portrait_box2{
-    margin-top:40px;
+    margin-top:200px;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
     clear:both;
     float:left;
     width:1000px;
-    height:850px;
-    line-height:850px;
+    height:900px;
+    line-height:900px;
     text-align: center;
     display:none;
 }
 .winner_portrait_box1 img{
     max-width:900px;
     vertical-align: middle;
-    max-height: 750px;
+    max-height: 900px;
     object-fit: cover;
 }
 .winner_portrait_box2 img{
     max-width:900px;
-    max-height: 750px;
+    max-height: 900px;
     vertical-align: middle;
     object-fit: cover;
 }
@@ -61,7 +61,7 @@
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
-    margin-top: 40px;
+    margin-top: 100px;
     width:840px;
     padding:30px;
     height:700px;

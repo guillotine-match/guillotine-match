@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="battleTag_sub">
-                    <h3>더 강력한 영웅을 가진 집단은?</h3>
+                    <h3>더 강력한 영웅 집단은?</h3>
                 </div>
 
                 <div class="imgbundle">
@@ -120,7 +120,7 @@
                     <!-- shift_02 -->
                     <div class="shifting_boxes" id="shift_02">
                         <div class="fight_about">
-                            양손 가득 shotter
+                            양손무기
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
@@ -199,7 +199,7 @@
                     <!--  shift_05 -->
                     <div class="shifting_boxes" id="shift_05">
                         <div class="fight_about">
-                            미모냐? 성능이냐?
+                            미모? 성능?
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
@@ -295,8 +295,11 @@
                 </div>
 
                 <div class="textRow" id="QuickPlay">
-                    <div class="match_title2">
+                    <div class="main_title2">
                         빠른 대전
+                    </div>
+                    <div class="sub_title2">
+                        quick play
                     </div>
                     <div class="questions" >
                         &nbsp;1. 솔져 vs 둠피스트<hr>
@@ -337,11 +340,12 @@
                             <li><input type="radio" name="qstion7" onclick="func(this.name); func2(this.className);" class="member2" id="n6"><label for="n6">바티스트</label></li>
                         </div><hr>
                     </div>
+                    <div class="Quick_play">
+                        <button class="buttons" onclick="showResult(); winnerMP3()" id="resultbutton">승부 보기</button>
+                        <button class="buttons" onclick="resetClicked()"            id="newPagebtn">  경기 리셋</button>
+                    </div>
                 </div>
-                <div class="winner_text">
-                    <button class="buttons" onclick="showResult(); winnerMP3()" id="resultbutton">승부 보기</button>
-                    <button class="buttons" onclick="resetClicked()"            id="newPagebtn">  경기 리셋</button>
-                </div>
+                
                 <div class="winner_image" id="winner_image_area">
                     <div class="winner_portrait_box0" id="portrait_box0_ID">
                         <img    class="winner_portrait0" 
@@ -376,7 +380,7 @@
                         </div>
                     </div>
                 </div>
-                    <div class="chatting" style="display:none;">
+                    <div class="chatting">
                         <div>
                             <br><br>댓글 API 영역입니다.
                         </div>
