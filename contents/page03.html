@@ -379,18 +379,31 @@
                             <button id="vol-" onclick="control(event)">vol-</button>
                             <button id="vol+" onclick="control(event)">vol+</button>
                             <button id="mute on/off" onclick="control(event)">mute</button>
-                            <audio id="vic_sound1" src="../src/mp3/contest02_overwatch.mp3"></audio>
-                            <audio id="vic_sound2" src="../src/mp3/contest02_talon.mp3"></audio>
-                            <audio id="clk_sound1" src="../src/mp3/clicked1.mp3"></audio>
-                            <audio id="clk_sound2" src="../src/mp3/clicked2.mp3"></audio> 
+                            
                         </div>
                     </div>
                 </div>
-                    <div class="chatting">
-                        <div>
-                            <br><br>댓글 API 영역입니다.
-                        </div>
+                <div style="display:none">
+
+                    <audio id="vic_sound1" src="../src/mp3/page03/overwatch.mp3"></audio>
+                    <audio id="vic_sound2" src="../src/mp3/page03/talon.mp3"></audio>
+
+                    <!-- 선택 음원 -->
+                    <audio id="selected1" src="../src/mp3/selected1.mp3"></audio> 
+                    <audio id="selected2" src="../src/mp3/selected2.mp3"></audio> 
+
+                    <!-- 매칭 앵커로 이동 -->
+                    <audio id="anchor" src="../src/mp3/anchor.mp3"></audio> 
+
+                    <!-- 뒤로가기 - 건너뛰기 -->
+                    <audio id="back_forward_1" src="../src/mp3/back_forward_1.wav"></audio> 
+                    <audio id="back_forward_2" src="../src/mp3/back_forward_2.wav"></audio> 
+                </div>
+                <div class="chatting">
+                    <div>
+                        <br><br>댓글 API 영역입니다.
                     </div>
+                </div>
                 </div>
             </div>
         </article>

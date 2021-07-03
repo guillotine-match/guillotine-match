@@ -8,12 +8,26 @@ function init() {
     result_Btn  = document.getElementById("resultbutton");
     refresh_Btn = document.getElementById('newPagebtn');
 
-    clk_sound1 = document.getElementById("clk_sound1");
-    clk_sound2 = document.getElementById("clk_sound2");
+    // sound ------- guillotine/radio : select sound
+    selected1 = document.getElementById("selected1");
+    selected2 = document.getElementById("selected2");
 
+    // sound ------- anchor move button
+    anchor = document.getElementById("anchor");
+
+    // sound ------- victory_sound
     vic_sound1 = document.getElementById("vic_sound1");
     vic_sound2 = document.getElementById("vic_sound2");
 
+    // sound ------- reset + match
+    reset_sound = document.getElementById("rewind");
+    match_sound = document.getElementById("bladecut");
+
+    // sound ------- guillotine : back - forward
+    back_forward_1 = document.getElementById("back_forward_1");
+    back_forward_2 = document.getElementById("back_forward_2");
+    
+    // portraitBoxes
     portBox1 = document.getElementById("portrait_box0_ID"); 
     portBox2 = document.getElementById("portrait_box1_ID"); 
     portBox3 = document.getElementById("portrait_box2_ID"); 
@@ -31,9 +45,13 @@ function init() {
 }
 
 function toGuillotine(){
+    anchor.load();
+    anchor.play();
     document.getElementById('Guillotine').scrollIntoView();
 }
 
 function toQuickplay(){
+    anchor.load();
+    anchor.play();
     document.getElementById('QuickPlay').scrollIntoView();
 }

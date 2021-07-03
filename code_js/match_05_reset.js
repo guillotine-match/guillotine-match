@@ -39,5 +39,8 @@ function resetClicked(){
     document.styleSheets[10].disabled = true; 
     document.styleSheets[11].disabled = true; 
 
+    //  리셋 소리
+    anchor.load();
+    anchor.play();
 }
 

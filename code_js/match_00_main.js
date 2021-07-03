@@ -17,13 +17,7 @@ let portBox1;
 let portBox2;
 let portBox3;
 
-// click_sound for radio select
-let clk_sound1;
-let clk_sound2;
 
-// victory_sound
-let vic_sound1;
-let vic_sound2;
 
 // shift Box 목록 : item 값 주고 사용 -> display off 할 수 있게
 let sboxList;
@@ -37,3 +31,18 @@ let grad1;
 let grad2;
 let grad_reset;
 
+
+// sound ------- guillotine/radio : select sound
+let selected1;
+let selected2;
+
+// sound ------- anchor move button
+let anchor;
+
+// sound ------- victory_sound
+let vic_sound1;
+let vic_sound2;
+
+// sound ------- guillotine : back - forward
+let back_forward_1;
+let back_forward_2;

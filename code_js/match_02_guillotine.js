@@ -22,17 +22,28 @@ function select(clsname){ //선택 버튼 (L, R) 클릭 시
         if(clsname=='tm1'){ // 왼쪽 멤버 선택 시
             ele[matchIndex*2].checked=true;
             func();
+            selected1.load();
+            selected1.play();
         }
         if(clsname=='tm2'){// 오른쪽 멤버 선택 시
             ele[(matchIndex*2)+1].checked=true;
             func();
+            selected2.load();
+            selected2.play();
         }
     }
-    go_next();
+    if(matchIndex<(total_match-1)){
+        matchIndex++;
+    } else if (matchIndex==total_match){
+        // 경기 종료 : 결과화면으로 이동
+    }
+    boxShifter();
 }
 
 
 function go_next(){
+    back_forward_1.load();
+    back_forward_1.play();
     if(matchIndex<(total_match-1)){
         matchIndex++;
     } else if (matchIndex==total_match){
@@ -42,6 +53,8 @@ function go_next(){
 }
 
 function go_back(){
+    back_forward_2.load();
+    back_forward_2.play();
     if(matchIndex>0){
         matchIndex--;
     }

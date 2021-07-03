@@ -41,6 +41,10 @@ function showResult(){
 }
 
 function winnerMP3() {
+    
+    anchor.load();
+    anchor.play();
+
     if(winner=='p1'){
         vic_sound1.load();
         vic_sound1.play();

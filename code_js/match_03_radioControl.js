@@ -24,12 +24,12 @@ function func2(e){ //라디오버튼 클릭시 이벤트
     
     // 라디오버튼 클릭음
     if(e=="member1"){
-        clk_sound1.load();
-        clk_sound1.play();
+        selected1.load();
+        selected1.play();
     }
     else if(e=="member2"){
-        clk_sound2.load();
-        clk_sound2.play();
+        selected2.load();
+        selected2.play();
     } 
     // portrait reset
     portBox1.style.display = "block";
