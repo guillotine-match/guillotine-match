@@ -34,5 +34,10 @@ function resetClicked(){
     current_box.style.display="block";
     matchIndex=0;
 
+    //gradient disable
+    document.styleSheets[9].disabled = true; 
+    document.styleSheets[10].disabled = true; 
+    document.styleSheets[11].disabled = true; 
+
 }
 

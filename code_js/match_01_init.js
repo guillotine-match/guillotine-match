@@ -20,6 +20,12 @@ function init() {
     
     sboxList = document.getElementsByClassName("shifting_boxes");
     total_match = sboxList.length;
+
+    // gradient CSS disable
+    document.styleSheets[9].disabled = true; 
+    document.styleSheets[10].disabled = true; 
+    document.styleSheets[11].disabled = true; 
+
     // 처음 박스 시프터 함수 작동 시에는 1번 외 shiftbox 를 display none 한다
     boxShifter();
 }

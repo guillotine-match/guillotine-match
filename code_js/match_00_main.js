@@ -31,3 +31,9 @@ let sboxList;
 // 참가자, 매칭 횟수
 let total_match;
 let total_player = total_match*2;
+
+// gradient settings
+let grad1;
+let grad2;
+let grad_reset;
+

@@ -39,4 +39,8 @@ function func2(e){ //라디오버튼 클릭시 이벤트
     // audio stop
     vic_sound1.pause();
     vic_sound2.pause();
+
+    document.styleSheets[9].disabled = true; //player1
+    document.styleSheets[10].disabled = true; //player2
+    document.styleSheets[11].disabled = false; //reset css
 }
