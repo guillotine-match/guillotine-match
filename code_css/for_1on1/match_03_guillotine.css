@@ -1,0 +1,155 @@
+
+/* 새로 파일 까자 */
+/* 대형 박스 하나 */
+.guillotine_Match{
+    position:relative; 
+    transform:translateX(-50%);
+    left:50%; 
+    float:left;
+    margin-top: 140px;
+    width:94%;
+    height:870px;
+    background:burlywood;
+    font-size: 25px;
+    text-align: center;
+}
+/* 내부 가로 창 하나 */
+.match_title{
+    position:relative; 
+    transform:translateX(-50%);
+    left:50%; 
+    float:left;
+    width:100%;
+    height:70px;
+    line-height: 70px;
+    background:burlywood;
+    font-size: 25px;
+}
+
+/* 사용자 선택 시 계속해서 교체되는 영역 */
+.shifting_boxes{
+    position:relative; 
+    transform:translateX(-50%);
+    left:50%; 
+    float:left;
+    width:100%;
+    height:645px;
+}
+.shifting_boxes .fight_about{
+    position:relative; 
+    transform:translateX(-50%);
+    left:50%; 
+    float:left;
+    width:100%;
+    height:60px;
+    line-height: 60px;
+    background: wheat;
+    font-family:  DotumChe;
+}
+.shifting_boxes .match_ImageBox{
+    position:relative; 
+    transform:translateX(-50%);
+    left:50%; 
+    float:left;
+    width:100%;
+    height:510px;
+    background:rgb(248, 233, 214);
+}
+.shifting_boxes .match_ImageBox img{
+    height: 510px;
+    object-fit: cover;
+}
+.shifting_boxes .Left_match_Imgbox img{
+    margin-left:3%;
+    float:left;
+    width:45%;
+}
+.shifting_boxes .Right_match_Imgbox img{
+    margin-left:3%;
+    width:45%;
+    margin-right:3%;
+
+}
+.shifting_boxes .Left_palyer_name{
+    float:left;
+    width:50%;
+    height:75px;
+    line-height: 75px;
+    background: beige;
+}
+.shifting_boxes .Right_palyer_name{
+    float:left;
+    width:50%;
+    height:75px;
+    line-height: 75px;
+    background:beige;
+}
+
+.area_for_6_button{
+    position:relative; 
+    transform:translateX(-50%);
+    left:50%; 
+    float:left;
+    width:100%;
+    height:155px;
+}
+
+.select_section>div>button{
+    font-size: 20px;
+    width:30%;
+    line-height: 50px;
+    height:50px;
+}
+
+.select_team1{
+    float:left;
+    width:50%;
+    height:75px;
+    line-height: 75px;
+    background: wheat;
+}
+
+.select_team2{
+    float:left;
+    width:50%;
+    height:75px;
+    line-height: 75px;
+    background:wheat;
+}
+.match_control_area{
+    float:left;
+    width:100%;
+    height:80px;
+    line-height: 80px;
+    background:burlywood;
+}
+.match_control_area>button{
+    font-size: 20px;
+    width:15%;
+    line-height: 50px;
+    height:50px;
+    margin-left:3%;
+    margin-right:3%;
+}
+
+.match_controller>img{
+    width:20px;
+}
+
+
+@media (max-width: 1220px){
+    .guillotine_Match{
+        margin-top: 140px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px){
+    .guillotine_Match{
+        margin-top: 600px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px){
+}

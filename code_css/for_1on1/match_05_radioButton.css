@@ -1,0 +1,37 @@
+
+.tabButton{ 
+  margin:0; padding:0;
+  font-size: 1.5rem;
+  width:100%; 
+  margin: 0 auto; 
+  position:relative; 
+}
+.tabButton li{
+  display:  inline-block;
+  width:50%;
+  float:left;  
+  text-align:center; 
+  background :#f9f9f9;
+  line-height:40px;
+}
+.tabButton input{display:none;}
+/* 라디오 버튼 안보이게 */
+
+.tabButton input:checked ~ label{
+  background:#ccc;
+}
+
+@media (max-width: 1220px){
+  .tabButton{ 
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px){
+  .tabButton{ 
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px){
+}

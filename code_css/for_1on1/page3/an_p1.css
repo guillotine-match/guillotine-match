@@ -18,13 +18,13 @@
 .contest {
 /* background: linear-gradient(to right, oldlace,chartreuse ); */
 
-background: linear-gradient(27deg, rgb(223, 135, 210),rgb(223, 135, 210), rgba(204, 235, 133, 0.905), oldlace,oldlace,rgba(144, 181, 236, 0.844),rgba(144, 181, 236, 0.844));
+background: linear-gradient(27deg, rgb(223, 135, 210), rgba(204, 235, 133, 0.905),oldlace,rgba(144, 181, 236, 0.844));
 
 
 
 background-size: 400% 400%;
 animation: AnimationName;
-animation-duration: 9s;
+animation-duration: 15s;
 animation-direction: alternate;
 animation-iteration-count :infinite;
 height: 100vh;

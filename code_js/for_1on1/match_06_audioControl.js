@@ -2,6 +2,8 @@
 function control(e) {
 	let id = e.target.id;
 	if(id == "play") { // play 버튼
+        audio_click.load();        
+        audio_click.play();
 		if(m1>m2){
             vic_sound1.play(); 
 
@@ -10,6 +12,8 @@ function control(e) {
         } 
 	}
 	else if(id == "pause") { // pause 버튼
+        audio_click.load();        
+        audio_click.play();
         if(m1>m2){
             vic_sound1.pause(); 
         } else if(m1<m2){
@@ -17,6 +21,8 @@ function control(e) {
         }
 	}
 	else if(id == "replay") { // replay 버튼
+        audio_click.load();        
+        audio_click.play();
         if(m1>m2){
             vic_sound1.load(); 
             vic_sound1.play(); 
@@ -26,7 +32,8 @@ function control(e) {
         }
 	}
 	else if(id == "vol-") { // vol- 버튼
-        
+        audio_click.load();        
+        audio_click.play();
         // 음량 0.1 감소
         if(m1>m2){
             vic_sound1.volume -= 0.1; 
@@ -37,7 +44,8 @@ function control(e) {
         }
 	}
 	else if(id == "vol+") { // vol+ 버튼
-        
+        audio_click.load();        
+        audio_click.play();
         // 음량 0.1 증가
         if(m1>m2){
             vic_sound1.volume += 0.1; 
@@ -49,6 +57,8 @@ function control(e) {
 	}
 
 	else if(id == "mute on/off") { 
+        audio_click.load();        
+        audio_click.play();
         // mute on/off 버튼
         if(winner=="p1"){
             vic_sound1.muted = !vic_sound1.muted; // 음소거 토글

@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-		let target;
-		target = document.getElementsByClassName("target");
-		
+<style>
+	body{
+	margin: 0;
+	padding:0px;
+	width:1000px;
+	height:500px;
+	}
+	.page1{
+	width:1000px;
+	height:500px;
+	}
+	.page2 {
+	width: 100vw;
+	height: 100vh;
+	background: pink;
+	font-size: 10vw;
+	display:none;
+	}
 
-		let score = 3;
-		let aaa = document.getElementsByClassName('target')[score - 1];
-		
-		var aaa_item = aaa.item;
-		aaa_item.style.border = "1px solid #0000ff"; }
-
-		// var section1s = document.getElementsByClassName("section1"); 
-		// for( var i = 0; i < section1s.length; i++ ){ 
-		// 	var section1 = section1s.item(i);
-		// 	section1.style.border = "1px solid #0000ff"; }
-	</script>
+</style>
 </head>
 <body>
-	<H1>
-		연속된 class 요소 몇 번째 것인지 구해보기
-	</H1>
-
-	<button class="target" name="111" type="radio">Yes</button>
-	<button class="target" name="111" type="radio">nop</button><br>
-	<button class="target" name="222" type="radio">Yes</button>
-	<button class="target" name="222" type="radio">nop</button><br>
-	<button class="target" name="333" type="radio">Yes</button>
-	<button class="target" name="333" type="radio">nop</button><br>
-
-
+	<div class="page1" id="page1">
+		<button onclick="toggle1();">toggle1</button>
+	</div>
+	<div class="page2" id="page2">as
+		<button onclick="toggle2();">toggle2</button>
+	</div>
 </body>
+<script>
+
+	let page1 = document.getElementById("page1");
+	let page2 = document.getElementById("page2");
+
+	function toggle1(){
+		page1.style.display='none';
+		page2.style.display='block';
+	}
+
+	function toggle2(){
+		page1.style.display='block';
+		page2.style.display='none';
+	}
+</script>
 </html>

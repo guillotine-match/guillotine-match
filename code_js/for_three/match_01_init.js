@@ -27,6 +27,10 @@ function init() {
     back_forward_1 = document.getElementById("back_forward_1");
     back_forward_2 = document.getElementById("back_forward_2");
     
+    // sound ------- audio_click
+    audio_click = document.getElementById("audio_click");
+
+    
     // portraitBoxes
     portBox1 = document.getElementById("portrait_box0_ID"); 
     portBox2 = document.getElementById("portrait_box1_ID"); 
