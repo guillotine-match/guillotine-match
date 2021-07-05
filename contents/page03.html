@@ -346,17 +346,20 @@
                     </div>
                     <div class="Quick_play" id="QuickID">
                         <button class="Quick_play_buttons" onclick="showResult(); winnerMP3()" id="resultbutton">승부 보기</button>
-                        <button class="Quick_play_buttons" onclick="resetClicked(this.id)"            id="resetQ">  경기 리셋</button>
+                        <button class="Quick_play_buttons" onclick="resetClicked(this.id)"     id="resetQ">      경기 리셋</button>
                     </div>
                 </div>
-                
+
+                <div class="winner_portrait_box0" id="portrait_box0_ID">
+                    <img    class="winner_portrait0" 
+                            id="winpic0"
+                            src="../src/img/anon.jpg"
+                            onclick="doImgPop('../src/img/anon.jpg')"/>
+                </div>
+
                 <div class="winner_image" id="winner_image_area">
-                    <div class="winner_portrait_box0" id="portrait_box0_ID">
-                        <img    class="winner_portrait0" 
-                                id="winpic0"
-                                src="../src/img/anon.jpg"
-                                onclick="doImgPop('../src/img/anon.jpg')"/>
-                    </div>
+                    <div class="Overwatch win !!!" id="team1ID"></div>
+                    <div class="Talon win !!!"     id="team2ID"></div>
                     <div class="winner_portrait_box1" id="portrait_box1_ID">
                         <img    class="winner_portrait1" 
                                 id="winpic1"
@@ -369,37 +372,32 @@
                                 src="../src/img/page03/vic_team2.png" 
                                 onclick="doImgPop('../src/img/page03/vic_team2.png')"/>
                     </div>
-                    <div class="audio_area">
+                    <div class="audio_area" id="audio_area_ID">
                         <div class="audio_area_inside">
-                            <button id="play" onclick="control(event)">play</button>
-                            <button id="pause" onclick="control(event)">pause</button>
-                            <button id="replay" onclick="control(event)">replay</button>
+                            <button id="play" onclick="control(event)">></button>
+                            <button id="pause" onclick="control(event)">||</button>
+                            <button id="replay" onclick="control(event)">C</button><br>
                             <button id="vol-" onclick="control(event)">vol-</button>
                             <button id="vol+" onclick="control(event)">vol+</button>
-                            <button id="mute on/off" onclick="control(event)">mute</button>
-                            <button class="match_controller" onclick="resetClicked(this.id)" id="resetAll">초기화</button>
+                            <button id="mute on/off" onclick="control(event)">(/)</button><br>
+                            <button class="match_controller" onclick="resetClicked(this.id)" id="resetAll">게임 리셋</button>
                         </div>
                     </div>
                 </div>
                 <div style="display:none">
-
+                    <!-- 승리 음원 -->
                     <audio id="vic_sound1" src="../src/mp3/page03/overwatch.mp3"></audio>
                     <audio id="vic_sound2" src="../src/mp3/page03/talon.mp3"></audio>
-
                     <!-- 선택 음원 -->
                     <audio id="selected1" src="../src/mp3/selected1.mp3"></audio> 
                     <audio id="selected2" src="../src/mp3/selected2.mp3"></audio> 
-
                     <!-- 매칭 앵커로 이동 -->
                     <audio id="anchor" src="../src/mp3/anchor.mp3"></audio> 
-
                     <!-- 뒤로가기 - 건너뛰기 -->
                     <audio id="back_forward_1" src="../src/mp3/back_forward_1.wav"></audio> 
                     <audio id="back_forward_2" src="../src/mp3/back_forward_2.wav"></audio> 
-                    
                     <!-- 오디오 컨트롤러 -->
                     <audio id="audio_click" src="../src/mp3/audio_click.mp3"></audio> 
-                    
                 </div>
                 <div class="chatting">
                     <div>

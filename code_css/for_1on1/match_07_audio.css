@@ -1,24 +1,35 @@
 .audio_area{
-    margin-top: -100px;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
     clear:both;
     float:left;
-    width:1000px;
-
+    font-weight: bold;
     text-align: center;
     display:block;
-    border:wheat;
+    border:burlywood solid;
+    border-radius: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .audio_area_inside{
-padding:30px;
+    padding:10px;
 }
 .audio_area_inside>button{
     width:100px;
-    height:30px;
+    margin-bottom: 10px;
+    height:40px;
+    line-height:40px;
+    font-weight: bold;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    background:whitesmoke ;
+    background:burlywood ;
     color:black;
+}
+.audio_area_inside button:nth-child(9){
+    width:310px;
+    height:55px;
+    line-height:55px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0px;
 }

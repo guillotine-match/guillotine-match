@@ -5,11 +5,24 @@ function showResult(){
     vic_sound1.pause();
     vic_sound2.pause();
 
+    let mem1 = document.getElementById('team1ID');
+    let mem2 = document.getElementById('team2ID');
+    
+    mem1.innerHTML = mem1.className;
+    mem2.innerHTML = mem2.className;
+    
     if(m1==m2){ // 무승부
         portBox1.style.display = "block";	//  초상화
         portBox2.style.display = "none";	// player1 초상화
         portBox3.style.display = "none";	// player2 초상화
         winner="an"; 
+        
+        // 승자 텍스트
+        mem1.style.display = "none";
+        mem2.style.display = "none";
+        
+        // audio display
+        audio_area_ID.style.display = "none";
 
         document.styleSheets[1].disabled = true; //player1
         document.styleSheets[2].disabled = true; //player2
@@ -22,6 +35,14 @@ function showResult(){
         document.getElementById('portrait_box1_ID').scrollIntoView();
         winner="p1";
 
+        // 승자 텍스트
+        mem1.style.display = "block";
+        mem2.style.display = "none";
+        
+        // audio display
+        audio_area_ID.style.display = "block";
+
+        // stylesheet on/off
         document.styleSheets[1].disabled = false; //player1
         document.styleSheets[2].disabled = true; //player2
 
@@ -31,7 +52,15 @@ function showResult(){
         portBox3.style.display = "block";	
         document.getElementById('portrait_box2_ID').scrollIntoView();
         winner="p2";
-
+        
+        // 승자 텍스트'
+        mem1.style.display = "none";
+        mem2.style.display = "block";
+        
+        // audio display
+        audio_area_ID.style.display = "block";
+        
+        // stylesheet on/off
         document.styleSheets[1].disabled = true; //player1
         document.styleSheets[2].disabled = false; //player2
     }

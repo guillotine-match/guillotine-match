@@ -43,5 +43,17 @@ function resetClicked(btn_id){
 
     // scroll reset
     if(btn_id=='resetAll'){document.getElementById('Guillotine').scrollIntoView();} 
+
+    //승리 텍스트 reset
+    let mem1 = document.getElementById('team1ID');
+    let mem2 = document.getElementById('team2ID');
+    mem1.innerHTML = mem1.className;
+    mem2.innerHTML = mem2.className;
+    mem1.style.display = "none";
+    mem2.style.display = "none";
+
+    // audio display none
+    audio_area_ID = document.getElementById("audio_area_ID"); 
+    audio_area_ID.style.display="none";
 }
 

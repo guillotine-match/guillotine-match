@@ -24,3 +24,11 @@
     height: 100vh;
     text-align: center;
 }
+
+#team2ID {
+    color:whitesmoke;
+    font-style: italic;
+}
+.audio_area{
+    margin-top: -60px;
+}

@@ -36,6 +36,10 @@ function init() {
     portBox2 = document.getElementById("portrait_box1_ID"); 
     portBox3 = document.getElementById("portrait_box2_ID"); 
     
+    // audio display 
+    audio_area_ID = document.getElementById("audio_area_ID"); 
+    audio_area_ID.style.display="none";
+    
     sboxList = document.getElementsByClassName("shifting_boxes");
     total_match = sboxList.length;
 

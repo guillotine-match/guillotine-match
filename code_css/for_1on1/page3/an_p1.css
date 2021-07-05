@@ -32,3 +32,10 @@ text-align: center;
 animation-timing-function: linear;
 }
 
+#team1ID {
+    color:red;
+    font-style: italic;
+}
+.audio_area{
+    margin-top: -90px;
+}

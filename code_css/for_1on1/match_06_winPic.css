@@ -1,17 +1,46 @@
-/* 무승부 */
+#team1ID {
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    width:96%;
+    float:left;
+    margin-top: 200px;
+    margin-bottom: -300px;
+    font-size: 40px;
+    text-align: center;
+    height:100px;
+    line-height:100px;
+    display:none;
+}
+#team2ID {
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    width:96%;
+    float:left;
+    margin-top: 200px;
+    margin-bottom: -300px;
+    font-size: 40px;
+    text-align: center;
+    height:100px;
+    line-height:100px;
+    display:none;
+}
+/* anon */
 .winner_portrait_box0{ 
     margin-top:200px;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
-    clear:both;
     float:left;
-    width:96%;
-    height:900px;
-    line-height:900px;
+    width:40%;
+    height:400px;
+    line-height:400px;
     text-align: center;
     display:block;
+    border-radius: 7px;
     background: #FAEBD7;
+    border:solid #e9cdaa;
 }
 
 /* player1 */
@@ -42,6 +71,13 @@
     line-height:900px;
     text-align: center;
     display:none;
+}
+
+.winner_portrait_box0 img{
+    max-width:96%;
+    vertical-align: middle;
+    max-height: 900px;
+    object-fit: cover;
 }
 .winner_portrait_box1 img{
     max-width:96%;
