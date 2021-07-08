@@ -5,7 +5,6 @@
     width:96%;
     float:left;
     margin-top: 200px;
-    margin-bottom: -300px;
     font-size: 40px;
     text-align: center;
     height:100px;
@@ -19,13 +18,14 @@
     width:96%;
     float:left;
     margin-top: 200px;
-    margin-bottom: -300px;
     font-size: 40px;
     text-align: center;
     height:100px;
     line-height:100px;
     display:none;
 }
+
+
 /* anon */
 .winner_portrait_box0{ 
     margin-top:200px;
@@ -39,13 +39,10 @@
     text-align: center;
     display:block;
     border-radius: 7px;
-    background: #FAEBD7;
-    border:solid #e9cdaa;
+
 }
 
-/* player1 */
 .winner_portrait_box1{
-    margin-top:200px;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
@@ -56,11 +53,10 @@
     line-height:900px;
     text-align: center;
     display:none;
+
 }
 
-/* player2 */
 .winner_portrait_box2{
-    margin-top:200px;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
@@ -74,20 +70,133 @@
 }
 
 .winner_portrait_box0 img{
-    max-width:96%;
+    max-width:100%;
     vertical-align: middle;
     max-height: 900px;
     object-fit: cover;
+    background: #FAEBD7;
+    border:solid #e9cdaa;
+    border-radius: 10px;
 }
 .winner_portrait_box1 img{
-    max-width:96%;
+    max-width:100%;
     vertical-align: middle;
     max-height: 900px;
     object-fit: cover;
+    border-radius: 10px;
 }
 .winner_portrait_box2 img{
-    max-width:96%;
+    width:100%;
     max-height: 900px;
     vertical-align: middle;
     object-fit: cover;
+    border-radius: 10px;
 }
+
+
+@media (max-width: 1220px){
+    #team1ID {
+        font-size: 30px;
+        height:70px;
+        line-height:70px;
+    }
+    #team2ID {
+        font-size: 30px;
+        height:70px;
+        line-height:70px;
+    }
+    
+    .winner_portrait_box0{ 
+        transform:translateX(-50%);
+        width:40%;
+        height:400px;
+        line-height:400px;
+    }
+
+    .winner_portrait_box1{
+        margin-bottom:250px;
+        width:100%;
+        height:600px;
+        line-height:600px;
+    }
+
+    .winner_portrait_box2{
+        margin-bottom:250px;
+        width:100%;
+        height: 600px;
+        line-height:600px;
+    }
+}
+
+@media (max-width: 768px){
+
+    #team1ID {
+        font-size: 30px;
+        height:70px;
+        line-height:70px;
+    }
+    #team2ID {
+        font-size: 30px;
+        height:70px;
+        line-height:70px;
+    }
+    
+    .winner_portrait_box0{ 
+        transform:translateX(-50%);
+        width:40%;
+        height:400px;
+        line-height:400px;
+    }
+
+    .winner_portrait_box1{
+        margin-top:-30px;
+        margin-bottom:50px;
+        width:100%;
+        height:600px;
+        line-height:600px;
+    }
+
+    .winner_portrait_box2{
+        margin-top:-30px;
+        margin-bottom:50px;
+        width:100%;
+        height: 600px;
+        line-height:600px;
+    }
+}
+
+@media (max-width: 480px){
+
+    #team1ID {
+        font-size: 30px;
+        height:70px;
+        line-height:70px;
+    }
+    #team2ID {
+        font-size: 30px;
+        height:70px;
+        line-height:70px;
+    }
+    
+    .winner_portrait_box0{ 
+        transform:translateX(-50%);
+        width:40%;
+        height:400px;
+        line-height:400px;
+    }
+
+    .winner_portrait_box1{
+        margin-top:-100px;
+        width:100%;
+        height:600px;
+        line-height:600px;
+    }
+
+    .winner_portrait_box2{
+        margin-top:-100px;
+        width:100%;
+        height: 600px;
+        line-height:600px;
+    }
+}
+
