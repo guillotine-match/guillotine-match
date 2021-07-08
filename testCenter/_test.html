@@ -1,0 +1,80 @@
+<link rel="stylesheet" type="text/css" href="test1.css">
+
+<div class="cls">
+    origin : 그린 (기본) <br>
+    test 2 : 레드로 변경 <br>
+    test 3 : 블루로 변경 <br>
+    <button onclick="origin()">원본</button>
+    <button onclick="clk1()">test2</button>
+    <button onclick="clk2()">test3</button>
+</div>
+
+<script>
+    function origin(){
+        
+        var linkNode = document.getElementsByTagName('link')[0];
+        linkNode.parentNode.removeChild(linkNode);
+
+        
+        var cssId = 'myCss3';  // you could encode the css path itself to generate id..
+        if (!document.getElementById(cssId))
+        {
+            var head  = document.getElementsByTagName('head')[0];
+            var link  = document.createElement('link');
+            link.id   = cssId;
+            link.rel  = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'test1.css';
+            link.media = 'all';
+            head.appendChild(link);
+        }   
+
+    }
+
+    function clk1(){
+
+        var linkNode = document.getElementsByTagName('link')[0];
+            linkNode.parentNode.removeChild(linkNode);   
+
+
+        var cssId = 'myCss1';  // you could encode the css path itself to generate id..
+        if (!document.getElementById(cssId))
+        {
+            var head  = document.getElementsByTagName('head')[0];
+            var link  = document.createElement('link');
+            link.id   = cssId;
+            link.rel  = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'test2.css';
+            link.media = 'all';
+            head.appendChild(link);
+
+                     
+        }
+    }
+
+    function clk2(){
+
+        
+        var linkNode = document.getElementsByTagName('link')[0];
+            linkNode.parentNode.removeChild(linkNode);   
+
+            
+        var cssId = 'myCss2';  // you could encode the css path itself to generate id..
+        if (!document.getElementById(cssId))
+        {
+            var head  = document.getElementsByTagName('head')[0];
+            var link  = document.createElement('link');
+            link.id   = cssId;
+            link.rel  = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'test3.css';
+            link.media = 'all';
+            head.appendChild(link);
+ 
+        }
+    }
+
+
+
+</script>

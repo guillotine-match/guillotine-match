@@ -40,6 +40,19 @@ function func2(e){ //라디오버튼 클릭시 이벤트
     vic_sound1.pause();
     vic_sound2.pause();
 
-    document.styleSheets[1].disabled = true; //player1
-    document.styleSheets[2].disabled = true; //player2
+    // gradient CSS loading (reset)
+    var linkNode = document.getElementsByTagName('link')[11];
+    linkNode.parentNode.removeChild(linkNode);
+    var cssId = 'myCss1';
+    if (!document.getElementById(cssId))
+    {
+        var head  = document.getElementsByTagName('head')[0];
+        var link  = document.createElement('link');
+        link.id   = cssId;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../code_css/for_1on1/page3/_reset.css';
+        link.media = 'all';
+        head.appendChild(link);
+    }  
 }
