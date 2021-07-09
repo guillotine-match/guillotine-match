@@ -33,7 +33,7 @@
     left:50%; 
     float:left;
     width:100%;
-    height:645px;
+    height:710px;
 }
 .shifting_boxes .fight_about{
     position:relative; 
@@ -52,11 +52,11 @@
     left:50%; 
     float:left;
     width:100%;
-    height:510px;
+    height:585px;
     background:rgb(248, 233, 214);
 }
 .shifting_boxes .match_ImageBox img{
-    height: 510px;
+    height: 585px;
     object-fit: cover;
 }
 .shifting_boxes .Left_match_Imgbox img{
@@ -93,28 +93,6 @@
     height:155px;
 }
 
-.select_section>div>button{
-    font-size: 20px;
-    width:65%;
-    line-height: 50px;
-    height:50px;
-}
-
-.select_team1{
-    float:left;
-    width:50%;
-    height:75px;
-    line-height: 75px;
-    background: wheat;
-}
-
-.select_team2{
-    float:left;
-    width:50%;
-    height:75px;
-    line-height: 75px;
-    background:wheat;
-}
 .match_control_area{
     float:left;
     width:100%;
@@ -181,25 +159,11 @@
     .area_for_6_button{
         height:135px;
     }
-    .select_team1{
-        height:55px;
-        line-height: 55px;
-    }
-    
-    .select_team2{
-        height:55px;
-        line-height: 55px;
-    }
     .match_control_area{
         height:55px;
         line-height: 55px;
     }
-    .select_section>div>button{
-        font-size: 20px;
-        width:65%;
-        line-height: 40px;
-        height:40px;
-    }
+
     .match_control_area>button{
         font-size: 20px;
         width:17%;
