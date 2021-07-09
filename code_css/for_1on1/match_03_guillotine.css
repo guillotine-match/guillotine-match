@@ -68,7 +68,6 @@
     margin-left:3%;
     width:45%;
     margin-right:3%;
-
 }
 .shifting_boxes .Left_palyer_name{
     float:left;
@@ -149,6 +148,17 @@
         margin-top: 600px;
         font-size: 20px;
     }
+    .shifting_boxes .Left_match_Imgbox img{
+        margin-left:0%;
+        margin-right:0%;
+        float:left;
+        width:50%;
+    }
+    .shifting_boxes .Right_match_Imgbox img{
+        margin-left:0%;
+        margin-right:0%;
+        width:50%;
+    }
 }
 /* //////////////////////////////////// */
 @media (max-width: 480px){
@@ -208,12 +218,8 @@
         height: 480px;
         object-fit: cover;
     }
-    .shifting_boxes .Left_match_Imgbox img{
-        width:45.5%;
-    }
-    .shifting_boxes .Right_match_Imgbox img{
-        width:45.5%;
-    }
+
+
 
 }
 

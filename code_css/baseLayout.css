@@ -32,12 +32,15 @@ a:active { color: red; text-decoration: none;}
 @media (max-width: 768px){
     section > div {width: 31.3333%;}
     nav > div {width: 48%;}
+    article {padding: 0%; width: 100%;}
+    article > div {padding:3px;}
 }
 
     /* 화면 너비 0 ~ 480px */
 @media (max-width: 480px){
     section{ height:800px;}
     section > div {width: 48%;}
+
 }
 
 
