@@ -17,20 +17,12 @@ let portBox1;
 let portBox2;
 let portBox3;
 
-
-
 // shift Box 목록 : item 값 주고 사용 -> display off 할 수 있게
 let sboxList;
 
 // 참가자, 매칭 횟수
 let total_match;
 let total_player = total_match*2;
-
-// gradient settings
-let grad1;
-let grad2;
-let grad_reset;
-
 
 // sound ------- guillotine/radio : select sound
 let selected1;
@@ -49,3 +41,8 @@ let back_forward_2;
 
 // sound ------- guillotine : back - forward
 let audio_click;
+
+
+
+
+

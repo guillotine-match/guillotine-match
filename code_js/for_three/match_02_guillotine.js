@@ -15,17 +15,17 @@ function boxShifter(){
     current_box.style.display="block";
 }
 
-function select(clsname){ //선택 버튼 (L, R) 클릭 시 
+function select(clsname){ //선택 버튼 (L, R) onclick 시 
 
     // 라디오 버튼 개수로 조회
     for(i = 0; i < ele.length; i++) { 
+
         if(clsname=='tm1'){ // 왼쪽 멤버 선택 시
             ele[matchIndex*2].checked=true;
             func();
             selected1.load();
             selected1.play();
-        }
-        if(clsname=='tm2'){// 오른쪽 멤버 선택 시
+        } else if(clsname=='tm2'){// 오른쪽 멤버 선택 시
             ele[(matchIndex*2)+1].checked=true;
             func();
             selected2.load();
@@ -33,9 +33,12 @@ function select(clsname){ //선택 버튼 (L, R) 클릭 시
         }
     }
     if(matchIndex<(total_match-1)){
+        // 마지막 매치 전까진 matchIndex 추가
         matchIndex++;
-    } else if (matchIndex==total_match){
+    } else if (matchIndex==total_match-1){
         // 경기 종료 : 결과화면으로 이동
+        showResult();
+        winnerMP3();
     }
     boxShifter();
 }
