@@ -24,8 +24,7 @@ function init() {
     match_sound = document.getElementById("bladecut");
 
     // sound ------- guillotine : back - forward
-    back_forward_1 = document.getElementById("back_forward_1");
-    back_forward_2 = document.getElementById("back_forward_2");
+    back_forward = document.getElementById("back_forward");
     
     // sound ------- audio_click
     audio_click = document.getElementById("audio_click");

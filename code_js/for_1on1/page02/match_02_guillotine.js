@@ -45,8 +45,8 @@ function select(clsname){ //선택 버튼 (L, R) onclick 시
 
 
 function go_next(){
-    back_forward_1.load();
-    back_forward_1.play();
+    back_forward.load();
+    back_forward.play();
     if(matchIndex<(total_match-1)){
         matchIndex++;
     } else if (matchIndex==total_match){
@@ -56,8 +56,8 @@ function go_next(){
 }
 
 function go_back(){
-    back_forward_2.load();
-    back_forward_2.play();
+    back_forward.load();
+    back_forward.play();
     if(matchIndex>0){
         matchIndex--;
     }

@@ -293,10 +293,10 @@
                     <!-- 버튼 Area 시작 -->
                     <div class="area_for_6_button">
                         <div class="match_control_area">
-                            <button class="match_controller" onclick="go_back();"><img src="../src/img/arrow(left).png"></button>
+                            <button class="match_controller" onclick="go_back();"><</button>
                             <button class="match_controller" onclick="showResult(); winnerMP3()">승부</button>
                             <button class="match_controller" onclick="resetClicked(this.id)" id="resetG">리셋</button>
-                            <button class="match_controller" onclick="go_next();"><img src="../src/img/arrow(right).png"></button>
+                            <button class="match_controller" onclick="go_next();">></button>
                         </div>
                     </div>
                 </div>
@@ -431,8 +431,7 @@
                     <!-- 매칭 앵커로 이동 -->
                     <audio id="anchor" src="../src/mp3/anchor.mp3"></audio> 
                     <!-- 뒤로가기 - 건너뛰기 -->
-                    <audio id="back_forward_1" src="../src/mp3/back_forward_1.wav"></audio> 
-                    <audio id="back_forward_2" src="../src/mp3/back_forward_1.wav"></audio> 
+                    <audio id="back_forward" src="../src/mp3/back_forward_1.wav"></audio> 
                     <!-- 오디오 컨트롤러 -->
                     <audio id="audio_click" src="../src/mp3/audio_click.mp3"></audio> 
                 </div>
