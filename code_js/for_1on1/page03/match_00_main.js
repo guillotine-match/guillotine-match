@@ -36,8 +36,7 @@ let vic_sound1;
 let vic_sound2;
 
 // sound ------- guillotine : back - forward
-let back_forward_1;
-let back_forward_2;
+let back_forward;
 
 // sound ------- guillotine : back - forward
 let audio_click;
