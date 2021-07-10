@@ -23,11 +23,9 @@
     .box1 img{
         margin-left:230px;
         float:left;
-        background: red;
     }
     .box2 img{
         margin-left:50px;
-        background: blue;
     }
     .anchorExplain{
         position:relative; 
