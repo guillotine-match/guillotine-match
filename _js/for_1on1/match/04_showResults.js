@@ -24,22 +24,8 @@ function showResult(){
         // audio display
         audio_area_ID.style.display = "none";
 
-        // gradient CSS loading (reset)
-        var linkNode = document.getElementsByTagName('link')[11];
-        linkNode.parentNode.removeChild(linkNode);
-        var cssId = 'myCss1';
-        if (!document.getElementById(cssId))
-        {
-            var head  = document.getElementsByTagName('head')[0];
-            var link  = document.createElement('link');
-            link.id   = cssId;
-            link.rel  = 'stylesheet';
-            link.type = 'text/css';
-            link.href = '../code_css/for_1on1/page02/_reset.css';
-            link.media = 'all';
-            head.appendChild(link);
-        }   
-
+        // reset_gradient
+        reset_gradient();
         
         // 재경기 메시지
         alert("무승부입니다! 다시 선택해 주세요.")
@@ -58,23 +44,8 @@ function showResult(){
         // audio display
         audio_area_ID.style.display = "block";
 
-        // stylesheet on/off
-        var linkNode = document.getElementsByTagName('link')[11];
-        linkNode.parentNode.removeChild(linkNode);
-        var cssId = 'myCss2';
-        if (!document.getElementById(cssId))
-        {
-            var head  = document.getElementsByTagName('head')[0];
-            var link  = document.createElement('link');
-            link.id   = cssId;
-            link.rel  = 'stylesheet';
-            link.type = 'text/css';
-            link.href = '../code_css/for_1on1/page02/an_p1.css';
-            link.media = 'all';
-            head.appendChild(link);
-        }   
-
-
+        // team1_stylesheet
+        team1_stylesheet_on();
 
     } else if(m1<m2){// 2번 승
         portBox1.style.display = "none";	
@@ -90,22 +61,8 @@ function showResult(){
         // audio display
         audio_area_ID.style.display = "block";
         
-        // stylesheet on/off
-        var linkNode = document.getElementsByTagName('link')[11];
-        linkNode.parentNode.removeChild(linkNode);
-        var cssId = 'myCss3';
-        if (!document.getElementById(cssId))
-        {
-            var head  = document.getElementsByTagName('head')[0];
-            var link  = document.createElement('link');
-            link.id   = cssId;
-            link.rel  = 'stylesheet';
-            link.type = 'text/css';
-            link.href = '../code_css/for_1on1/page02/an_p2.css';
-            link.media = 'all';
-            head.appendChild(link);
-        }   
-
+        // team2_stylesheet
+        team2_stylesheet_on();  
     }
 }
 

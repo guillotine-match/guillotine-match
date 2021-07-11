@@ -14,7 +14,7 @@ function resetClicked(btn_id){
     scroll_reset();
     winner_text_reset();
     audio_display_off();
-    gradient_CSS_loading_reset();
+    reset_gradient();
 } 
 
 function portrait_reset(){
@@ -58,21 +58,4 @@ function winner_text_reset(){
 function audio_display_off(){
     audio_area_ID = document.getElementById("audio_area_ID"); 
     audio_area_ID.style.display="none";
-}
-
-function gradient_CSS_loading_reset(){
-    var linkNode = document.getElementsByTagName('link')[11];
-    linkNode.parentNode.removeChild(linkNode);
-    var cssId = 'myCss1';
-    if (!document.getElementById(cssId))
-    {
-        var head  = document.getElementsByTagName('head')[0];
-        var link  = document.createElement('link');
-        link.id   = cssId;
-        link.rel  = 'stylesheet';
-        link.type = 'text/css';
-        link.href = '../code_css/for_1on1/page04/_reset.css';
-        link.media = 'all';
-        head.appendChild(link);
-    }  
 }
