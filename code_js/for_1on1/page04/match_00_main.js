@@ -41,7 +41,7 @@ let back_forward;
 // sound ------- guillotine : back - forward
 let audio_click;
 
-
-
-
-
+// 단두대 박스넘버
+let current_Box;
+let selected_Box;
+let selected_Box_num=0;

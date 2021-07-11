@@ -32,6 +32,12 @@ function select(clsname){ //선택 버튼 (L, R) onclick 시
             selected2.play();
         }
     }
+
+    // box_number 표시
+    // let BoxNum = document.getElementById("currentBoxNum");
+    // BoxNum.innerHTML=(matchIndex+'/'+total_match);
+    // BoxNum.innerHTML=('ㅁㄴㅇ');
+
     if(matchIndex<(total_match-1)){
         // 마지막 매치 전까진 matchIndex 추가
         matchIndex++;
@@ -41,8 +47,13 @@ function select(clsname){ //선택 버튼 (L, R) onclick 시
         winnerMP3();
     }
     boxShifter();
+    
 }
 
+function showBoxNum(){
+    BoxNum.innerHTML="hello";
+    // BoxNum.innerHTML=((matchIndex+1)+'/'+total_match);
+}
 
 function go_next(){
     back_forward.load();

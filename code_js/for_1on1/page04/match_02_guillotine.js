@@ -13,6 +13,9 @@ function boxShifter(){
     let current_box; 
     current_box = sboxList.item(matchIndex); 
     current_box.style.display="block";
+    
+    // box idx 변경
+    ShowBoxIdx();
 }
 
 function select(clsname){ //선택 버튼 (L, R) onclick 시 
@@ -32,9 +35,11 @@ function select(clsname){ //선택 버튼 (L, R) onclick 시
             selected2.play();
         }
     }
+
     if(matchIndex<(total_match-1)){
         // 마지막 매치 전까진 matchIndex 추가
         matchIndex++;
+
     } else if (matchIndex==total_match-1){
         // 경기 종료 : 결과화면으로 이동
         showResult();
@@ -42,7 +47,6 @@ function select(clsname){ //선택 버튼 (L, R) onclick 시
     }
     boxShifter();
 }
-
 
 function go_next(){
     back_forward.load();

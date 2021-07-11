@@ -41,7 +41,7 @@ let back_forward;
 // sound ------- guillotine : back - forward
 let audio_click;
 
-
-
+// represent shift box number in specific division
+let BoxNum;
 
 

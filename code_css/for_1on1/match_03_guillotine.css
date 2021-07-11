@@ -26,6 +26,23 @@
     font-size: 25px;
 }
 
+#current_Box{
+    position:absolute; 
+    left:2%; 
+    height:70px;
+    line-height: 70px;
+    font-size: 25px;
+    z-index: 99;
+}
+#selected_Box{
+    position:absolute; 
+    right:2%; 
+    height:70px;
+    line-height: 70px;
+    font-size: 20px;
+    z-index: 99;
+}
+
 /* 사용자 선택 시 계속해서 교체되는 영역 */
 .shifting_boxes{
     position:relative; 

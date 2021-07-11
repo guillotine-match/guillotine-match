@@ -28,7 +28,6 @@ function init() {
     
     // sound ------- audio_click
     audio_click = document.getElementById("audio_click");
-
     
     // portraitBoxes
     portBox1 = document.getElementById("portrait_box0_ID"); 
@@ -42,8 +41,16 @@ function init() {
     sboxList = document.getElementsByClassName("shifting_boxes");
     total_match = sboxList.length;
 
+    current_Box  = document.getElementById("current_Box");
+    selected_Box = document.getElementById("selected_Box");
+
     // 처음 박스 시프터 함수 작동 시에는 1번 외 shiftbox 를 display none 한다
     boxShifter();
+}
+
+function ShowBoxIdx(){
+    current_Box.innerHTML =('#'+(matchIndex+1));
+    selected_Box.innerHTML=(selected_Box_num+'/'+total_match+' done');
 }
 
 function toGuillotine(){
