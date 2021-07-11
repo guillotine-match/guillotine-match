@@ -6,22 +6,22 @@ function resetClicked(btn_id){
     anchor.load();
     anchor.play();
 
-    // reset 함수들
+    // 모든 리셋 함수
     portrait_reset();
     audio_stop();
     radio_reset();
     sbox_and_variable_reset();
-    gradient_CSS_loading_reset();
     scroll_reset();
     winner_text_reset();
     audio_display_off();
+    gradient_CSS_loading_reset();
 } 
 
 function portrait_reset(){
-// portrait_reset
-portBox1.style.display = "block";
-portBox2.style.display = "none";
-portBox3.style.display = "none";
+    // portrait_reset
+    portBox1.style.display = "block";
+    portBox2.style.display = "none";
+    portBox3.style.display = "none";
 }
 
 function audio_stop(){
@@ -42,6 +42,24 @@ function sbox_and_variable_reset(){
     ShowBoxIdx();
 }
 
+function scroll_reset(){
+    document.getElementById('Guillotine').scrollIntoView();
+}
+
+function winner_text_reset(){
+    let mem1 = document.getElementById('team1ID');
+    let mem2 = document.getElementById('team2ID');
+    mem1.innerHTML ='';
+    mem2.innerHTML ='';
+    mem1.style.display = "none";
+    mem2.style.display = "none";
+}
+
+function audio_display_off(){
+    audio_area_ID = document.getElementById("audio_area_ID"); 
+    audio_area_ID.style.display="none";
+}
+
 function gradient_CSS_loading_reset(){
     var linkNode = document.getElementsByTagName('link')[11];
     linkNode.parentNode.removeChild(linkNode);
@@ -57,26 +75,4 @@ function gradient_CSS_loading_reset(){
         link.media = 'all';
         head.appendChild(link);
     }  
-}
-
-
-function scroll_reset(){
-    if(btn_id=='resetAll'){
-        document.getElementById('Guillotine').scrollIntoView();
-    } 
-
-}
-
-function winner_text_reset(){
-    let mem1 = document.getElementById('team1ID');
-    let mem2 = document.getElementById('team2ID');
-    mem1.innerHTML = mem1.className;
-    mem2.innerHTML = mem2.className;
-    mem1.style.display = "none";
-    mem2.style.display = "none";
-}
-
-function audio_display_off(){
-    audio_area_ID = document.getElementById("audio_area_ID"); 
-    audio_area_ID.style.display="none";
 }
