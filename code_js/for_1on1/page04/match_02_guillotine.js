@@ -2,14 +2,14 @@ let matchIndex=0;
 
 // shift 라고는 하지만 사실 display on off 함수
 function boxShifter(){
-    // 전체 시프트 박스 display none
+    // 전체 시프트 박스 숨기기
     for( var i = 0; i < total_match; i++ ){
         let sboxes; 
         sboxes = sboxList.item(i); 
         sboxes.style.display="none";
 
     }
-    // 현재 시프트 박스만 display block
+    // 현재 시프트 박스만 오픈
     let current_box; 
     current_box = sboxList.item(matchIndex); 
     current_box.style.display="block";

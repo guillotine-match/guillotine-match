@@ -20,6 +20,7 @@ function func(e){
     m1=k1;
     m2=k2;
     selected_Box_num=m1+m2;
+    boxShifter();
 }
 function func2(e){ //라디오버튼 클릭시 이벤트
     
