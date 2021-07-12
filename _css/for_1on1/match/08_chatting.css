@@ -1,0 +1,16 @@
+
+.chatting{
+    float:left;
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    margin-top: 250px;
+    width:85%;
+    padding:30px;
+    height:680px;
+    background:#FAEBD7;
+}
+.chatting>div{
+    background:#ffe4c2;
+    height:700px;
+}

@@ -1,0 +1,24 @@
+.audio_area{
+    margin-top: -100px;
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    clear:both;
+    float:left;
+    width:1000px;
+
+    text-align: center;
+    display:block;
+    border:wheat;
+}
+.audio_area_inside{
+padding:30px;
+}
+.audio_area_inside>button{
+    width:100px;
+    height:30px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background:whitesmoke ;
+    color:black;
+}
