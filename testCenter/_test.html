@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            z-index study
+        </title>
+        <style>
+            .cls1{
+                position:relative;
+                width:100px;
+                height:100px;
+                z-index: 3;
+                background:green;
+            }
+            .cls2{
+                position:absolute;
+                left:10%;
+                width:100px;
+                height:100px;
+                background:red;
+                z-index: 8;
+            }
+            .cls3{
+                margin-top: -40px;
+
+                width:400px;
+                height:400px;
+                background:blue;
+                z-index: 5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cls1"></div>
+        <div class="cls2"></div>
+        <div class="cls3"></div>
+    </body>
+</html>
