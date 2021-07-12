@@ -11,7 +11,7 @@ function team1_stylesheet_on(){
         link.id   = cssId;
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = '../_css/for_1on1/page04/an_p1.css';
+        link.href = '../css/for_1on1/page04/an_p1.css';
         link.media = 'all';
         head.appendChild(link);
     }   
@@ -29,7 +29,7 @@ function team2_stylesheet_on(){
         link.id   = cssId;
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = '../_css/for_1on1/page04/an_p2.css';
+        link.href = '../css/for_1on1/page04/an_p2.css';
         link.media = 'all';
         head.appendChild(link);
     }  
@@ -47,7 +47,7 @@ function reset_gradient(){
         link.id   = cssId;
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = '../_css/for_1on1/page04/_reset.css';
+        link.href = '../css/for_1on1/page04/_reset.css';
         link.media = 'all';
         head.appendChild(link);
     } 
