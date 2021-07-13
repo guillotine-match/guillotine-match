@@ -47,7 +47,7 @@ function reset_gradient(){
         link.id   = cssId;
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = '../css/for_1on1/page04/_reset.css';
+        link.href = '../css/for_1on1/page04/reset.css';
         link.media = 'all';
         head.appendChild(link);
     } 
