@@ -1,8 +1,8 @@
 .audio_area{
+    margin-top: 100px;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
-    clear:both;
     float:left;
     font-weight: bold;
     text-align: center;
@@ -35,17 +35,19 @@
 }
 
 @media (max-width: 1220px){
-
+    .audio_area{
+        margin-top:-140px;
+    }
 }
 
 @media (max-width: 768px){
     .audio_area{
-        margin-top:-70px;
+        margin-top:-160px;
     }
 }
 
 @media (max-width: 480px){
     .audio_area{
-        margin-top:-100px;
+        margin-top:-200px;
     }
 }
