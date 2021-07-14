@@ -73,10 +73,12 @@
         min-width: 300px;
         line-height:40px;
         height:100px;
+        font-size: 15px;
     }
     .battleTag_sub{
         min-width: 300px;
         height:40px;
         line-height:40px;
+        font-size: 14px;
     }
 }

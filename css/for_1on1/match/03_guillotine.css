@@ -6,7 +6,7 @@
     transform:translateX(-50%);
     left:50%; 
     float:left;
-    margin-top: 140px;
+    margin-top: 340px;
     width:100%;
     height:870px;
     background:burlywood;
@@ -133,14 +133,14 @@
 
 @media (max-width: 1220px){
     .guillotine_Match{
-        margin-top: 140px;
+        margin-top: 340px;
         font-size: 20px;
     }
 }
 
 @media (max-width: 768px){
     .guillotine_Match{
-        margin-top: 600px;
+        margin-top: 300px;
         font-size: 20px;
     }
     .shifting_boxes .Left_match_Imgbox img{
@@ -157,8 +157,8 @@
 }
 /* //////////////////////////////////// */
 @media (max-width: 480px){
-
     .guillotine_Match{
+        margin-top:-500px;
         font-size: 20px;
         height:710px;
     }

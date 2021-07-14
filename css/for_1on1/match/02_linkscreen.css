@@ -1,6 +1,7 @@
 
 /* img_style */
     .imgbundle {
+        float:left;
         position:relative; 
         transform:translateX(-50%);
         left:50%; 
@@ -59,17 +60,37 @@
         height:60px;
     }
 
+
+/* 화면 너비 0 ~ 1220px */
+@media (max-width: 1220px){
+    .imgbundle {
+        margin-top:40px;
+        width:740px;
+        height:370px;
+    } 
+    .box1 img{
+        margin-left:100px;
+    }
+    .box2 img{
+        margin-left:40px;
+    }
+    .anchorExplain{
+        margin-top: -40px;
+    }
+}
+
+
 /* 화면 너비 0 ~ 768px */
 @media (max-width: 768px){
     .imgbundle {
-        position:absolute; 
         width:400px;
-        height:230px;
+        height:430px;
         left:50%; 
         transform:translateX(-50%);
     } 
     .imgbox{
         width:100%;
+        height:230px;
         padding:2%;
         text-align: center;
     }
@@ -87,6 +108,53 @@
         margin-left:10px;
     }
     .anchorExplain{
-        margin-top: -140px;
+        margin-top:10px;
+    }
+}
+
+
+/* 화면 너비 0 ~ 480px */
+@media (max-width: 480px){
+    .imgbundle {
+        margin-top:40px;
+        width:320px;
+        height:1000px;
+    } 
+    .imgbox{
+        width:90%;
+        height:180px;
+        padding:2%;
+    }
+    .imgbox img{
+        max-width: 130px;
+        height: 180px;
+        object-fit: cover;
+    }
+    .box1 img{
+        margin-left:8%;
+    }
+    .box2 img{
+        margin-left:1%;
+    }
+    .anchorExplain{
+        margin-top:10px;
+        float:left;
+        width: 280px;
+        height: 60px;
+        line-height: 60px;
+        font-size:20px;
+    }
+    .anchorBtnArea{
+        margin-top:10px;
+        float:left;
+        height:100px;
+        line-height: 100px;
+    }
+    .anchorBtnArea>button{
+        float:left;
+        font-size: 20px;
+        width:130px;
+        margin-left:10px;
+        height:60px;
     }
 }
