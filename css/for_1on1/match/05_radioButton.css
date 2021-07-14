@@ -26,17 +26,13 @@
 }
 
 .tabButton input:checked ~ label{
-  background:rgb(192, 187, 187);
-  color:cyan;
-
+  background:rgb(238, 221, 221);
+  color:black;
+  font-weight: 900;
 } 
 
 .tabButton li:hover{
-  background-color:rgb(190, 185, 185);
-  color:cyan;
-}
-.tabButton li:active {
-  color: cyan;
+  background:rgb(245, 234, 234);
 }
 
 /* 의사 클래스 순서 (:link), (:visited), (:hover), (:active) */
@@ -66,5 +62,10 @@
 @media (max-width: 480px){
   .tabButton{ 
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 400px){
+  .tabButton{ 
+    font-size: 0.7rem;
   }
 }

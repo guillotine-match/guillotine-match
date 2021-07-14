@@ -36,19 +36,20 @@
     float:left;
     width:100%;
     margin:0 auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 
 
 .q_row:nth-of-type(2n){
-    background:lightcyan;
+    background:rgb(196, 233, 233);
 }
 .q_row:nth-of-type(2n-1){
-    background:lightyellow;
+    background:rgb(223, 243, 243);
 }
 .q_row:hover{
-    background: orange;
-    color:white;
+    background: rgb(165, 211, 229);
+    color:black;
 }
 .numbering{
     width:5%;
@@ -57,7 +58,7 @@
     text-align: left;
     height:40px;
     line-height: 40px;
-    font-size:10px;
+    font-size:15px;
 }
 .queries{
     width:45%;
@@ -107,6 +108,7 @@
     }
     .numbering{
         width:5%;
+        font-size: 10px;
     }
     .queries{
         width:45%;
@@ -124,6 +126,16 @@
         font-size: 13px;
     }
 
+}
+@media (max-width: 400px){
+    .numbering{
+        width:0%;
+        display:none;
+    }
+
+    .queries{
+        width:50%;
+    }
 }
 
 
