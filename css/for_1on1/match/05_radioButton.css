@@ -24,9 +24,25 @@
   height:40px;
   line-height:40px;
 }
+
 .tabButton input:checked ~ label{
-  background:#ccc;
+  background:rgb(192, 187, 187);
+  color:cyan;
+
+} 
+
+.tabButton li:hover{
+  background-color:rgb(190, 185, 185);
+  color:cyan;
 }
+.tabButton li:active {
+  color: cyan;
+}
+
+/* 의사 클래스 순서 (:link), (:visited), (:hover), (:active) */
+
+
+
 
 @media (max-width: 1220px){
   .tabButton{ 
