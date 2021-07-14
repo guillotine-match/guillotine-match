@@ -24,9 +24,6 @@ function showResult(){
         // audio display
         audio_area_ID.style.display = "none";
 
-        // reset_gradient
-        reset_gradient();
-        
         // 재경기 메시지
         alert("무승부입니다! 다시 선택해 주세요.")
 
