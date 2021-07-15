@@ -1,7 +1,6 @@
 
 /* img_style */
     .imgbundle {
-        float:left;
         position:relative; 
         transform:translateX(-50%);
         left:50%; 
@@ -23,7 +22,6 @@
     }
     .box1 img{
         margin-left:230px;
-        float:left;
     }
     .box2 img{
         margin-left:50px;

@@ -41,6 +41,8 @@ function func2(e){ //라디오버튼 클릭시 이벤트
     // audio stop
     vic_sound1.pause();
     vic_sound2.pause();
-
+    
+    winner_text_reset();
+    audio_display_off();
     reset_gradient();
 }
