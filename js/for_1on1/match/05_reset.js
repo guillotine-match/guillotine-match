@@ -2,7 +2,7 @@
 
 function resetClicked(btn_id){
 
-    //  (1) reset_button_sound
+    //  (1) 클릭음
     anchor.load();
     anchor.play();
 
@@ -21,20 +21,14 @@ function resetClicked(btn_id){
     // (6) 스크롤 리셋
     scroll_reset();
 
-    // (7) 승리 메시지 리셋
-    winner_text_reset();
-
-    // (8) 오디오 출력화면 리셋
-    audio_display_off();
-
     // (9) 그라디언트 삭제
     reset_gradient();
 } 
 
 function portrait_reset(){
-    portBox1.style.display = "block";
-    portBox2.style.display = "none";
-    portBox3.style.display = "none";
+    anonBox.style.display = "block";
+    team1box.style.display = "none";
+    team2box.style.display = "none";
 }
 
 function audio_stop(){
@@ -59,16 +53,3 @@ function scroll_reset(){
     document.getElementById('Guillotine').scrollIntoView();
 }
 
-function winner_text_reset(){
-    let mem1 = document.getElementById('team1ID');
-    let mem2 = document.getElementById('team2ID');
-    mem1.innerHTML ='';
-    mem2.innerHTML ='';
-    mem1.style.display = "none";
-    mem2.style.display = "none";
-}
-
-function audio_display_off(){
-    audio_area_ID = document.getElementById("audio_area_ID"); 
-    audio_area_ID.style.display="none";
-}

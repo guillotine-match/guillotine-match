@@ -69,6 +69,3 @@ function go_back(){
     }
     boxShifter();
 }
-
-function toggle_MatchArea_Display(){
-}

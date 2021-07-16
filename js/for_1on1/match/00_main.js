@@ -12,10 +12,10 @@ let winner="an";
 let result_Btn;
 let refresh_Btn;
 
-//portrait_box1_ID objects
-let portBox1;
-let portBox2;
-let portBox3;
+// win_text & portrait_box
+let anonBox;
+let team1box;
+let team2box;
 
 // shift Box 목록 : item 값 주고 사용 -> display off 할 수 있게
 let sboxList;
@@ -45,3 +45,10 @@ let audio_click;
 let current_Box;
 let selected_Box;
 let selected_Box_num=0;
+
+// chatting ID 에서 bottom y 좌표 받아서 
+// bottom 값에 넣은 후 
+// article(ID) 의 height 변경하기 
+let bottom = 0;
+let chattingID;
+// document.getElementById('(article)').style.height = (bottom + 50);

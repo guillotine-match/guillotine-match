@@ -87,7 +87,7 @@
                         <button onclick="toQuickplay()">빠른 대전</button>
                     </div>
                 </div>
-
+                <!-- toGuillotine(); -->
                 <div class="guillotine_Match" id="Guillotine">
                     <div class="match_title">단두대 매치</div>
                     <div id=current_Box></div>
@@ -1010,43 +1010,51 @@
 
                 <div class="winner_portrait_box0" id="portrait_box0_ID">
                     <img    class="winner_portrait0" 
-                            id="winpic0"
                             src="../src/img/anon.jpg"
                             onclick="doImgPop('../src/img/anon.jpg')"/>
                 </div>
 
-                <div class="winner_image" id="winner_image_area">
-                    <div class="위나라 승리!!" id="team1ID"></div>
-                    <div class="촉나라 승리!!" id="team2ID"></div>
+                <div id="team1box" style="display:none">
+                    <div id="team1ID">위나라 승리!!</div>
                     <div class="winner_portrait_box1" id="portrait_box1_ID">
                         <img    class="winner_portrait1" 
-                                id="winpic1"
                                 src="../src/img/page01/vic_team1.jpg"
                                 onclick="doImgPop('../src/img/page01/vic_team1.jpg')"/>
                     </div>
+                    <div id="team1_win_audio">
+                            <button id="play"   onclick="control(event)">&gt;</button> 
+                            <button id="pause"  onclick="control(event)">||</button>
+                            <button id="replay" onclick="control(event)">C</button><br>
+                            <button id="vol-"   onclick="control(event)">vol-</button>
+                            <button id="vol+"   onclick="control(event)">vol+</button>
+                            <button id="mute on/off" onclick="control(event)">mute</button><br>
+                            <button class="match_controller" onclick="resetClicked(this.id)" id="resetAll">게임 리셋</button>
+                    </div>
+                </div>
+
+                <div id="team2box"  style="display:none">
+                    <div id="team2ID">촉나라 승리!!</div>
                     <div class="winner_portrait_box2" id="portrait_box2_ID">
                         <img    class="winner_portrait2" 
-                                id="winpic2"
                                 src="../src/img/page01/vic_team2.jpg" 
                                 onclick="doImgPop('../src/img/page01/vic_team2.jpg')"/>
                     </div>
-                    <div class="audio_area" id="audio_area_ID">
-                        <div class="audio_area_inside">
-                            <button id="play" onclick="control(event)">&gt;</button>
-                            <button id="pause" onclick="control(event)">||</button>
-                            <button id="replay" onclick="control(event)">C</button><br>
-                            <button id="vol-" onclick="control(event)">vol-</button>
-                            <button id="vol+" onclick="control(event)">vol+</button>
-                            <button id="mute on/off" onclick="control(event)">mute</button><br>
-                            <button class="match_controller" onclick="resetClicked(this.id)" id="resetAll">게임 리셋</button>
-                        </div>
+                    <div id="team2_win_audio">
+                            <button id="play2"  onclick="control(event)">&gt;</button> 
+                            <button id="pause2" onclick="control(event)">||</button>
+                            <button id="replay2"onclick="control(event)">C</button><br>
+                            <button id="vol2-"  onclick="control(event)">vol-</button>
+                            <button id="vol2+"  onclick="control(event)">vol+</button>
+                            <button id="mute on/off2" onclick="control(event)">mute</button><br>
+                            <button class="match_controller2" onclick="resetClicked(this.id)" id="resetAll">게임 리셋</button>
                     </div>
                 </div>
+
                 <div style="display:none">
-                    <!-- 승리 음원 -->
+                    <!-- 승리  -->
                     <audio id="vic_sound1" src="../src/mp3/page01/team1.mp3"></audio>
                     <audio id="vic_sound2" src="../src/mp3/page01/team2.mp3"></audio>
-                    <!-- 선택 음원 -->
+                    <!-- 선택  -->
                     <audio id="selected1" src="../src/mp3/selected1.mp3"></audio> 
                     <audio id="selected2" src="../src/mp3/selected2.mp3"></audio> 
                     <!-- 매칭 앵커로 이동 -->
@@ -1056,7 +1064,7 @@
                     <!-- 오디오 컨트롤러 -->
                     <audio id="audio_click" src="../src/mp3/audio_click.mp3"></audio> 
                 </div>
-                <div class="chatting">
+                <div class="chatting" id="chattingID">
                     <div>
                         <br><br>댓글 API 영역입니다.
                     </div>

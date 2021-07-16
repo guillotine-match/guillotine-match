@@ -22,7 +22,6 @@
     animation-duration: 8s;
     animation-direction: alternate;
     animation-iteration-count :infinite;
-    height: 100vh;
     text-align: center;
     animation-timing-function: linear;
     }

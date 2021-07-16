@@ -1,4 +1,7 @@
-.audio_area{
+
+#team1_win_audio,
+#team2_win_audio{
+    padding:10px;
     width:340px;
     margin-top: 200px;
     position:relative; 
@@ -6,15 +9,13 @@
     transform:translateX(-50%);
     font-weight: bold;
     text-align: center;
-    display:block;
     border:burlywood solid;
     border-radius: 8px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.audio_area_inside{
-    padding:10px;
-}
-.audio_area_inside>button{
+
+#team1_win_audio>button,
+#team2_win_audio>button{
+    
     width:100px;
     margin-bottom: 10px;
     height:40px;
@@ -23,31 +24,33 @@
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     background:burlywood ;
-    color:black;
 }
-.audio_area_inside button:nth-child(9){
+#team1_win_audio button:nth-child(9),
+#team2_win_audio button:nth-child(9){
     width:310px;
     height:55px;
     line-height:55px;
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
     margin-bottom: 0px;
 }
 
 @media (max-width: 1220px){
-    .audio_area{
+    #team1_win_audio,
+    #team2_win_audio{
         margin-top:-140px;
     }
 }
 
 @media (max-width: 768px){
-    .audio_area{
+    #team1_win_audio,
+    #team2_win_audio{
         margin-top:-160px;
     }
 }
 
 @media (max-width: 480px){
-    .audio_area{
+    #team1_win_audio,
+    #team2_win_audio{
         margin-top:-200px;
     }
 }

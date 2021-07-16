@@ -1,37 +1,63 @@
-<!DOCTYPE html>
-<html lang="ko">
+
+<html>
 <head>
-        <meta charset="UTF-8">
-        <title>산업대학교</title>
-        <link rel="stylesheet" href="style.css">
+        <style>
+                *{
+                        margin:0;
+                }
+                #rect{
+                        width:200px;
+                        height:200px;
+                        background-color: aqua;
+                }
+                #top{
+                        width:100px;
+                        height:100px;
+                        background-color: bisque;
+                }
+                #last {
+                        width:50px;
+                        height:50px;
+                        background-color: blueviolet;
+                }
+        </style>
 </head>
 <body>
-        <div id="wrap">
-        <header id="header" class="clearfix">
-                <h1 class="logo">로고</h1>
-                <div class="nav">메뉴</div>
-        </header>
-        <!-- //header -->
+        <div id="rect">     200 * 200   </div>
+        <div id="top">     top   </div>
+        <div id="rect">     200 * 200   </div>
+        <div id="last">     last   </div>
+        <button onclick="change1()"> change </button>
+</body> 
+<script>
+        var target = document.getElementById("last");
         
-        <section id="banner">
-                <h2>이미지 슬라이드</h2>
-        </section>
-        <!-- //banner -->
-        
-        <section id="contents" class="clearfix">
-                <div class="cont1"><h3>공지사항</h3></div>
-                <div class="cont2"><h3>갤러리</h3></div>
-                <div class="cont3"><h3>팝업</h3></div>
-        </section>
-        <!-- //contents -->
+        // var targetTop = target.getBoundingClientRect().top;
+        // var targetBottom = target.getBoundingClientRect().bottom;
 
-        <footer id="footer" class="clearfix">
-                <div class="foot1"><h3>로고</h3></div>
-                <div class="foot2"><h3>Copyright</h3></div>
-                <div class="foot3"><h3>SNS</h3></div>
-        </footer>
-        <!-- //footer -->
-        </div>
-    <!-- //wrap -->
-</body>
+        var abTop = window.pageYOffset + target.getBoundingClientRect().top;
+        var abBottom = window.pageYOffset + target.getBoundingClientRect().bottom;
+
+        Number(abTop);
+        Number(abBottom);
+
+        function change1(){
+                alert(abTop);
+                document.getElementById('last').style.height=abTop-200;
+                change2();
+        }
+        function change2(){
+                document.getElementById('last').style.width=abTop-200;
+                change3();
+        }
+        function change3(){
+                var getvalue = document.getElementById("last");
+                var NewAbTop = window.pageYOffset + getvalue.getBoundingClientRect().top;
+                var NewAbBottom = window.pageYOffset + getvalue.getBoundingClientRect().bottom;
+                alert(NewAbTop);
+                alert(NewAbBottom);
+        }
+
+</script>
 </html>
+

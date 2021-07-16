@@ -28,21 +28,19 @@ function init() {
     
     // sound ------- audio_click
     audio_click = document.getElementById("audio_click");
+
     
-    // portraitBoxes
-    portBox1 = document.getElementById("portrait_box0_ID"); 
-    portBox2 = document.getElementById("portrait_box1_ID"); 
-    portBox3 = document.getElementById("portrait_box2_ID"); 
-    
-    // audio display 
-    audio_area_ID = document.getElementById("audio_area_ID"); 
-    audio_area_ID.style.display="none";
+    // portrait Boxes
+    anonBox = document.getElementById("portrait_box0_ID"); 
+    team1box = document.getElementById("team1box"); 
+    team2box = document.getElementById("team2box"); 
     
     sboxList = document.getElementsByClassName("shifting_boxes");
     total_match = sboxList.length;
 
     current_Box  = document.getElementById("current_Box");
     selected_Box = document.getElementById("selected_Box");
+
 
     // 처음 박스 시프터 함수 작동 시에는 1번 외 shiftbox 를 display none 한다
     boxShifter();
@@ -64,3 +62,4 @@ function toQuickplay(){
     anchor.play();
     document.getElementById('QuickPlay').scrollIntoView();
 }
+

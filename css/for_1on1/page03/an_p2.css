@@ -21,12 +21,10 @@
     animation-duration: 5s;
     animation-fill-mode: forwards;
     animation-iteration-count :1;
-    height: 100vh;
     text-align: center;
 }
 
 #team2ID {
     color:whitesmoke;
     font-style: italic;
-
 }

@@ -34,15 +34,13 @@ function func2(e){ //라디오버튼 클릭시 이벤트
         selected2.play();
     } 
     // portrait reset
-    portBox1.style.display = "block";
-    portBox2.style.display = "none";
-    portBox3.style.display = "none";
+    anonBox.style.display = "block";
+    team1box.style.display = "none";
+    team2box.style.display = "none";
 
     // audio stop
     vic_sound1.pause();
     vic_sound2.pause();
     
-    winner_text_reset();
-    audio_display_off();
     reset_gradient();
 }

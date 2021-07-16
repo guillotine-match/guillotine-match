@@ -22,7 +22,6 @@
     animation-duration: 10s;
     animation-fill-mode: forwards;
     animation-iteration-count :1;
-    height: 100vh;
     text-align: center;
     animation-timing-function: ease-in;
 }
@@ -35,12 +34,9 @@
     animation-duration: 15s;
     animation-direction: alternate;
     animation-iteration-count :infinite;
-    height: 100vh;
     text-align: center;
     animation-timing-function: linear;
 } */
-
-
 
 #team2ID {
     color:indianred;
