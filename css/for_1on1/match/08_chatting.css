@@ -6,11 +6,21 @@
     left:50%; 
     transform:translateX(-50%);
     margin-top: 200px;
-    width:96%;
+    width:98%;
     height:750px;
-    background:#FAEBD7;
+    background:bisque;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+
 }
 .chatting>div{
-    background:#ffe4c2;
-    height:740px;
+    position:relative; 
+    left:50%; 
+    transform:translateX(-50%);
+    background:whitesmoke;
+    width:99%;
+    height:99%;
+    border-radius: 4px;
 }

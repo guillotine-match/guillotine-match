@@ -1,92 +1,18 @@
-<!-- 
 
-<script>
-https://www.youtube.com/watch?v=jov44IW6LEI&ab_channel=MagicMusic
-var vid = "jov44IW6LEI",
-    audio_streams = {},
-    audio_tag = document.getElementById('youtube');
-
-fetch("https://"+vid+"-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=https%3A%2F%2Fwww.youtube.com%2Fget_video_info%3Fvideo_id%3D" + vid).then(response => {
-    if (response.ok) {
-        response.text().then(data => {
-
-            var data = parse_str(data),
-                streams = (data.url_encoded_fmt_stream_map + ',' + data.adaptive_fmts).split(',');
-
-            streams.forEach(function(s, n) {
-                var stream = parse_str(s),
-                    itag = stream.itag * 1,
-                    quality = false;
-                console.log(stream);
-                switch (itag) {
-                    case 139:
-                        quality = "48kbps";
-                        break;
-                    case 140:
-                        quality = "128kbps";
-                        break;
-                    case 141:
-                        quality = "256kbps";
-                        break;
-                }
-                if (quality) audio_streams[quality] = stream.url;
-            });
-
-            console.log(audio_streams);
-
-            audio_tag.src = audio_streams['128kbps'];
-            audio_tag.play();
-        })
+<body>
+    <div class='test'>
+    test
+    </div>
+    </body>
+    
+    <style>
+    .test {
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    background-color: #fa8;
+    border: 1px solid #000;
+    
+    background-clip: content-box;
     }
-});
-
-function parse_str(str) {
-    return str.split('&').reduce(function(params, param) {
-        var paramSplit = param.split('=').map(function(value) {
-            return decodeURIComponent(value.replace('+', ' '));
-        });
-        params[paramSplit[0]] = paramSplit[1];
-        return params;
-    }, {});
-}
-</script> -->
-
-
-
-<script>
-// YouTube video ID
-var videoID = "F9WCu8Pxo3o";
-
-// Fetch video info (using a proxy to avoid CORS errors)
-fetch('https://cors-anywhere.herokuapp.com/' + "https://www.youtube.com/get_video_info?video_id=" + videoID).then(response => {
-if (response.ok) {
-response.text().then(ytData => {
-    
-    // parse response to find audio info
-    var ytData = parse_str(ytData);
-    var getAdaptiveFormats = JSON.parse(ytData.player_response).streamingData.adaptiveFormats;
-    var findAudioInfo = getAdaptiveFormats.findIndex(obj => obj.audioQuality);
-    
-    // get the URL for the audio file
-    var audioURL = getAdaptiveFormats[findAudioInfo].url;
-    
-    // update the <audio> element src
-    var youtubeAudio = document.getElementById('youtube');
-    youtubeAudio.src = audioURL;
-    
-});
-}
-});
-
-function parse_str(str) {
-return str.split('&').reduce(function(params, param) {
-var paramSplit = param.split('=').map(function(value) {
-    return decodeURIComponent(value.replace('+', ' '));
-});
-params[paramSplit[0]] = paramSplit[1];
-return params;
-}, {});
-}
-</script>
-
-<audio id="youtube" controls></audio>
+    </style>
