@@ -741,43 +741,62 @@
                     </div>
                 </div>
 
-                <div id="team2box"  style="display:none">
-                    <div id="team2ID">마블 코믹스 승리!!</div>
-                    <div class="winner_portrait_box2" id="portrait_box2_ID">
-                        <img    class="winner_portrait2" 
-                                src="../src/img/page02/vic_team2.jpg" 
-                                onclick="doImgPop('../src/img/page02/vic_team2.jpg')"/>
+                    <div id="team2box"  style="display:none">
+                        <div id="team2ID">마블 코믹스 승리!!</div>
+                        <div class="winner_portrait_box2" id="portrait_box2_ID">
+                            <img    class="winner_portrait2" 
+                                    src="../src/img/page02/vic_team2.jpg" 
+                                    onclick="doImgPop('../src/img/page02/vic_team2.jpg')"/>
+                        </div>
+                        <div id="team2_win_audio">
+                                <button id="play2"  onclick="control(event)">&gt;</button> 
+                                <button id="pause2" onclick="control(event)">||</button>
+                                <button id="replay2"onclick="control(event)">C</button><br>
+                                <button id="vol2-"  onclick="control(event)">vol-</button>
+                                <button id="vol2+"  onclick="control(event)">vol+</button>
+                                <button id="mute on/off2" onclick="control(event)">mute</button><br>
+                                <button class="match_controller2" onclick="resetClicked(this.id)" id="resetAll">게임 리셋</button>
+                        </div>
                     </div>
-                    <div id="team2_win_audio">
-                            <button id="play2"  onclick="control(event)">&gt;</button> 
-                            <button id="pause2" onclick="control(event)">||</button>
-                            <button id="replay2"onclick="control(event)">C</button><br>
-                            <button id="vol2-"  onclick="control(event)">vol-</button>
-                            <button id="vol2+"  onclick="control(event)">vol+</button>
-                            <button id="mute on/off2" onclick="control(event)">mute</button><br>
-                            <button class="match_controller2" onclick="resetClicked(this.id)" id="resetAll">게임 리셋</button>
-                    </div>
-                </div>
 
-                <div style="display:none">
-                    <!-- 승리 음원 -->
-                    <audio id="vic_sound1" src="../src/mp3/page02/JusticeLeague.mp3"></audio>
-                    <audio id="vic_sound2" src="../src/mp3/page02/Avengers.mp3"></audio>
-                    <!-- 선택 음원 -->
-                    <audio id="selected1" src="../src/mp3/selected1.mp3"></audio> 
-                    <audio id="selected2" src="../src/mp3/selected2.mp3"></audio> 
-                    <!-- 매칭 앵커로 이동 -->
-                    <audio id="anchor" src="../src/mp3/anchor.mp3"></audio> 
-                    <!-- 뒤로가기 - 건너뛰기 -->
-                    <audio id="back_forward" src="../src/mp3/back_forward.mp3"></audio> 
-                    <!-- 오디오 컨트롤러 -->
-                    <audio id="audio_click" src="../src/mp3/audio_click.mp3"></audio> 
-                </div>
-                <div class="chatting" id="chattingID">
-                    <div>
-                        <br><br>댓글 API 영역입니다.
+                    <div style="display:none">
+                        <!-- 승리 음원 -->
+                        <audio id="vic_sound1" src="../src/mp3/page02/JusticeLeague.mp3"></audio>
+                        <audio id="vic_sound2" src="../src/mp3/page02/Avengers.mp3"></audio>
+                        <!-- 선택 음원 -->
+                        <audio id="selected1" src="../src/mp3/selected1.mp3"></audio> 
+                        <audio id="selected2" src="../src/mp3/selected2.mp3"></audio> 
+                        <!-- 매칭 앵커로 이동 -->
+                        <audio id="anchor" src="../src/mp3/anchor.mp3"></audio> 
+                        <!-- 뒤로가기 - 건너뛰기 -->
+                        <audio id="back_forward" src="../src/mp3/back_forward.mp3"></audio> 
+                        <!-- 오디오 컨트롤러 -->
+                        <audio id="audio_click" src="../src/mp3/audio_click.mp3"></audio> 
                     </div>
-                </div>
+                    
+                    <div class="chatting" id="chattingID">
+                        <div>
+                            <br><div id="disqus_thread"></div>
+                            <script>
+                                /**
+                                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                                /*
+                                var disqus_config = function () {
+                                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                };
+                                */
+                                (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+                                s.src = 'https://guillotine-match.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        </div>
+                    </div>
                 </div>
             </div>
         </article>
