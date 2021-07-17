@@ -16,13 +16,12 @@ footer >div { height: 300px; background-color:#d4c0a6; }
 
 .center{text-align: center;}
 .right{text-align: right;}
-.links{    cursor:pointer;}
-.links2{    font-size: 20px;    font-weight: 700;    text-align: center; min-width:130px;        }
+.links{cursor:pointer;}
 
-a:link { color: red; text-decoration: none;}
+a:link { text-decoration: none;}
 a:visited { color: black; text-decoration: none;}
-a:hover { color: blue; text-decoration: none;} 
-a:active { color: red; text-decoration: none;} 
+a:hover { font-style:italic; text-decoration: none;} 
+a:active { text-decoration: none;} 
 
 .clearfix::before, 
 .clearfix::after {display: block; content: ''; clear: both;}

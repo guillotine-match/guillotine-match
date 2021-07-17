@@ -34,7 +34,6 @@
     float:left;
     width:100%;
     margin:0 auto;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 
@@ -89,7 +88,6 @@
 .Quick_play_buttons{
     background-color: bisque;
     color:darkslategray;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-style: ridge;
     text-align: center;
     text-decoration: none;

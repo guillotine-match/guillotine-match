@@ -1,7 +1,7 @@
 
 // team1_stylesheet_on
 function team1_stylesheet_on(){
-    var linkNode = document.getElementsByTagName('link')[11];
+    var linkNode = document.getElementsByTagName('link')[16];
     linkNode.parentNode.removeChild(linkNode);
     var cssId = 'myCss2';
     if (!document.getElementById(cssId))
@@ -19,7 +19,7 @@ function team1_stylesheet_on(){
 
 // team2_stylesheet_on
 function team2_stylesheet_on(){
-    var linkNode = document.getElementsByTagName('link')[11];
+    var linkNode = document.getElementsByTagName('link')[16];
     linkNode.parentNode.removeChild(linkNode);
     var cssId = 'myCss3';
     if (!document.getElementById(cssId))
@@ -37,7 +37,7 @@ function team2_stylesheet_on(){
 
 // reset_gradient
 function reset_gradient(){
-    var linkNode = document.getElementsByTagName('link')[11];
+    var linkNode = document.getElementsByTagName('link')[16];
     linkNode.parentNode.removeChild(linkNode);
     var cssId = 'myCss1';
     if (!document.getElementById(cssId))
