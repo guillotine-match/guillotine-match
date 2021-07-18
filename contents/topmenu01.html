@@ -4,34 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initialscale=1, minimum-scale=1, maximum-scale=1, user-scaleable=no">
     <title>Guillotine-Match</title>
+    
+    <!-- Favicon [Chrome, Safari, IE] , [Firefox, Opera] -->
+    <link rel="shortcut icon" href="../src/img/iconbox/guillotine.ico" type="image/x-icon">
+    <link rel="icon" href="../src/img/iconbox/guillotine.ico" type="image/x-icon">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/baseLayout.css">
+    <link rel="stylesheet" type="text/css" href="../css/menuLayout.css">
 </head>
 
 <body>
     <div id="wrap" >
-        <header><h1 class="center"><a href="../index.html">단두대 매치</a></h1></header>
+        <header class="Jua">
+            <h1 class="center"><a href="../index.html">단두대 매치</a></h1>
+        </header>
+
         <nav>
-            <div class="links" OnClick="location.href ='topmenu01.html'"><h3>공지사항</h3></div>
-            <div class="links" OnClick="location.href ='topmenu02.html'"><h3>업데이트</h3></div>
-            <div class="links" OnClick="location.href ='topmenu03.html'"><h3>about us </h3></div>
-            <div class="links" OnClick="location.href ='topmenu04.html'"><h3>컨텐츠 건의</h3></div>
-            <div class="links" OnClick="location.href ='topmenu05.html'"><h3>커뮤니티</h3></div>
-            <div class="links" OnClick="location.href ='topmenu06.html'"><h3>Reference</h3></div>
+            <div class="links Jua" OnClick="location.href ='topmenu01.html'"><h3>공지사항</h3></div>
+            <div class="links Jua" OnClick="location.href ='topmenu02.html'"><h3>업데이트</h3></div>
+            <div class="links Jua" OnClick="location.href ='topmenu03.html'"><h3>About Us </h3></div>
+            <div class="links Jua" OnClick="location.href ='topmenu04.html'"><h3>컨텐츠 건의</h3></div>
+            <div class="links Jua" OnClick="location.href ='topmenu05.html'"><h3>커뮤니티</h3></div>
+            <div class="links Jua" OnClick="location.href ='topmenu06.html'"><h3>Reference</h3></div>
         </nav>
         <article>
             <div class="contest" id="contestarea">
                 
-                <div class="battleTag">
-                    <br><h2 class="center">공지사항</h2><br>
-                </div>
-                <div class="battleTag_sub" style="text-align: center;">
+
+                <div class="intro"></div>
+                    <br><br><h2>공지사항</h2><br>
                     <h3>사이트 이용 안내입니다</h3>
+
+                    <br>음악은 저작권 이슈로 youtube api를 받아올 예정입니다 <br>
+                    <br>이미지는 가능한 공식 이미지를 구해오거나 저작권자와 협의할 수 있도록 하겠습니다.<br>
                 </div>
-                <div style="width:900px; height:500px; padding:70px;" >
+
+                <div class="detail">
                 </div>
-                <div class="chatting" style="margin-top:30px">
-                    <div >
-                        <br><br>댓글 API 영역
+
+                <div class="textbox"><br>
+                </div>
+
+                <div class="chatting" id="chattingID">
+                    <div>
+                        <br><div id="disqus_thread"></div>
+                        <script>
+                            /**
+                            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                            /*
+                            var disqus_config = function () {
+                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                            };
+                            */
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://guillotine-match.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                     </div>
                 </div>
                 </div>

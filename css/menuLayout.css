@@ -1,16 +1,36 @@
 
+.Jua{font-family: 'Jua', sans-serif; font-size: 20px;}
+.sm {font-family: 'Song Myung', serif;}
+
+
+.contest{
+    text-align: center;
+}
+.intro{
+    text-align: center;
+}
+.detail{
+    text-align: center;
+}
+.textbox{
+    text-align: left;
+}
+
+img {object-fit: cover;}
+p{font-size: 15px;}
+
+
+
 .chatting {
     clear: both;
-    margin:0%;
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
-    margin-top: 200px;
-    width:98%;
+    width:97.5%;
     height:750px;
     background:whitesmoke;
     border-radius: 4px;
-    border:solid black;
+    border:solid lightslategray;
     display: flex;
     align-items: center;
     /* font-family: 'Courier New', Courier, monospace; */
