@@ -119,6 +119,8 @@ slider.style.background = color;
 
 slider.addEventListener("mousemove", xmove);
 slider.addEventListener("touchmove", xmove);
+slider.addEventListener("touchend", xmove);
+
 function xmove (){
     x = slider.value;
     color = 'linear-gradient(90deg, rgb(117, 252, 117)' + x + '% , rgb(214, 214, 214)' + x + '%)';
