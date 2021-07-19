@@ -15,7 +15,7 @@ function onYouTubeIframeAPIReady() {
 
     player1 = new YT.Player('youtube_Iframe1', {
         height: '200',            // <iframe> 태그 지정시 필요없음
-        width: '315',             // <iframe> 태그 지정시 필요없음
+        width: '338',             // <iframe> 태그 지정시 필요없음
         videoId: youtube_vid_01,   // <iframe> 태그 지정시 필요없음
         playerVars: {             // <iframe> 태그 지정시 필요없음
             'autoplay':     0, // 자동재생
@@ -35,7 +35,7 @@ function onYouTubeIframeAPIReady() {
 
     player2 = new YT.Player('youtube_Iframe2', {
         height: '200',            // <iframe> 태그 지정시 필요없음
-        width: '315',             // <iframe> 태그 지정시 필요없음
+        width: '338',             // <iframe> 태그 지정시 필요없음
         videoId: youtube_vid_02,   // <iframe> 태그 지정시 필요없음
         playerVars: {             // <iframe> 태그 지정시 필요없음
             'autoplay':     0, // 자동재생

@@ -1,7 +1,8 @@
 // 승자 저장 -   출력
 function showResult(){
     
-    pauseYoutube();
+    player1.stopVideo();
+    player2.stopVideo();
 
     if(m1==m2){ // 무승부
         anonBox.style.display = "block";	// anonymous 그림

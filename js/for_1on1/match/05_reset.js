@@ -3,7 +3,8 @@
 function resetClicked(btn_id){
 
     // youtube 중단, display off
-    stopYoutube();
+    player1.stopVideo();
+    player2.stopVideo();
     youtubeBox.style.display = "none";	// 
     youtube_Iframe1.style.display = "none";// 
     youtube_Iframe2.style.display = "none";	// 

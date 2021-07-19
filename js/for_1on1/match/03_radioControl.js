@@ -41,6 +41,11 @@ function func2(e){ //라디오버튼 클릭시 이벤트
 
     reset_gradient();
     
-    // youtube 부분 reset 하기
-    pauseYoutube();
+    // youtube reset
+    player1.stopVideo();
+    player2.stopVideo();
+    youtubeBox.style.display = "none";	// 
+    youtube_Iframe1.style.display = "none";	// 
+    youtube_Iframe2.style.display = "none";	// 
 }
+

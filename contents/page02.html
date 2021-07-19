@@ -714,7 +714,7 @@
                     </div><hr>
                     
                     <div class="Quick_play" id="QuickID">
-                        <button class="Quick_play_buttons" onclick="showResult(); winnerMP3()" id="resultbutton">승부 보기</button>
+                        <button class="Quick_play_buttons" onclick="showResult()" id="resultbutton">승부 보기</button>
                         <button class="Quick_play_buttons" onclick="resetClicked(this.id)"     id="resetQ">      경기 리셋</button>
                     </div>
                 </div>
@@ -756,20 +756,19 @@
                     </script>
                     
                     <!-- audio controller-->
-                    <div id=audio_area>
-                        <!-- audio buttons -->
-                        <button type="button" onclick="playYoutube();">></button>
-                        <button type="button" onclick="pauseYoutube();">||</button>
-                        <button type="button" onclick="stopYoutube();">ㅁ</button>
-                        <button type="button" onclick="resetClicked(this.id)" id="resetA">Game Reset</button>
-
+                    <div id=audio_area class="Jua">
                         <!-- volume Slider -->
                         <div class="main">
                             <div class="slideContainer">
                                 <input type="range" min="0" max="100" value="42"   class="slider" id="myRange" onmousedown="volchange2(e)" onmouseout="mouseout()">
-                                <br><br><p>volume: <span id="value"></span></p><br>
+                                <br><p>VOLUME : <span id="value"></span></p><br>
                             </div>
                         </div>
+                        <!-- audio buttons -->
+                        <button class="Jua" type="button" onclick="playYoutube();">play</button>
+                        <button class="Jua" type="button" onclick="pauseYoutube();">pause</button>
+                        <button class="Jua" type="button" onclick="stopYoutube();">stop</button>
+                        <button class="Jua" type="button" onclick="resetClicked(this.id)" id="resetA">게임 리셋</button>
                     </div>
 
                     <!-- Youtube API -->
