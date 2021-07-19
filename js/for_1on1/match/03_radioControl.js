@@ -33,14 +33,14 @@ function func2(e){ //라디오버튼 클릭시 이벤트
         selected2.load();
         selected2.play();
     } 
-    // portrait reset
+
+    //  reset
     anonBox.style.display = "block";
     team1box.style.display = "none";
     team2box.style.display = "none";
 
-    // audio stop
-    vic_sound1.pause();
-    vic_sound2.pause();
-    
     reset_gradient();
+    
+    // youtube 부분 reset 하기
+    pauseYoutube();
 }

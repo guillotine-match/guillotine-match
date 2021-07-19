@@ -15,10 +15,6 @@ function init() {
     // sound ------- anchor move button
     anchor = document.getElementById("anchor");
 
-    // sound ------- victory_sound
-    vic_sound1 = document.getElementById("vic_sound1");
-    vic_sound2 = document.getElementById("vic_sound2");
-
     // sound ------- reset + match
     reset_sound = document.getElementById("rewind");
     match_sound = document.getElementById("bladecut");
@@ -28,16 +24,21 @@ function init() {
     
     // sound ------- audio_click
     audio_click = document.getElementById("audio_click");
-
     
-    // portrait Boxes
+    // winnner display boxes
     anonBox = document.getElementById("portrait_box0_ID"); 
     team1box = document.getElementById("team1box"); 
     team2box = document.getElementById("team2box"); 
+
+    youtubeBox = document.getElementById("youtubeBox"); 
+    youtube_Iframe1 = document.getElementById("youtube_Iframe1"); 
+    youtube_Iframe2 = document.getElementById("youtube_Iframe2"); 
     
+    // shift boxes
     sboxList = document.getElementsByClassName("shifting_boxes");
     total_match = sboxList.length;
 
+    // 길로틴 박스 좌우 설명 박스
     current_Box  = document.getElementById("current_Box");
     selected_Box = document.getElementById("selected_Box");
 

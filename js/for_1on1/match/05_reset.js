@@ -2,15 +2,12 @@
 
 function resetClicked(btn_id){
 
-    //  (1) 클릭음
+    //  (1) 클릭음 내기
     anchor.load();
     anchor.play();
 
     // (2) 승리화면 리셋
     portrait_reset();
-    
-    // (3) 오디오 중단
-    audio_stop();
     
     // (4) 라디오 리셋
     radio_reset();
@@ -23,6 +20,9 @@ function resetClicked(btn_id){
 
     // (9) 그라디언트 삭제
     reset_gradient();
+
+    // youtube 중단, display off
+    youtube_reset();
 } 
 
 function portrait_reset(){
@@ -31,10 +31,6 @@ function portrait_reset(){
     team2box.style.display = "none";
 }
 
-function audio_stop(){
-    vic_sound1.pause();
-    vic_sound2.pause();
-}
 function radio_reset(){
     for(i = 0; i < ele.length; i++) {
         if(ele[i].type == "radio") {
@@ -53,3 +49,7 @@ function scroll_reset(){
     document.getElementById('Guillotine').scrollIntoView();
 }
 
+function youtube_reset(){
+    // audio stop
+    stopYoutube();
+}

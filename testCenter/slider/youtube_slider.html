@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./slider.css">
+</head>
+<body>
+    <!-- 유튜브 API -->
+    <div id="youtube_Iframe"></div>
+    <button type="button" onclick="playYoutube();">Play</button>
+    <button type="button" onclick="pauseYoutube();">Pause</button>
+    <button type="button" onclick="stopYoutube();">Stop</button>
+
+    <!-- 슬라이더 -->
+    <div class="main">
+        <div class="slideContainer">
+            <input type="range" min="0" max="100" value="42"   class="slider" id="myRange" onmousedown="volchange2(e)" onmouseout="mouseout()">
+            <p>볼륨: <span id="value"></span></p>
+        </div>
+    </div>
+</body>
+</html>

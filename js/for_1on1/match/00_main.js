@@ -31,14 +31,9 @@ let selected2;
 // sound ------- anchor move button
 let anchor;
 
-// sound ------- victory_sound
-let vic_sound1;
-let vic_sound2;
 
 // sound ------- guillotine : back - forward
 let back_forward;
-
-// sound ------- guillotine : back - forward
 let audio_click;
 
 // 단두대 박스넘버
@@ -46,9 +41,7 @@ let current_Box;
 let selected_Box;
 let selected_Box_num=0;
 
-// chatting ID 에서 bottom y 좌표 받아서 
-// bottom 값에 넣은 후 
-// article(ID) 의 height 변경하기 
-let bottom = 0;
-let chattingID;
-// document.getElementById('(article)').style.height = (bottom + 50);
+// youtube box
+let youtubeBox;
+let youtube_Iframe1;
+let youtube_Iframe2;
