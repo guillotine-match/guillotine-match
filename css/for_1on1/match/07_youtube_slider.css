@@ -1,5 +1,5 @@
 #youtubeBox{
-	width:315px;
+	width:340px;
 	padding-top: 20px;
 	padding-bottom: 10px;
     margin-top: 200px;
@@ -7,7 +7,8 @@
     left:50%; 
     transform:translateX(-50%);
 	text-align: center;
-	
+	background: black;
+	border-radius: 10px;
 }
 
 #youtubeBox > #video_bundle{

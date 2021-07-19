@@ -28,22 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../css/for_1on1/match/08_chatting.css">
     <link rel="stylesheet" type="text/css" href="../css/for_1on1/page01/reset.css">
 
-    <!-- JS -->
-    <script src="../js/for_1on1/match/00_main.js"></script>
-    <script src="../js/for_1on1/match/01_init.js"></script>
-    <script src="../js/for_1on1/match/02_guillotine.js"></script>
-    <script src="../js/for_1on1/match/03_radioControl.js"></script>
-    <script src="../js/for_1on1/match/04_showResults.js"></script>
-    <script src="../js/for_1on1/match/05_reset.js"></script>
-    <script src="../js/for_1on1/match/06_audioControl.js"></script>
-    <script src="../js/for_1on1/page01/css_loader.js"></script>
-    
-    <!-- image controller -->
-    <script type="text/javascript" src="../js/extra_imagePop.js"></script>
-    <script> if (window.screen.width>1220) { // PC 화면에서만 이미지 마우스 호버시 확대
-        document.write('<script type="text/javascript" src="../js/extra_imageEnlarge.js"><\/script>');
-        }
-    </script> 
+
 
 
 
@@ -1041,28 +1026,27 @@
                 </div>
 
                 <div id="youtubeBox" style="display:none">
-                    <!-- youtube video ID setting -->
+                    <!-- youtube video ID -->
                     <script>
                         let youtube_vid_01 = '8tkQTQLbyt4';
                         let youtube_vid_02 = '8wRJ3aYRHqU';
                     </script>
-
-
-
+                    
+                    <!-- audio controller-->
                     <button type="button" onclick="playYoutube();">Play</button>
                     <button type="button" onclick="pauseYoutube();">Pause</button>
                     <button type="button" onclick="stopYoutube();">Stop</button>
 
-                    <!-- 슬라이더 -->
+                    <!-- Slider -->
                     <div class="main">
                         <div class="slideContainer">
                             <input  type="range" min="0" max="100" value="20"   
-                                    class="slider" id="myRange" onmousedown="volchange2(e)" onmouseout="mouseout()">
+                                    class="slider" id="myRange" onmousedown="down(e)"  onmouseout="mouseout()">
                             <br><br><p>volume: <span id="value"></span></p>
                         </div>
                     </div>
 
-                    <!-- 유튜브 API -->
+                    <!-- Youtube API -->
                     <div id=video_bundle>
                         <br><div style="display:none" id="youtube_Iframe1"></div><br>
                         <br><div style="display:none" id="youtube_Iframe2"></div><br>
@@ -1116,6 +1100,21 @@
         </article>
         <footer><div></div></footer>
     </div>
-    
+        <!-- JS -->
+        <script src="../js/for_1on1/match/00_main.js"></script>
+        <script src="../js/for_1on1/match/01_init.js"></script>
+        <script src="../js/for_1on1/match/02_guillotine.js"></script>
+        <script src="../js/for_1on1/match/03_radioControl.js"></script>
+        <script src="../js/for_1on1/match/04_showResults.js"></script>
+        <script src="../js/for_1on1/match/05_reset.js"></script>
+        <script src="../js/for_1on1/match/06_audioControl.js"></script>
+        <script src="../js/for_1on1/page01/css_loader.js"></script>
+        
+        <!-- image controller -->
+        <script type="text/javascript" src="../js/extra_imagePop.js"></script>
+        <script> if (window.screen.width>1220) { // PC 화면에서만 이미지 마우스 호버시 확대
+            document.write('<script type="text/javascript" src="../js/extra_imageEnlarge.js"><\/script>');
+            }
+        </script> 
 </body>
 </html>
