@@ -26,7 +26,7 @@ function showResult(){
 
         // youtube
         youtubeBox.style.display = "block";	// 
-        youtube_Iframe1.style.display = "block";	// 
+        youtube_Iframe1.style.display = "block";// 
         youtube_Iframe2.style.display = "none";	// 
         playYoutube();
 

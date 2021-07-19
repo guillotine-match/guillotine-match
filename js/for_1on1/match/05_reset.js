@@ -2,6 +2,12 @@
 
 function resetClicked(btn_id){
 
+    // youtube 중단, display off
+    stopYoutube();
+    youtubeBox.style.display = "none";	// 
+    youtube_Iframe1.style.display = "none";// 
+    youtube_Iframe2.style.display = "none";	// 
+    
     //  (1) 클릭음 내기
     anchor.load();
     anchor.play();
@@ -21,8 +27,7 @@ function resetClicked(btn_id){
     // (9) 그라디언트 삭제
     reset_gradient();
 
-    // youtube 중단, display off
-    youtube_reset();
+
 } 
 
 function portrait_reset(){
@@ -47,9 +52,4 @@ function sbox_and_variable_reset(){
 
 function scroll_reset(){
     document.getElementById('Guillotine').scrollIntoView();
-}
-
-function youtube_reset(){
-    // audio stop
-    stopYoutube();
 }

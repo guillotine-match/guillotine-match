@@ -28,9 +28,22 @@
     <link rel="stylesheet" type="text/css" href="../css/for_1on1/match/08_chatting.css">
     <link rel="stylesheet" type="text/css" href="../css/for_1on1/page01/reset.css">
 
-
-
-
+    <!-- JS -->
+    <script src="../js/for_1on1/match/00_main.js"></script>
+    <script src="../js/for_1on1/match/01_init.js"></script>
+    <script src="../js/for_1on1/match/02_guillotine.js"></script>
+    <script src="../js/for_1on1/match/03_radioControl.js"></script>
+    <script src="../js/for_1on1/match/04_showResults.js"></script>
+    <script src="../js/for_1on1/match/05_reset.js"></script>
+    <script src="../js/for_1on1/match/06_audioControl.js"></script>
+    <script src="../js/for_1on1/page01/css_loader.js"></script>
+    
+    <!-- image controller -->
+    <script type="text/javascript" src="../js/extra_imagePop.js"></script>
+    <script> if (window.screen.width>1220) { // PC 화면에서만 이미지 마우스 호버시 확대
+        document.write('<script type="text/javascript" src="../js/extra_imageEnlarge.js"><\/script>');
+        }
+    </script> 
 
 </head>
 <body onload="init()">
@@ -1035,9 +1048,10 @@
                     <!-- audio controller-->
                     <div id=audio_area>
                         <!-- audio buttons -->
-                        <button type="button" onclick="playYoutube();">Play</button>
-                        <button type="button" onclick="pauseYoutube();">Pause</button>
-                        <button type="button" onclick="stopYoutube();">Stop</button>
+                        <button type="button" onclick="playYoutube();">></button>
+                        <button type="button" onclick="pauseYoutube();">||</button>
+                        <button type="button" onclick="stopYoutube();">ㅁ</button>
+                        <button type="button" onclick="resetClicked(this.id)" id="resetA">Game Reset</button>
 
                         <!-- volume Slider -->
                         <div class="main">
@@ -1053,16 +1067,12 @@
                         <br><div style="display:none" id="youtube_Iframe1"></div><br>
                         <br><div style="display:none" id="youtube_Iframe2"></div><br>
                     </div>
-                    
                 </div>
                 <script src="../js/for_1on1/match/06_youtube_slider.js"></script>
 
 
 
                 <div style="display:none">
-                    <!-- 승리  -->
-                    <audio id="vic_sound1" src="../src/mp3/page01/team1.mp3"></audio>
-                    <audio id="vic_sound2" src="../src/mp3/page01/team2.mp3"></audio>
                     <!-- 선택  -->
                     <audio id="selected1" src="../src/mp3/selected1.mp3"></audio> 
                     <audio id="selected2" src="../src/mp3/selected2.mp3"></audio> 
@@ -1102,21 +1112,5 @@
         </article>
         <footer><div></div></footer>
     </div>
-        <!-- JS -->
-        <script src="../js/for_1on1/match/00_main.js"></script>
-        <script src="../js/for_1on1/match/01_init.js"></script>
-        <script src="../js/for_1on1/match/02_guillotine.js"></script>
-        <script src="../js/for_1on1/match/03_radioControl.js"></script>
-        <script src="../js/for_1on1/match/04_showResults.js"></script>
-        <script src="../js/for_1on1/match/05_reset.js"></script>
-        <script src="../js/for_1on1/match/06_audioControl.js"></script>
-        <script src="../js/for_1on1/page01/css_loader.js"></script>
-        
-        <!-- image controller -->
-        <script type="text/javascript" src="../js/extra_imagePop.js"></script>
-        <script> if (window.screen.width>1220) { // PC 화면에서만 이미지 마우스 호버시 확대
-            document.write('<script type="text/javascript" src="../js/extra_imageEnlarge.js"><\/script>');
-            }
-        </script> 
 </body>
 </html>
