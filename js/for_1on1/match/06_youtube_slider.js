@@ -83,7 +83,7 @@ function mobileChange(){
     alert();
 }
 
-const Vol = setInterval(volchange, 100);
+const Vol = setInterval(volchange, 50);
 let mousePosition=0;
 
 function volchange2(){
