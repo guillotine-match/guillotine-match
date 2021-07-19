@@ -1047,11 +1047,7 @@
                         let youtube_vid_02 = '8wRJ3aYRHqU';
                     </script>
 
-                    <!-- 유튜브 API -->
-                    <div id=video_bundle>
-                        <br><div style="display:none" id="youtube_Iframe1"></div><br>
-                        <br><div style="display:none" id="youtube_Iframe2"></div><br>
-                    </div>
+
 
                     <button type="button" onclick="playYoutube();">Play</button>
                     <button type="button" onclick="pauseYoutube();">Pause</button>
@@ -1060,11 +1056,18 @@
                     <!-- 슬라이더 -->
                     <div class="main">
                         <div class="slideContainer">
-                            <input  type="range" min="0" max="100" value="42"   
+                            <input  type="range" min="0" max="100" value="20"   
                                     class="slider" id="myRange" onmousedown="volchange2(e)" onmouseout="mouseout()">
                             <br><br><p>volume: <span id="value"></span></p>
                         </div>
                     </div>
+
+                    <!-- 유튜브 API -->
+                    <div id=video_bundle>
+                        <br><div style="display:none" id="youtube_Iframe1"></div><br>
+                        <br><div style="display:none" id="youtube_Iframe2"></div><br>
+                    </div>
+                    
                 </div>
                 <script src="../js/for_1on1/match/06_youtube_slider.js"></script>
 

@@ -11,7 +11,7 @@
 }
 
 #youtubeBox > #video_bundle{
-	
+    margin-top: 20px;
 	background: black;
 	border-radius: 10px;
 }
