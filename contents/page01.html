@@ -1033,16 +1033,18 @@
                     </script>
                     
                     <!-- audio controller-->
-                    <button type="button" onclick="playYoutube();">Play</button>
-                    <button type="button" onclick="pauseYoutube();">Pause</button>
-                    <button type="button" onclick="stopYoutube();">Stop</button>
+                    <div id=audio_area>
+                        <!-- audio buttons -->
+                        <button type="button" onclick="playYoutube();">Play</button>
+                        <button type="button" onclick="pauseYoutube();">Pause</button>
+                        <button type="button" onclick="stopYoutube();">Stop</button>
 
-                    <!-- Slider -->
-                    <div class="main">
-                        <div class="slideContainer">
-                            <input  type="range" min="0" max="100" value="20"   
-                                    class="slider" id="myRange" onmousedown="down(e)"  onmouseout="mouseout()">
-                            <br><br><p>volume: <span id="value"></span></p>
+                        <!-- volume Slider -->
+                        <div class="main">
+                            <div class="slideContainer">
+                                <input type="range" min="0" max="100" value="42"   class="slider" id="myRange" onmousedown="volchange2(e)" onmouseout="mouseout()">
+                                <br><br><p>volume: <span id="value"></span></p><br>
+                            </div>
                         </div>
                     </div>
 

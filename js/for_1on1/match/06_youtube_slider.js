@@ -71,19 +71,21 @@ function stopYoutube() {
 }
 
 
+
+
+
+
+
+
+
+
 // 볼륨 슬라이더
 function volchange(){
     player1.setVolume(x);
     player2.setVolume(x);
 }
 
-function mobileChange(){
-    player1.setVolume(x);
-    player2.setVolume(x);
-    alert();
-}
-
-const Vol = setInterval(volchange, 50);
+const Vol = setInterval(volchange, 100);
 let mousePosition=0;
 
 function volchange2(){
@@ -96,6 +98,9 @@ function mouseout(){
     mousePosition=1;
 }
 
+
+
+
 // 슬라이더 생성
 var slider = document.getElementById("myRange");
 
@@ -106,7 +111,7 @@ slider.oninput = function() {
 output.innerHTML = this.value;
 }
 
-// x값 시작값에 대입
+// x값을 시작 볼륨값으로 대입
 var start_value = slider.getAttribute("value");
 var x = start_value;
 
@@ -127,36 +132,3 @@ function xmove (){
     slider.style.background = color;
 }
 
-
-
-
-
-
-// 슬라이더 생성
-var slider2 = document.getElementById("myRange");
-
-// y 값 텍스트로 내보내기
-var output2 = document.getElementById("value");
-output.innerHTML = slider.value;
-slider2.oninput = function() {
-output.innerHTML = this.value;
-}
-
-// y값 시작값에 대입
-var start_value2 = slider.getAttribute("value");
-var y = start_value2;
-
-// y값 이동에 따른 색상 부여
-var color = 'linear-gradient(90deg, rgb(117, 252, 117)' + y + '% , rgb(214, 214, 214)' + y + '%)';
-slider.style.background = color;
-
-// 슬라이더의 y값 변경에 대한 event listener를
-// 접속 가능한 기기별로 등록 (마우스, 터치)
-
-slider.addEventListener("mousemove", ymove);
-slider.addEventListener("touchmove", ymove);
-function ymove (){
-    y = slider.value;
-    color = 'linear-gradient(90deg, rgb(117, 252, 117)' + y + '% , rgb(214, 214, 214)' + y + '%)';
-    slider.style.background = color;
-}
