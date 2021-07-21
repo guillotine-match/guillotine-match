@@ -11,8 +11,9 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player1;
 var player2;
 
-function onYouTubeIframeAPIReady() {
 
+function onYouTubeIframeAPIReady() {
+    
     player1 = new YT.Player('youtube_Iframe1', {
         height: '200',            // <iframe> 태그 지정시 필요없음
         width: '338',             // <iframe> 태그 지정시 필요없음
@@ -51,7 +52,11 @@ function onYouTubeIframeAPIReady() {
             'wmode': 'transparent',         // 뭔지 모름
             'showinfo': 0,
         }
-    });
+    }
+    
+    );
+
+    
 }
 
 function playYoutube() {
@@ -86,6 +91,8 @@ function volchange(){
 }
 
 const Vol = setInterval(volchange, 100);
+
+
 let mousePosition=0;
 
 function volchange2(){
