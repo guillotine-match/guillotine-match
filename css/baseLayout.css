@@ -2,7 +2,8 @@
 html{scroll-behavior: smooth;}
 body { background-color: #fff9f3; }
 #wrap {width: 1200px; margin: 0 auto;}
-header {width: 100%; height: 100px; padding-top:100px; background-color: #f8eee0;}
+header {width: 100%; height: 200px; padding-top:100px; background-color: #f8eee0;}
+header > div { width: 100%; height:100px;  padding-top:50px; font-size: 23px; text-align: center; color:brown}
 nav {width: 90%; height: 100px; padding: 5%; background-color: #e4c4a0;}
 nav > div {width: 30%; margin: 1%; height: 30px; line-height: 30px; background-color: #FAEBD7; float: left; border-radius: 5px; text-align: center;}
 nav > div:hover{background: peachpuff;}
@@ -21,6 +22,7 @@ footer >div { height: 300px; background-color:#d4c0a6; }
 .center{text-align: center;}
 .right{text-align: right;}
 .links{cursor:pointer;}
+button{cursor:pointer;}
 
 a:link { text-decoration: none;}
 a:visited { color: black; text-decoration: none;}

@@ -73,7 +73,7 @@
 }
 .shifting_boxes .match_ImageBox img{
     height: 585px;
-    object-fit: cover;
+    object-fit:cover;
 }
 .shifting_boxes .Left_match_Imgbox img{
     margin-left:3%;
@@ -195,7 +195,6 @@
     }
     .shifting_boxes .match_ImageBox img{
         height: 480px;
-        object-fit: cover;
     }
 
 

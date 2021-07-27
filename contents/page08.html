@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../css/for_1on1/match/06_winPic.css">
     <link rel="stylesheet" type="text/css" href="../css/for_1on1/match/07_youtube_slider.css">
     <link rel="stylesheet" type="text/css" href="../css/for_1on1/match/08_chatting.css">
-    <link rel="stylesheet" type="text/css" href="../css/for_1on1/page07/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/for_1on1/page08/reset.css">
 
     <!-- JS -->
     <script src="../js/for_1on1/match/00_main.js"></script>
@@ -47,7 +47,7 @@
     <script src="../js/for_1on1/match/04_showResults.js"></script>
     <script src="../js/for_1on1/match/05_reset.js"></script>
     <script src="../js/for_1on1/match/06_audioControl.js"></script>
-    <script src="../js/for_1on1/page07/css_loader.js"></script>
+    <script src="../js/for_1on1/page08/css_loader.js"></script>
     
     <!-- image controller -->
     <script type="text/javascript" src="../js/extra_imagePop.js"></script>
@@ -72,27 +72,27 @@
             <div class="contest" id="contestarea">
                 
                 <div class="battleTag">
-                    <br><h2> 철권 vs 킹오파 </h2><br>
+                    <br><h2>동양 vs 서양 액션</h2><br>
                 </div>
 
-                <div class="battleTag_sub">
-                    <h3> 철권 vs 킹 오브 파이터즈 </h3>
+                <div class="battleTag_sub ">
+                    <h3>동서양 액션스타 단두대 매치</h3>
                 </div>
 
-                <div class="imgbundle">
+                <div class="imgbundle" >
                     <div class="imgbox">
                         <div class="box1">
-                            <img src="../src/img/page07/team1.jpg" 
+                            <img src="../src/img/page08/team1.jpg" 
                             onmouseenter="zoomIn(event)" 
                             onmouseleave="zoomOut(event)" 
-                            onclick="doImgPop('../src/img/page07/team1.jpg')"/>
+                            onclick="doImgPop('../src/img/page08/team1.jpg')"/>
                         </div>
                         <div class="emptyBox"></div>
                         <div class="box2">
-                            <img src="../src/img/page07/team2.jpg" 
+                            <img src="../src/img/page08/team2.jpg" 
                             onmouseenter="zoomIn(event)" 
                             onmouseleave="zoomOut(event)" 
-                            onclick="doImgPop('../src/img/page07/team2.jpg')"/>
+                            onclick="doImgPop('../src/img/page08/team2.jpg')"/>
                         </div>
                     </div>
                     <div class="anchorExplain">
@@ -103,28 +103,26 @@
                         <button onclick="toQuickplay()">빠른 대전</button>
                     </div>
                 </div>
-
+                <!-- toGuillotine(); -->
                 <div class="guillotine_Match" id="Guillotine">
                     <div class="match_title">단두대 매치</div>
-
                     <div id=current_Box></div>
                     <div id=selected_Box></div>
-
                     <!-- shift_01 -->
                     <div class="shifting_boxes" id="shift_01">
                         <div class="fight_about">
-                            주인공
+                            아이콘
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/1.jpg"
+                                <img src="../src/img/page08/team1/01.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/1.jpg" 
+                                <img src="../src/img/page08/team2/01.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -133,27 +131,27 @@
                         </div>
                         
                         <div class="Left_palyer_name">
-                            쿠사나기 쿄
+                            브루스 리
                         </div>
                         <div class="Right_palyer_name">
-                            진 카즈야
+                            실베스터 스텔론
                         </div>
                     </div>
                     <!-- shift_02 -->
                     <div class="shifting_boxes" id="shift_02" style="display:none">
                         <div class="fight_about">
-                            타격 전문
+                            역동적인 무빙
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/2.jpg" 
+                                <img src="../src/img/page08/team1/02.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/2.jpg" 
+                                <img src="../src/img/page08/team2/02.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -161,27 +159,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            랄프 존스
+                            성룡
                         </div>
                         <div class="Right_palyer_name">
-                            아머 킹
+                            장 클로드 반담
                         </div>
                     </div>
                     <!-- shift_03 -->
                     <div class="shifting_boxes" id="shift_03" style="display:none">
                         <div class="fight_about">
-                            잡기
+                            완벽주의자
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/3.jpg" 
+                                <img src="../src/img/page08/team1/03.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/3.jpg" 
+                                <img src="../src/img/page08/team2/03.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -189,27 +187,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            나나카세 야시로
+                            이연걸
                         </div>
                         <div class="Right_palyer_name">
-                            킹
+                            아놀드 슈왈츠제네거
                         </div>
                     </div>
                     <!--  shift_04 -->
                     <div class="shifting_boxes" id="shift_04" style="display:none">
                         <div class="fight_about">
-                            태권도 사부
+                            백병전
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/4.jpg" 
+                                <img src="../src/img/page08/team1/04.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/4.jpg" 
+                                <img src="../src/img/page08/team2/04.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -218,27 +216,27 @@
                         </div>
                         
                         <div class="Left_palyer_name">
-                            김갑환
+                            견자단
                         </div>
                         <div class="Right_palyer_name">
-                            화랑
+                            휴잭맨
                         </div>
                     </div>
                     <!--  shift_05 -->
                     <div class="shifting_boxes" id="shift_05" style="display:none">
                         <div class="fight_about">
-                            취권
+                            두께로 승부한다
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/5.jpg"
+                                <img src="../src/img/page08/team1/05.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/5.jpg" 
+                                <img src="../src/img/page08/team2/05.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -246,27 +244,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            친 겐사이
+                            마동석
                         </div>
                         <div class="Right_palyer_name">
-                            레이 우롱
+                            드웨인 존슨
                         </div>
                     </div>
                     <!--  shift_06 -->
                     <div class="shifting_boxes" id="shift_06" style="display:none">
                         <div class="fight_about">
-                            무에타이
+                            격투가 출신
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/6.jpg" 
+                                <img src="../src/img/page08/team1/06.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/6.jpg" 
+                                <img src="../src/img/page08/team2/06.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -274,27 +272,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            죠 히가시
+                            토니 쟈
                         </div>
                         <div class="Right_palyer_name">
-                            브루스 어빈
+                            돌프 룬드그렌
                         </div>
                     </div>
                     <!--  shift_07 -->
                     <div class="shifting_boxes" id="shift_07" style="display:none">
                         <div class="fight_about">
-                            사바트(프랑스)
+                            정예군
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/7.jpg" 
+                                <img src="../src/img/page08/team1/07.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/7.jpg" 
+                                <img src="../src/img/page08/team2/07.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -302,27 +300,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            킹
+                            주걸륜
                         </div>
                         <div class="Right_palyer_name">
-                            카타리나 아우베스
+                            브래드 피트
                         </div>
                     </div>
                     <!--  shift_08 -->
                     <div class="shifting_boxes" id="shift_08" style="display:none">
                         <div class="fight_about">
-                            아이돌
+                            추노 vs 프리덤
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/8.jpg" 
+                                <img src="../src/img/page08/team1/08.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/8.jpg" 
+                                <img src="../src/img/page08/team2/08.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -330,27 +328,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            아사미야 아테나
+                            장혁
                         </div>
                         <div class="Right_palyer_name">
-                            럭키 클로에
+                            멜 깁슨
                         </div>
                     </div>
                     <!--  shift_09 -->
                     <div class="shifting_boxes" id="shift_09" style="display:none">
                         <div class="fight_about">
-                            복서
+                            피의 복수극
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/9.jpg" 
+                                <img src="../src/img/page08/team1/09.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/9.jpg" 
+                                <img src="../src/img/page08/team2/09.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -358,27 +356,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            바네사
+                            원빈
                         </div>
                         <div class="Right_palyer_name">
-                            스티브 폭스
+                            리암 니슨
                         </div>
                     </div>
                     <!--  shift_10 -->
                     <div class="shifting_boxes" id="shift_10" style="display:none">
                         <div class="fight_about">
-                            군인
+                            현실성 제로 액션
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/10.jpg" 
+                                <img src="../src/img/page08/team1/10.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/10.jpg" 
+                                <img src="../src/img/page08/team2/10.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -386,27 +384,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            하이데른
+                            우징
                         </div>
                         <div class="Right_palyer_name">
-                            세르게이 드라그노프
+                            스티븐 시걸
                         </div>
                     </div>
                     <!--  shift_11 -->
                     <div class="shifting_boxes" id="shift_11" style="display:none">
                         <div class="fight_about">
-                            관절기
+                            신궁
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/11.jpg" 
+                                <img src="../src/img/page08/team1/11.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/11.jpg" 
+                                <img src="../src/img/page08/team2/11.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -414,27 +412,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            셸미
+                            송일국
                         </div>
                         <div class="Right_palyer_name">
-                            나나 윌리엄스
+                            올랜도 블룸
                         </div>
                     </div>
                     <!--  shift_12 -->
                     <div class="shifting_boxes" id="shift_12" style="display:none">
                         <div class="fight_about">
-                            여군
+                            진정한 망치의 주인
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/12.jpg" 
+                                <img src="../src/img/page08/team1/12.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/12.jpg" 
+                                <img src="../src/img/page08/team2/12.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -442,27 +440,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            레오나
+                            최민식
                         </div>
                         <div class="Right_palyer_name">
-                            마스터 레이븐
+                            크리스 햄스워스
                         </div>
                     </div>
                     <!--  shift_13 -->
                     <div class="shifting_boxes" id="shift_13" style="display:none">
                         <div class="fight_about">
-                            머리가 힘의 근원
+                            칼로 나누는 대화
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/13.jpg" 
+                                <img src="../src/img/page08/team1/13.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/13.jpg" 
+                                <img src="../src/img/page08/team2/13.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -470,27 +468,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            베니마루
+                            이병헌
                         </div>
                         <div class="Right_palyer_name">
-                            폴 피닉스
+                            웨슬리 스나입스
                         </div>
                     </div>
                     <!--  shift_14 -->
                     <div class="shifting_boxes" id="shift_14" style="display:none">
                         <div class="fight_about">
-                            중국 정통 무술
+                            활강
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/14.jpg" 
+                                <img src="../src/img/page08/team1/14.png" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/14.jpg" 
+                                <img src="../src/img/page08/team2/14.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -498,27 +496,27 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            시라누이 마이
+                            주성치
                         </div>
                         <div class="Right_palyer_name">
-                            링 샤오유
+                            키아누 리브스
                         </div>
                     </div>
                     <!--  shift_15 -->
                     <div class="shifting_boxes" id="shift_15" style="display:none">
                         <div class="fight_about">
-                            금발갑
+                            액션 영화의 원로
                         </div>
                         <div class="match_ImageBox">
                             <div class="Left_match_Imgbox">
-                                <img src="../src/img/page07/team1/15.jpg" 
+                                <img src="../src/img/page08/team1/15.jpg" 
                                 class="tm1"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
                                 onclick="select(this.className)"/>
                             </div>
                             <div class="Right_match_Imgbox">
-                                <img src="../src/img/page07/team2/15.jpg" 
+                                <img src="../src/img/page08/team2/15.jpg" 
                                 class="tm2"
                                 onmouseenter="zoomIn(event)" 
                                 onmouseleave="zoomOut(event)" 
@@ -526,19 +524,189 @@
                             </div>
                         </div>
                         <div class="Left_palyer_name">
-                            블루 마리
+                            주윤발
                         </div>
                         <div class="Right_palyer_name">
-                            리리 로슈포르
+                            브루스 윌리스
                         </div>
                     </div>
+                    <!--  shift_16 -->
+                    <div class="shifting_boxes" id="shift_16" style="display:none">
+                        <div class="fight_about">
+                            수트핏
+                        </div>
+                        <div class="match_ImageBox">
+                            <div class="Left_match_Imgbox">
+                                <img src="../src/img/page08/team1/16.jpg" 
+                                class="tm1"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                            <div class="Right_match_Imgbox">
+                                <img src="../src/img/page08/team2/16.jpg" 
+                                class="tm2"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                        </div>
+                        <div class="Left_palyer_name">
+                            곽부성
+                        </div>
+                        <div class="Right_palyer_name">
+                            제이슨 스타뎀
+                        </div>
+                    </div>
+                    <!--  shift_17 -->
+                    <div class="shifting_boxes" id="shift_17" style="display:none">
+                        <div class="fight_about">
+                            왕의 귀환
+                        </div>
+                        <div class="match_ImageBox">
+                            <div class="Left_match_Imgbox">
+                                <img src="../src/img/page08/team1/17.jpg" 
+                                class="tm1"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                            <div class="Right_match_Imgbox">
+                                <img src="../src/img/page08/team2/17.jpg" 
+                                class="tm2"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                        </div>
+                        <div class="Left_palyer_name">
+                            최수종
+                        </div>
+                        <div class="Right_palyer_name">
+                            러셀 크로우
+                        </div>
+                    </div>
+                    <!--  shift_18 -->
+                    <div class="shifting_boxes" id="shift_18" style="display:none">
+                        <div class="fight_about">
+                            잠입 경찰
+                        </div>
+                        <div class="match_ImageBox">
+                            <div class="Left_match_Imgbox">
+                                <img src="../src/img/page08/team1/18.jpg" 
+                                class="tm1"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                            <div class="Right_match_Imgbox">
+                                <img src="../src/img/page08/team2/18.jpg" 
+                                class="tm2"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                        </div>
+                        <div class="Left_palyer_name">
+                            양조위
+                        </div>
+                        <div class="Right_palyer_name">
+                            레오나르도 디카프리오
+                        </div>
+                    </div>
+
+                    <!--  shift_19 -->
+                    <div class="shifting_boxes" id="shift_19" style="display:none">
+                        <div class="fight_about">
+                            셔츠 한 장 패션
+                        </div>
+                        <div class="match_ImageBox">
+                            <div class="Left_match_Imgbox">
+                                <img src="../src/img/page08/team1/19.jpg" 
+                                class="tm1"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                            <div class="Right_match_Imgbox">
+                                <img src="../src/img/page08/team2/19.jpg" 
+                                class="tm2"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                        </div>
+                        <div class="Left_palyer_name">
+                            유덕화
+                        </div>
+                        <div class="Right_palyer_name">
+                            멧 데이먼
+                        </div>
+                    </div>
+                    <!--  shift_20 -->
+                    <div class="shifting_boxes" id="shift_20" style="display:none">
+                        <div class="fight_about">
+                            특훈
+                        </div>
+                        <div class="match_ImageBox">
+                            <div class="Left_match_Imgbox">
+                                <img src="../src/img/page08/team1/20.jpg" 
+                                class="tm1"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                            <div class="Right_match_Imgbox">
+                                <img src="../src/img/page08/team2/20.jpg" 
+                                class="tm2"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                        </div>
+                        <div class="Left_palyer_name">
+                            권상우
+                        </div>
+                        <div class="Right_palyer_name">
+                            크리스찬 베일
+                        </div>
+                    </div>
+                    <!--  shift_21 -->
+                    <div class="shifting_boxes" id="shift_21" style="display:none">
+                        <div class="fight_about">
+                            무술 감독
+                        </div>
+                        <div class="match_ImageBox">
+                            <div class="Left_match_Imgbox">
+                                <img src="../src/img/page08/team1/21.jpg" 
+                                class="tm1"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                            <div class="Right_match_Imgbox">
+                                <img src="../src/img/page08/team2/21.jpg" 
+                                class="tm2"
+                                onmouseenter="zoomIn(event)" 
+                                onmouseleave="zoomOut(event)" 
+                                onclick="select(this.className)"/>
+                            </div>
+                        </div>
+                        <div class="Left_palyer_name">
+                            정두홍
+                        </div>
+                        <div class="Right_palyer_name">
+                            스콧 앳킨스
+                        </div>
+                    </div>
+                    
                     <!-- 버튼 Area 시작 -->
                     <div class="area_for_6_button">
                         <div class="match_control_area">
-                            <button class="match_controller" onclick="go_back();"><</button>
+                            <button class="match_controller" onclick="go_back();">&lt;</button>
                             <button class="match_controller" onclick="showResult();">승부</button>
                             <button class="match_controller" onclick="resetClicked(this.id)" id="resetG">리셋</button>
-                            <button class="match_controller" onclick="go_next();">></button>
+                            <button class="match_controller" onclick="go_next();">&gt;</button>
                         </div>
                     </div>
                 </div>
@@ -550,196 +718,236 @@
                     <div class="sub_title2">
                         quick play
                     </div>
-
-
-
-
                     <div class="q_row">
-                        <div class="numbering">&nbsp;1.</div><div class="queries">주인공</div>
+                        <div class="numbering">&nbsp;1.</div><div class="queries"> 아이콘</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion1" onclick="func(this.name); func2(this.className);" class="member1" id="y0"><label for="y0">쿠사나기 쿄</label></li>
-                                <li><input type="radio" name="qstion1" onclick="func(this.name); func2(this.className);" class="member2" id="n0"><label for="n0">카자마 진</label></li>
+                                <li><input type="radio" name="qstion1" onclick="func(this.name); func2(this.className);" class="member1" id="y0"><label for="y0">브루스 리</label></li>
+                                <li><input type="radio" name="qstion1" onclick="func(this.name); func2(this.className);" class="member2" id="n0"><label for="n0">실베스터 스텔론</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;2.</div><div class="queries">타격 전문</div>
+                        <div class="numbering">&nbsp;2.</div><div class="queries">역동적인 무빙</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion2" onclick="func(this.name); func2(this.className);" class="member1" id="y1"><label for="y1">랄프 존스</label></li>
-                                <li><input type="radio" name="qstion2" onclick="func(this.name); func2(this.className);" class="member2" id="n1"><label for="n1">아머 킹</label></li>
+                                <li><input type="radio" name="qstion2" onclick="func(this.name); func2(this.className);" class="member1" id="y1"><label for="y1">성룡</label></li>
+                                <li><input type="radio" name="qstion2" onclick="func(this.name); func2(this.className);" class="member2" id="n1"><label for="n1">장 클로드 반담</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;3.</div><div class="queries">잡기</div>
+                        <div class="numbering">&nbsp;3.</div><div class="queries">완벽주의</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion3" onclick="func(this.name); func2(this.className);" class="member1" id="y2"><label for="y2">야시로</label></li>
-                                <li><input type="radio" name="qstion3" onclick="func(this.name); func2(this.className);" class="member2" id="n2"><label for="n2">킹</label></li>
+                                <li><input type="radio" name="qstion3" onclick="func(this.name); func2(this.className);" class="member1" id="y2"><label for="y2">이연걸</label></li>
+                                <li><input type="radio" name="qstion3" onclick="func(this.name); func2(this.className);" class="member2" id="n2"><label for="n2">아놀드 슈왈츠제네거</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;4.</div><div class="queries">태권도 사부</div>
+                        <div class="numbering">&nbsp;4.</div><div class="queries">백병전</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion4" onclick="func(this.name); func2(this.className);" class="member1" id="y3"><label for="y3">김갑환</label></li>
-                                <li><input type="radio" name="qstion4" onclick="func(this.name); func2(this.className);" class="member2" id="n3"><label for="n3">화랑</label></li>
+                                <li><input type="radio" name="qstion4" onclick="func(this.name); func2(this.className);" class="member1" id="y3"><label for="y3">견자단</label></li>
+                                <li><input type="radio" name="qstion4" onclick="func(this.name); func2(this.className);" class="member2" id="n3"><label for="n3">휴 잭맨</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;5.</div><div class="queries">취권</div>
+                        <div class="numbering">&nbsp;5.</div><div class="queries">두께로 승부한다</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion5" onclick="func(this.name); func2(this.className);" class="member1" id="y4"><label for="y4">친 겐사이</label></li>
-                                <li><input type="radio" name="qstion5" onclick="func(this.name); func2(this.className);" class="member2" id="n4"><label for="n4">레이 우롱</label></li>
+                                <li><input type="radio" name="qstion5" onclick="func(this.name); func2(this.className);" class="member1" id="y4"><label for="y4">마동석</label></li>
+                                <li><input type="radio" name="qstion5" onclick="func(this.name); func2(this.className);" class="member2" id="n4"><label for="n4">드웨인 존슨</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;6.</div><div class="queries">무에타이</div>
+                        <div class="numbering">&nbsp;6.</div><div class="queries">격투가 출신</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion6" onclick="func(this.name); func2(this.className);" class="member1" id="y5"><label for="y5">죠 히가시</label></li>
-                                <li><input type="radio" name="qstion6" onclick="func(this.name); func2(this.className);" class="member2" id="n5"><label for="n5">브루스 어빈</label></li>
+                                <li><input type="radio" name="qstion6" onclick="func(this.name); func2(this.className);" class="member1" id="y5"><label for="y5">토니 쟈</label></li>
+                                <li><input type="radio" name="qstion6" onclick="func(this.name); func2(this.className);" class="member2" id="n5"><label for="n5">돌프 룬드그렌</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;7.</div><div class="queries">사바트</div>
+                        <div class="numbering">&nbsp;7.</div><div class="queries">정예군</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion7" onclick="func(this.name); func2(this.className);" class="member1" id="y6"><label for="y6">킹</label></li>
-                                <li><input type="radio" name="qstion7" onclick="func(this.name); func2(this.className);" class="member2" id="n6"><label for="n6">카타리나</label></li>
+                                <li><input type="radio" name="qstion7" onclick="func(this.name); func2(this.className);" class="member1" id="y6"><label for="y6">주걸륜</label></li>
+                                <li><input type="radio" name="qstion7" onclick="func(this.name); func2(this.className);" class="member2" id="n6"><label for="n6">브래드 피트</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;8.</div><div class="queries">아이돌</div>
+                        <div class="numbering">&nbsp;8.</div><div class="queries">추노 vs 프리덤</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion8" onclick="func(this.name); func2(this.className);" class="member1" id="y7"><label for="y7">아테나</label></li>
-                                <li><input type="radio" name="qstion8" onclick="func(this.name); func2(this.className);" class="member2" id="n7"><label for="n7">럭키 클로에</label></li>
+                                <li><input type="radio" name="qstion8" onclick="func(this.name); func2(this.className);" class="member1" id="y7"><label for="y7">장혁</label></li>
+                                <li><input type="radio" name="qstion8" onclick="func(this.name); func2(this.className);" class="member2" id="n7"><label for="n7">멜 깁슨</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;9.</div><div class="queries">복서</div>
+                        <div class="numbering">&nbsp;9.</div><div class="queries">피의 복수극</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion9" onclick="func(this.name); func2(this.className);" class="member1" id="y8"><label for="y8">바네사</label></li>
-                                <li><input type="radio" name="qstion9" onclick="func(this.name); func2(this.className);" class="member2" id="n8"><label for="n8">스티브 폭스</label></li>
+                                <li><input type="radio" name="qstion9" onclick="func(this.name); func2(this.className);" class="member1" id="y8"><label for="y8">원빈</label></li>
+                                <li><input type="radio" name="qstion9" onclick="func(this.name); func2(this.className);" class="member2" id="n8"><label for="n8">리암 니슨</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;10.</div><div class="queries">참군인</div>
+                        <div class="numbering">&nbsp;10.</div><div class="queries">현실성 제로</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion10" onclick="func(this.name); func2(this.className);" class="member1" id="y9"><label for="y9">하이데른</label></li>
-                                <li><input type="radio" name="qstion10" onclick="func(this.name); func2(this.className);" class="member2" id="n9"><label for="n9">드라그노프</label></li>
+                                <li><input type="radio" name="qstion10" onclick="func(this.name); func2(this.className);" class="member1" id="y9"><label for="y9">우징</label></li>
+                                <li><input type="radio" name="qstion10" onclick="func(this.name); func2(this.className);" class="member2" id="n9"><label for="n9">스티븐 시걸</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;11.</div><div class="queries">관절기</div>
+                        <div class="numbering">&nbsp;11.</div><div class="queries">신궁</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion11" onclick="func(this.name); func2(this.className);" class="member1" id="y10"><label for="y10">셸미</label></li>
-                                <li><input type="radio" name="qstion11" onclick="func(this.name); func2(this.className);" class="member2" id="n10"><label for="n10">나나 윌리엄스</label></li>
+                                <li><input type="radio" name="qstion11" onclick="func(this.name); func2(this.className);" class="member1" id="y10"><label for="y10">송일국</label></li>
+                                <li><input type="radio" name="qstion11" onclick="func(this.name); func2(this.className);" class="member2" id="n10"><label for="n10">올랜도 블룸</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;12.</div><div class="queries">여군</div>
+                        <div class="numbering">&nbsp;12.</div><div class="queries">진정한 망치의 주인</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion12" onclick="func(this.name); func2(this.className);" class="member1" id="y11"><label for="y11">레오나</label></li>
-                                <li><input type="radio" name="qstion12" onclick="func(this.name); func2(this.className);" class="member2" id="n11"><label for="n11">마스터 레이븐</label></li>
+                                <li><input type="radio" name="qstion12" onclick="func(this.name); func2(this.className);" class="member1" id="y11"><label for="y11">최민식</label></li>
+                                <li><input type="radio" name="qstion12" onclick="func(this.name); func2(this.className);" class="member2" id="n11"><label for="n11">크리스 햄스워스</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;13.</div><div class="queries">머리가 힘의 근원</div>
+                        <div class="numbering">&nbsp;13.</div><div class="queries">칼로 나누는 대화</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion13" onclick="func(this.name); func2(this.className);" class="member1" id="y12"><label for="y12">베니마루</label></li>
-                                <li><input type="radio" name="qstion13" onclick="func(this.name); func2(this.className);" class="member2" id="n12"><label for="n12">폴 피닉스</label></li>
+                                <li><input type="radio" name="qstion13" onclick="func(this.name); func2(this.className);" class="member1" id="y12"><label for="y12">이병헌</label></li>
+                                <li><input type="radio" name="qstion13" onclick="func(this.name); func2(this.className);" class="member2" id="n12"><label for="n12">웨슬리 스나입스</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;14.</div><div class="queries">중국 전통 무술</div>
+                        <div class="numbering">&nbsp;14.</div><div class="queries">활강</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion14" onclick="func(this.name); func2(this.className);" class="member1" id="y13"><label for="y13">시라누이 마이</label></li>
-                                <li><input type="radio" name="qstion14" onclick="func(this.name); func2(this.className);" class="member2" id="n13"><label for="n13">링 샤오유</label></li>
+                                <li><input type="radio" name="qstion14" onclick="func(this.name); func2(this.className);" class="member1" id="y13"><label for="y13">주성치</label></li>
+                                <li><input type="radio" name="qstion14" onclick="func(this.name); func2(this.className);" class="member2" id="n13"><label for="n13">키아누 리브스</label></li>
                             </div>
                         </div>
                     </div><hr>
                     <div class="q_row">
-                        <div class="numbering">&nbsp;15.</div><div class="queries">금발갑</div>
+                        <div class="numbering">&nbsp;15.</div><div class="queries">액션 영화의 원로</div>
                         <div class="radios">
                             <div class="tabButton">
-                                <li><input type="radio" name="qstion15" onclick="func(this.name); func2(this.className);" class="member1" id="y14"><label for="y14">블루 마리</label></li>
-                                <li><input type="radio" name="qstion15" onclick="func(this.name); func2(this.className);" class="member2" id="n14"><label for="n14">리리 로슈포르</label></li>
+                                <li><input type="radio" name="qstion15" onclick="func(this.name); func2(this.className);" class="member1" id="y14"><label for="y14">주윤발</label></li>
+                                <li><input type="radio" name="qstion15" onclick="func(this.name); func2(this.className);" class="member2" id="n14"><label for="n14">브루스 윌리스</label></li>
                             </div>
                         </div>
                     </div><hr>
-
-
-
-
-
-
-
-
-
-
+                    <div class="q_row">
+                        <div class="numbering">&nbsp;16.</div><div class="queries">수트핏</div>
+                        <div class="radios">
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion16" onclick="func(this.name); func2(this.className);" class="member1" id="y15"><label for="y15">곽부성</label></li>
+                                <li><input type="radio" name="qstion16" onclick="func(this.name); func2(this.className);" class="member2" id="n15"><label for="n15">제이슨 스타뎀</label></li>
+                            </div>
+                        </div>
+                    </div><hr>
+                    <div class="q_row">
+                        <div class="numbering">&nbsp;17.</div><div class="queries">왕의 귀환</div>
+                        <div class="radios">
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion17" onclick="func(this.name); func2(this.className);" class="member1" id="y16"><label for="y16">최수종</label></li>
+                                <li><input type="radio" name="qstion17" onclick="func(this.name); func2(this.className);" class="member2" id="n16"><label for="n16">러셀 크로우</label></li>
+                            </div>
+                        </div>
+                    </div><hr>
+                    <div class="q_row">
+                        <div class="numbering">&nbsp;18.</div><div class="queries">잠입 경찰</div>
+                        <div class="radios">
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion18" onclick="func(this.name); func2(this.className);" class="member1" id="y17"><label for="y17">양조위</label></li>
+                                <li><input type="radio" name="qstion18" onclick="func(this.name); func2(this.className);" class="member2" id="n17"><label for="n17">디카프리오</label></li>
+                            </div>
+                        </div>
+                    </div><hr>
+                    <div class="q_row">
+                        <div class="numbering">&nbsp;19.</div><div class="queries">셔츠 한 장</div>
+                        <div class="radios">
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion19" onclick="func(this.name); func2(this.className);" class="member1" id="y18"><label for="y18">유덕화</label></li>
+                                <li><input type="radio" name="qstion19" onclick="func(this.name); func2(this.className);" class="member2" id="n18"><label for="n18">멧 데이먼</label></li>
+                            </div>
+                        </div>
+                    </div><hr>
+                    <div class="q_row">
+                        <div class="numbering">&nbsp;20.</div><div class="queries">특훈</div>
+                        <div class="radios">
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion20" onclick="func(this.name); func2(this.className);" class="member1" id="y19"><label for="y19">권상우</label></li>
+                                <li><input type="radio" name="qstion20" onclick="func(this.name); func2(this.className);" class="member2" id="n19"><label for="n19">크리스찬 베일</label></li>
+                            </div>
+                        </div>
+                    </div><hr>
+                    <div class="q_row">
+                        <div class="numbering">&nbsp;21.</div><div class="queries">무술 감독</div>
+                        <div class="radios">
+                            <div class="tabButton">
+                                <li><input type="radio" name="qstion21" onclick="func(this.name); func2(this.className);" class="member1" id="y20"><label for="y20">정두홍</label></li>
+                                <li><input type="radio" name="qstion21" onclick="func(this.name); func2(this.className);" class="member2" id="n20"><label for="n20">스콧 앳킨스</label></li>
+                            </div>
+                        </div>
+                    </div><hr>
 
                     <div class="Quick_play" id="QuickID">
-                        <button class="Quick_play_buttons" onclick="showResult()"           id="resultbutton">승부 보기</button>
-                        <button class="Quick_play_buttons" onclick="resetClicked(this.id)"  id="resetQ">      경기 리셋</button>
+                        <button class="Quick_play_buttons" onclick="showResult()" id="resultbutton">승부 보기</button>
+                        <button class="Quick_play_buttons" onclick="resetClicked(this.id)"     id="resetQ">      경기 리셋</button>
                     </div>
                 </div>
 
                 <div class="winner_portrait_box0" id="portrait_box0_ID">
                     <img    class="winner_portrait0" 
-                            id="winpic0"
                             src="../src/img/anon.jpg"
                             onclick="doImgPop('../src/img/anon.jpg')"/>
                 </div>
+
                 <div id="team1box" style="display:none">
-                    <div id="team1ID">킹 오브 파이터즈 승리!</div>
+                    <div id="team1ID">아시아 액션스타 승리!!</div>
                     <div class="winner_portrait_box1" id="portrait_box1_ID">
                         <img    class="winner_portrait1" 
-                                src="../src/img/page07/vic_team1.jpg"
-                                onclick="doImgPop('../src/img/page07/vic_team1.jpg')"/>
+                                src="../src/img/page08/vic_team1.jpg"
+                                onclick="doImgPop('../src/img/page08/vic_team1.jpg')"/>
                     </div>
+
                 </div>
 
                 <div id="team2box"  style="display:none">
-                    <div id="team2ID">철권 승리!!</div>
+                    <div id="team2ID">할리웃 액션스타 승리!!</div>
                     <div class="winner_portrait_box2" id="portrait_box2_ID">
                         <img    class="winner_portrait2" 
-                                src="../src/img/page07/vic_team2.jpg" 
-                                onclick="doImgPop('../src/img/page07/vic_team2.jpg')"/>
+                                src="../src/img/page08/vic_team2.jpg" 
+                                onclick="doImgPop('../src/img/page08/vic_team2.jpg')"/>
                     </div>
                 </div>
 
                 <div id="youtubeBox" style="display:none">
                     <!-- youtube video ID -->
                     <script>
-                        let youtube_vid_01 = 'DcvB8KcOzgE';
-                        let youtube_vid_02 = 'fVJYtg2ILUU';
+                        let youtube_vid_01 = 'WChTTwtniNE';
+                        let youtube_vid_02 = 'OLTZbJMQiD4';
                     </script>
                     
                     <!-- audio controller-->
                     <div id=audio_area class="Jua">
-
                         <!-- volume Slider -->
                         <div class="main">
                             <div class="slideContainer">
@@ -747,7 +955,7 @@
                                 <br><p>VOLUME : <span id="value"></span></p><br>
                             </div>
                         </div>
-                        
+
                         <!-- audio buttons -->
                         <button class="Jua" type="button" onclick="playYoutube();"><img src="../src/img/iconbox/audio/1.png" width="30px";></button>
                         <button class="Jua" type="button" onclick="pauseYoutube();"><img src="../src/img/iconbox/audio/2.png" width="30px";></button>
@@ -764,8 +972,9 @@
                 <script src="../js/for_1on1/match/06_youtube_slider.js"></script>
 
 
+
                 <div style="display:none">
-                    <!-- 선택 음원 -->
+                    <!-- 선택  -->
                     <audio id="selected1" src="../src/mp3/selected1.mp3"></audio> 
                     <audio id="selected2" src="../src/mp3/selected2.mp3"></audio> 
                     <!-- 매칭 앵커로 이동 -->
