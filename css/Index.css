@@ -5,7 +5,7 @@
     min-width:130px;        
 }
 
-#page01,#page02,#page03,#page04,#page05,#page06,#page07, #page08
+#page01,#page02,#page03,#page04,#page05,#page06,#page07, #page08, #page09
 {    
     text-align: center;
     position: relative;
@@ -19,7 +19,8 @@
 #page05::after,
 #page06::after,
 #page07::after,
-#page08::after
+#page08::after,
+#page09::after
 {    
     width: 100%;
     height: 100%;
@@ -39,6 +40,7 @@
 #page06::after {background: center / contain no-repeat url("../src/img/page_thumnail/06.jpg");}
 #page07::after {background: center / contain no-repeat url("../src/img/page_thumnail/07.jpg");}
 #page08::after {background: center / contain no-repeat url("../src/img/page_thumnail/08.jpg");}
+#page09::after {background: center / contain no-repeat url("../src/img/page_thumnail/09.jpg");}
 
 .Jua{
     font-family: 'Jua', sans-serif;
