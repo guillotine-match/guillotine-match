@@ -10,7 +10,7 @@
 <url>
   <loc>https://guillotine-match.com/</loc>
   <lastmod>2021-07-24T15:35:43+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>1.20</priority>
 </url>
 <url>
   <loc>https://guillotine-match.com/index.html</loc>
@@ -57,7 +57,11 @@
   <lastmod>2021-07-24T15:35:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://guillotine-match.com/contents/page09.html</loc>
+  <lastmod>2021-07-24T15:35:43+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
 
 <url>
   <loc>https://guillotine-match.com/contents/topmenu01.html</loc>

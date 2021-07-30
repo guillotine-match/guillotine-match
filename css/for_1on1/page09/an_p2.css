@@ -15,8 +15,11 @@
     100%{background-position:100% 100%}
 }
 
+.asdf{
+    color:goldenrod
+}
 .contest {
-    background: linear-gradient(27deg, oldlace, red,black,purple, brown, gray);
+    background: linear-gradient(27deg, oldlace, red,black,goldenrod, coral, gray);
     background-size: 400% 400%;
     animation: AnimationName;
     animation-duration: 8s;

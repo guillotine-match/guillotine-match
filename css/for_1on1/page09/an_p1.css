@@ -15,11 +15,11 @@
     100%{background-position:100% 100%}
 }
 .asdf{
- color:paleturquoise
+ color:greenyellow
 }
 
 .contest {
-    background: linear-gradient(27deg, oldlace, black, brown, red,paleturquoise, gold, oldlace , rgb(59, 170, 124));
+    background: linear-gradient(27deg, oldlace, aquamarine,paleturquoise,greenyellow, gold, oldlace , rgb(59, 170, 124));
     background-size: 400% 400%;
     animation: AnimationName;
     animation-duration: 14s;
