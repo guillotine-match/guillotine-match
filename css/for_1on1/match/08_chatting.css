@@ -5,11 +5,12 @@
     /* width:800px; */
     width:85%;
     margin-top: 200px;
-    background:red;
+    background:burlywood;
     /* position:relative; 
     left:50%; 
     transform:translateX(-50%); */
     height:650px;
+    border-radius: 10px;
 }
 
 .temp{
