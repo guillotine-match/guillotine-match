@@ -23,18 +23,6 @@
     WIDTH: 500px; 
 }
 
-.survey>iframe{
-    margin:0 auto;
-    padding:0;
-}
-
-@media (max-width: 780){
-    .survey{
-    }
-    .survey>iframe{
-    }
-}
-
 .chatting {
     clear: both;
     margin:0%;
