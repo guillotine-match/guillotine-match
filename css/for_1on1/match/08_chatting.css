@@ -1,26 +1,12 @@
+
+
 .survey{
-    clear: both;
     margin:0 auto;
-    padding:0;
-    /* width:800px; */
-    width:85%;
+    width:90%;
+    clear: both;
     margin-top: 200px;
     background:burlywood;
-    /* position:relative; 
-    left:50%; 
-    transform:translateX(-50%); */
-    height:650px;
     border-radius: 10px;
-}
-
-.temp{
-    Z-INDEX: 1; 
-    LEFT: -110px; 
-    OVERFLOW: hidden; 
-    POSITION: absolute; 
-    TOP: -150px; 
-    HEIGHT: 420px;
-    WIDTH: 500px; 
 }
 
 .chatting {
