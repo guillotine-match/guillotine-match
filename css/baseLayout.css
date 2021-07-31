@@ -9,7 +9,7 @@ nav > div {width: 30%; margin: 1%; height: 30px; line-height: 30px; background-c
 nav > div:hover{background: peachpuff;}
 
 section { padding: 5%; width: 90%; min-height:600px; background-color: #ebd8c0;}
-section > div {position: relative; width: 18%; margin: 1%; height: 170px; background-color: #FAEBD7; float: left; border-radius: 5px; cursor:pointer;}
+section > div {position: relative; width: 18%; margin: 1%; height: 200px; background-color: #FAEBD7; float: left; border-radius: 5px; cursor:pointer;}
 section > div:hover {background: peachpuff;}
 
 section>div>div{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
@@ -37,13 +37,14 @@ a:active { text-decoration: none;}
 @media (max-width: 1220px){
     #wrap {width: 100%; position: absolute;}
     section > div {width: 23%;}
-    section > div:nth-child(9) {display: none;}
-    section > div:nth-child(10) {display: none;}
+    /* section > div:nth-child(9) {display: none;}
+    section > div:nth-child(10) {display: none;} */
 }
 
 /* 화면 너비 0 ~ 768px */
 @media (max-width: 768px){
     section > div {width: 31.3333%;}
+    section{ height:1000px;}
     nav > div {width: 48%;}
     article {padding: 0%; width: 100%;}
     article > div {padding:3px;}
@@ -51,7 +52,7 @@ a:active { text-decoration: none;}
 
     /* 화면 너비 0 ~ 480px */
 @media (max-width: 480px){
-    section{ height:800px;}
+    section{ height:1100px;}
     section > div {width: 48%;}
 }
 
