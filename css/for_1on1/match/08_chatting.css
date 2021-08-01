@@ -1,4 +1,19 @@
 
+.ad_banner_1{
+
+    width:320px;
+    height:300px;
+    margin: 0 auto;
+    margin-top: 200px;
+    background: red;
+}
+/* 
+.ad_banner_2{
+    width:320px;
+    margin: 0 auto;
+    background: blue;
+    height:300px;
+} */
 
 .survey{
     margin:0 auto;
