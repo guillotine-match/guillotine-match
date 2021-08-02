@@ -48,24 +48,25 @@
 }
 .sm {font-family: 'Song Myung', serif;}
 
+p{
+    text-align:center;
+}
+
+
 p>button{
     width:55px;
     height:40px;
     border-radius: 10px;
     border: solid burlywood;
     background-color:blanchedalmond;
-    margin-left:-4px;
+    margin-left:-3px;
+    margin-right:-3px;
+    margin-bottom: 10px;
     cursor:pointer;
 }
-p>button:hover{
-    background: orange;
-}
+p>button:hover{    background: khaki;}
+p>button:nth-of-type(1){    background-color:beige;}
+p>button:nth-of-type(1):hover{    background: khaki;}
 
-p>button:nth-of-type(1){
-    background-color:beige;
-    margin-bottom: 10px;
-}
-p>button:nth-of-type(1):hover{
-    background: orange;
-    margin-bottom: 10px;
-}
+p>button:focus{    background: orange;}
+p>button:nth-of-type(1):focus{    background: orange;}
