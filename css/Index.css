@@ -55,13 +55,17 @@ p>button{
     border: solid burlywood;
     background-color:blanchedalmond;
     margin-left:-4px;
+    cursor:pointer;
+}
+p>button:hover{
+    background: orange;
 }
 
 p>button:nth-of-type(1){
     background-color:beige;
     margin-bottom: 10px;
 }
-p>button:nth-of-type(1){
-    background-color:beige;
+p>button:nth-of-type(1):hover{
+    background: orange;
     margin-bottom: 10px;
 }
