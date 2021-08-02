@@ -37,6 +37,7 @@ a:active { text-decoration: none;}
 @media (max-width: 1220px){
     #wrap {width: 100%; position: absolute;}
     section > div {width: 23%;}
+    section{ height:900px;}
     /* section > div:nth-child(9) {display: none;}
     section > div:nth-child(10) {display: none;} */
 }
@@ -52,7 +53,7 @@ a:active { text-decoration: none;}
 
     /* 화면 너비 0 ~ 480px */
 @media (max-width: 480px){
-    section{ height:1100px;}
+    section{ height:1200px;}
     section > div {width: 48%;}
 }
 

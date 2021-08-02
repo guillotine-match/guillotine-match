@@ -48,3 +48,20 @@
 }
 .sm {font-family: 'Song Myung', serif;}
 
+p>button{
+    width:55px;
+    height:40px;
+    border-radius: 10px;
+    border: solid burlywood;
+    background-color:blanchedalmond;
+    margin-left:-4px;
+}
+
+p>button:nth-of-type(1){
+    background-color:beige;
+    margin-bottom: 10px;
+}
+p>button:nth-of-type(1){
+    background-color:beige;
+    margin-bottom: 10px;
+}

@@ -49,18 +49,65 @@
             <div class="links Jua" OnClick="location.href ='contents/topmenu06.html'"><h3>Reference</h3></div>
         </nav>
         <section class="wrapper2">
-            <div class="sm" id="page01" OnClick="location.href='contents/page01.html'"><div class="links2" >위나라 <br>vs<br> 촉나라</div></div>
-            <div class="sm" id="page02" OnClick="location.href='contents/page02.html'"><div class="links2" > Marvel <br>vs<br> DC</div></div>
-            <div class="sm" id="page03" OnClick="location.href='contents/page03.html'"><div class="links2" >오버워치 <br>vs<br> 탈론</div></div>
-            <div class="sm" id="page04" OnClick="location.href='contents/page04.html'"><div class="links2" >96 불스 <br>vs<br> 17 골스</div></div>
-            <div class="sm" id="page05" OnClick="location.href='contents/page05.html'"><div class="links2" >전원생활 <br>vs<br> 도심생활 </div></div>
-            <div class="sm" id="page06" OnClick="location.href='contents/page06.html'"><div class="links2" >Microsoft <br>vs<br> Google </div></div>
-            <div class="sm" id="page07" OnClick="location.href='contents/page07.html'"><div class="links2" >킹오파 <br>vs<br> 철권 </div></div>
-            <div class="sm" id="page08" OnClick="location.href='contents/page08.html'"><div class="links2" >동양 vs 서양 <br>액션 스타 (남)</div></div>
-            <div class="sm" id="page09" OnClick="location.href='contents/page09.html'"><div class="links2" >동양 vs 서양 <br>액션 스타 (여)</div></div>
+            <p class="Jua">분류 :
+                <button class="orderBtn Jua" id="all" onclick="show_all(this.id)"> ALL </button><br>
+                <button class="orderBtn Jua" id="pol" onclick="show_category(this.id)">정치</button>
+                <button class="orderBtn Jua" id="eco" onclick="show_category(this.id)">경제</button>
+                <button class="orderBtn Jua" id="soc" onclick="show_category(this.id)">사회</button>
+                <button class="orderBtn Jua" id="cul" onclick="show_category(this.id)">문화</button>
+                <button class="orderBtn Jua" id="spo" onclick="show_category(this.id)">스포츠</button>
+                <button class="orderBtn Jua" id="ent" onclick="show_category(this.id)">연예</button>
+            </p><br>
+
+            <div class="cbox sm" id="page01" OnClick="location.href='contents/page01.html'"><div class="links2" >위나라 <br>vs<br> 촉나라</div></div>
+            <div class="cbox sm" id="page02" OnClick="location.href='contents/page02.html'"><div class="links2" > Marvel <br>vs<br> DC</div></div>
+            <div class="cbox sm" id="page03" OnClick="location.href='contents/page03.html'"><div class="links2" >오버워치 <br>vs<br> 탈론</div></div>
+            <div class="cbox sm" id="page04" OnClick="location.href='contents/page04.html'"><div class="links2" >96 불스 <br>vs<br> 17 골스</div></div>
+            <div class="cbox sm" id="page05" OnClick="location.href='contents/page05.html'"><div class="links2" >전원생활 <br>vs<br> 도심생활 </div></div>
+            <div class="cbox sm" id="page06" OnClick="location.href='contents/page06.html'"><div class="links2" >Microsoft <br>vs<br> Google </div></div>
+            <div class="cbox sm" id="page07" OnClick="location.href='contents/page07.html'"><div class="links2" >킹오파 <br>vs<br> 철권 </div></div>
+            <div class="cbox sm" id="page08" OnClick="location.href='contents/page08.html'"><div class="links2" >동양 vs 서양 <br>액션 스타 (남)</div></div>
+            <div class="cbox sm" id="page09" OnClick="location.href='contents/page09.html'"><div class="links2" >동양 vs 서양 <br>액션 스타 (여)</div></div>
             <!-- <div id="page10" OnClick="location.href='testCenter/test3.html'"><div class="links2" ></div></div> -->
         </section>
         <footer><div></div></footer>
     </div>
 </body>
-</html>
+
+<script>
+    let page_cat = ['cul', 'cul', 'cul', 'spo', 'soc', 'soc', 'cul', 'ent', 'ent'];
+
+    // cbox means content boxes
+    let cboxes = document.getElementsByClassName('cbox');
+    
+
+    function show_category(cid){
+        
+        // 모든 cobx display none
+        for( var i = 0; i < cboxes.length; i++ ){ 
+            var cbox = cboxes.item(i); 
+            cbox.style.display = "none"; 
+        }
+
+        for( var i = 0; i < cboxes.length; i++ ){ 
+            var cbox = cboxes.item(i); 
+            if(cid=='pol'){if(page_cat[i]=='pol'){cbox.style.display = "block";}}
+            if(cid=='eco'){if(page_cat[i]=='eco'){cbox.style.display = "block";}}
+            if(cid=='soc'){if(page_cat[i]=='soc'){cbox.style.display = "block";}}
+            if(cid=='cul'){if(page_cat[i]=='cul'){cbox.style.display = "block";}}
+            if(cid=='spo'){if(page_cat[i]=='spo'){cbox.style.display = "block";}}
+            if(cid=='ent'){if(page_cat[i]=='ent'){cbox.style.display = "block";}}
+        }
+    }
+
+    function show_all(){
+        // 모든 cbox display 
+        for( var i = 0; i < cboxes.length; i++ ){ 
+            var cbox = cboxes.item(i); 
+            cbox.style.display = "block"; 
+        }
+    }
+
+</script>
+
+</html>;
