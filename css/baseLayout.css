@@ -8,7 +8,7 @@ nav {width: 90%; height: 100px; padding: 5%; background-color: #e4c4a0;}
 nav > div {width: 30%; margin: 1%; height: 30px; line-height: 30px; background-color: #FAEBD7; float: left; border-radius: 5px; text-align: center;}
 nav > div:hover{background: peachpuff;}
 
-section { padding: 5%; width: 90%; min-height:600px; background-color: #ebd8c0;}
+section { padding: 5%; width: 90%; min-height:750px; background-color: #ebd8c0;}
 section > div {position: relative; width: 18%; margin: 1%; height: 200px; background-color: #FAEBD7; float: left; border-radius: 5px; cursor:pointer;}
 section > div:hover {background: peachpuff;}
 
