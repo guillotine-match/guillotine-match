@@ -1,0 +1,16 @@
+.page_button_area{
+    text-align: center;
+    background: blanchedalmond;
+    border:burlywood 1px solid; 
+}
+.page_button_area>button{
+    width:20px;
+}
+
+/* 
+ 485 까지는 2 * 6 = 12 개 
+ 768 까지는 3 * 4 = 12 개 
+ 1220 까지는 4 * 4 = 16 개 
+ 이후는 5 * 3 = 15개 
+ */
+

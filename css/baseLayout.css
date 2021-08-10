@@ -8,13 +8,19 @@ nav {width: 90%; height: 100px; padding: 5%; background-color: #e4c4a0;}
 nav > div {width: 30%; margin: 1%; height: 30px; line-height: 30px; background-color: #FAEBD7; float: left; border-radius: 5px; text-align: center;}
 nav > div:hover{background: peachpuff;}
 
-section { padding: 5%; width: 90%; min-height:750px; background-color: #ebd8c0;}
+section { padding: 5%; width: 90%; min-height:800px; background-color: #ebd8c0;}
+/* 
 section > div {position: relative; width: 18%; margin: 1%; height: 200px; background-color: #FAEBD7; float: left; border-radius: 5px; cursor:pointer;}
 section > div:hover {background: peachpuff;}
+section>div>div{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);} */
+
+.cbox{position: relative; width: 18%; margin: 1%; height: 200px; background-color: #FAEBD7; float: left; border-radius: 5px; cursor:pointer;}
+.cbox:hover {background: peachpuff;}
+.cbox>div{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
 
 
 
-section>div>div{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+
 
 article {padding: 5%; width: 90%; background-color: #c9b6a0;}
 article > div {padding:10px; background-color:#FAEBD7;}
@@ -34,11 +40,10 @@ a:active { text-decoration: none;}
 .clearfix::before, 
 .clearfix::after {display: block; content: ''; clear: both;}
 
-
 /* 화면 너비 0 ~ 1200px */
 @media (max-width: 1220px){
     #wrap {width: 100%; position: absolute;}
-    section > div {width: 23%;}
+    .cbox {width: 23%;}
     section{ height:900px;}
     /* section > div:nth-child(9) {display: none;}
     section > div:nth-child(10) {display: none;} */
@@ -46,7 +51,7 @@ a:active { text-decoration: none;}
 
 /* 화면 너비 0 ~ 768px */
 @media (max-width: 768px){
-    section > div {width: 31.3333%;}
+    .cbox {width: 31.3333%;}
     section{ height:1000px;}
     nav > div {width: 48%;}
     article {padding: 0%; width: 100%;}
@@ -55,8 +60,8 @@ a:active { text-decoration: none;}
 
     /* 화면 너비 0 ~ 480px */
 @media (max-width: 480px){
-    section{ height:1200px;}
-    section > div {width: 48%;}
+    section{ height:700px;}
+    .cbox {width: 48%;}
 }
 
 
