@@ -52,7 +52,7 @@
         <section class="wrapper2">
 
 
-            <p class="Jua">분류 :
+            <!-- <p class="Jua">분류 :
                 <button class="orderBtn Jua" id="all" onclick="show_all(this.id)"> ALL </button><br>
                 <button class="orderBtn Jua" id="pol" onclick="show_category(this.id)">정치</button>
                 <button class="orderBtn Jua" id="eco" onclick="show_category(this.id)">경제</button>
@@ -64,10 +64,15 @@
                 <button class="orderBtn Jua" id="his" onclick="show_category(this.id)">역사</button>
                 <button class="orderBtn Jua" id="gam" onclick="show_category(this.id)">게임</button>
                 <button class="orderBtn Jua" id="tra" onclick="show_category(this.id)">여행</button>
-            </p><br>
+            </p><br> -->
 
             <!-- innerHTML 로 템플릿 넣기 -->
             <div id="cbox"></div>
+        
+        </section>
+        <div class="page_button_area">페이지 탐색
+            <div id="page_btns"></div>
+        </div>
 
             <script>
                 let games=[
@@ -83,13 +88,55 @@
                     `공화당 <br>vs<br> 민주당`,//10
                     `미국 vs 중국 <br> 관광명소`//11
                 ];
+
+                let page_cat = [
+                    'his', //1
+                    'cul', //2
+                    'gam', //3
+                    'spo', //4
+                    'soc', //5
+                    'soc', //6
+                    'gam', //7
+                    'ent', //8
+                    'ent', //9
+                    'pol', //10
+                    'tra'  //11
+                ];
+                let page_cat_num = {
+                    all : games.length,
+                    pol : 0,
+                    eco : 0,
+                    soc : 0,
+                    spo : 0,
+                    ent : 0,
+                    sci : 0,
+                    his : 0,
+                    gam : 0,
+                    tra : 0,
+                };
+                for(let i = 0; i<games.length; i++){
+                    if(page_cat[i]=='pol'){page_cat_num.pol+=1;}
+                    if(page_cat[i]=='eco'){page_cat_num.eco+=1;}
+                    if(page_cat[i]=='soc'){page_cat_num.soc+=1;}
+                    if(page_cat[i]=='cul'){page_cat_num.cul+=1;}
+                    if(page_cat[i]=='spo'){page_cat_num.spo+=1;}
+                    if(page_cat[i]=='ent'){page_cat_num.ent+=1;}
+                    if(page_cat[i]=='sci'){page_cat_num.sci+=1;}
+                    if(page_cat[i]=='his'){page_cat_num.his+=1;}
+                    if(page_cat[i]=='gam'){page_cat_num.gam+=1;}
+                    if(page_cat[i]=='tra'){page_cat_num.tra+=1;}
+                }
+
                 let ppp; ; // Posts_Per_Page
                 let page_cnt; // page 개수
                 let cbox_num = games.length;
                 let paging_temp_arr = []; //페이징 돔이 들어있는 배열
                 let page_arr = []; // 1, 2, 3, 4... 마지막 페이지 인덱스를 가르키는 배열
                 let real_boxes;
+                let n =1 ; // page id (page_number)
+                let original_boxes = []; //게임 박스 돔이 들어있는 배열
 
+                // 페이지 번호 생성
                 function make_pages(){
 
                     // 1220px 이상
@@ -113,122 +160,201 @@
                     }
                     for(let i=0; i<page_cnt; i++){
                         page_arr[i]=`${i+1}`;
-                        // 만약 page_cnt 가 3이면 page_arr 은 [1,2,3] 이 됨
+                        // 만약 page_cnt 가 3이면 page_arr 은 [1,2,3]
                     }
                     if(ppp> cbox_num){real_boxes=cbox_num;}
                     if(ppp<=cbox_num){real_boxes=ppp;}
                 }
                 make_pages();
+                
+                
 
-                let gamebox_templates = []; //게임 박스 돔이 들어있는 배열
-
-                // 기본 1 페이지 세팅
-                function make_gamebox_templates(){
+                // 기본 페이지 생성
+                function make_original_boxes(){
                     let cboxNode = document.getElementById("cbox");
 
-                    for(let i=0; i<real_boxes; i++){gamebox_templates[i]='';}
+                    for(let i=0; i<real_boxes; i++){original_boxes[i]='';}
                     for(let i=0; i<real_boxes; i++){
-                    gamebox_templates[i] += 
+                    original_boxes[i] += 
                     `
                     <div class="cbox sm" id="page${i+1}" OnClick="location.href='contents/page${i+1}.html'"><div class="links2">${games[i]}</div></div>
                     `
-                    cboxNode.innerHTML+=gamebox_templates[i];
+                    cboxNode.innerHTML+=original_boxes[i];
                     }
                 }
-                make_gamebox_templates();
-            </script>
+                make_original_boxes();
 
-    </section>
-        <div class="page_button_area">페이지 탐색
-            <div id="page_btns"></div>
-        </div>
-            <script>
-            // 페이지 버튼 생성
-            function make_paging_template(){
-                let pageBtnNode = document.getElementById("page_btns");
+                // 페이지 버튼 돔 생성
+                function make_paging_template(){
+                    let pageBtnNode = document.getElementById("page_btns");
 
-                for(let i=0; i<page_cnt; i++){paging_temp_arr[i]='';}
-                for(let i=0; i<page_cnt; i++){
-                    paging_temp_arr[i] += 
+                    for(let i=0; i<page_cnt; i++){paging_temp_arr[i]='';}
+                    for(let i=0; i<page_cnt; i++){
+                        paging_temp_arr[i] += 
+                        `
+                        <button class="paging_btns" id=${i+1} onclick="shift_page(this.id)">${i+1}</button>
+                        `
+                        pageBtnNode.innerHTML+=paging_temp_arr[i];
+                    }
+                }
+                make_paging_template();
+
+                function show_all(){
+                    deleteBoxes();
+                    make_original_boxes();
+                }
+
+                function shift_page(pid){
+                    
+                    // 기존 컨텐츠 박스 삭제
+                    deleteBoxes()
+                    
+                    // 컨텐츠 박스 내 인덱스 구하는 변수
+                    n = pid;
+                    let a = ppp;
+                    let start = (n-1)*a+1;
+                    let final = (n*a);
+                    if (final>cbox_num){final=cbox_num;}
+
+                    // 필요한 컨텐츠 박스 생성
+                    let cboxNode = document.getElementById("cbox");
+                    for(let i=start-1; i<final; i++){original_boxes[i]='';}
+                    for(let i=start-1; i<final; i++){
+                    original_boxes[i] += 
                     `
-                    <button class="paging_btns" id=${i+1} onclick="shift_page(this.id)">${i+1}</button>
+                    <div class="cbox sm" id="page${i+1}" OnClick="location.href='contents/page${i+1}.html'"><div class="links2">${games[i]}</div></div>
                     `
-                    pageBtnNode.innerHTML+=paging_temp_arr[i];
+                    cboxNode.innerHTML+=original_boxes[i];
+                    }
                 }
-            }
-            make_paging_template();
 
-            function shift_page(pid){
-
-                // 컨텐츠 박스 인덱스 구하는 변수
-                let n = pid;
-                let a = ppp;
-                let start = (n-1)*a+1;
-                let final = (n*a);
-                if (final>cbox_num){final=cbox_num;}
-
-                // 기존 컨텐츠 박스 삭제
-                const elements = document.getElementsByClassName('cbox');
-                while(elements.length > 0){
-                    elements[0].parentNode.removeChild(elements[0]);
+                function deleteBoxes(){
+                    // cbox 전체 삭제
+                    const elements = document.getElementsByClassName('cbox');
+                    while(elements.length > 0){
+                        elements[0].parentNode.removeChild(elements[0]);
+                    }
                 }
-                
-                // 필요한 컨텐츠 박스 생성
-                let cboxNode = document.getElementById("cbox");
-                for(let i=start-1; i<final; i++){gamebox_templates[i]='';}
-                for(let i=start-1; i<final; i++){
-                gamebox_templates[i] += 
-                `
-                <div class="cbox sm" id="page${i+1}" OnClick="location.href='contents/page${i+1}.html'"><div class="links2">${games[i]}</div></div>
-                `
-                cboxNode.innerHTML+=gamebox_templates[i];
-                }
-            }
+            
             </script>
         <footer><div></div></footer>
     </div>
     
     <!-- 카테고리 생성 스크립트 -->
     <script defer>
+
+
         
-        // 카테고리 종류
-        let page_cat = ['his', 'cul', 'gam', 'spo', 'soc', 'soc', 'gam', 'ent', 'ent', 'pol','tra'];
-    
-        // 컨텐츠 박스 불러오기
-        let cboxes = document.getElementsByClassName('cbox');
-    
-        function show_category(cid){
-            
-            // (1) 모든 cobx display off
-            for( var i = 0; i < cboxes.length; i++ ){ 
-                var cbox = cboxes.item(i); 
-                cbox.style.display = "none"; 
-            }
-            
-            // (2) 해당 cbox display on
-            for( var i = 0; i < cboxes.length; i++ ){ 
-                var cbox = cboxes.item(i); 
-                if(cid=='pol'){if(page_cat[i]=='pol'){cbox.style.display = "block";}}
-                if(cid=='eco'){if(page_cat[i]=='eco'){cbox.style.display = "block";}}
-                if(cid=='soc'){if(page_cat[i]=='soc'){cbox.style.display = "block";}}
-                if(cid=='cul'){if(page_cat[i]=='cul'){cbox.style.display = "block";}}
-                if(cid=='spo'){if(page_cat[i]=='spo'){cbox.style.display = "block";}}
-                if(cid=='ent'){if(page_cat[i]=='ent'){cbox.style.display = "block";}}
-                if(cid=='sci'){if(page_cat[i]=='sci'){cbox.style.display = "block";}}
-                if(cid=='his'){if(page_cat[i]=='his'){cbox.style.display = "block";}}
-                if(cid=='gam'){if(page_cat[i]=='gam'){cbox.style.display = "block";}}
-                if(cid=='tra'){if(page_cat[i]=='tra'){cbox.style.display = "block";}}
-            }
-        }
 
-        function show_all(){
 
-            // (1) 모든 cbox display on
-            for( var i = 0; i < cboxes.length; i++ ){ 
-                var cbox = cboxes.item(i); 
-                cbox.style.display = "block"; 
-            }
-        }
+        // function show_category(cid){
+
+        //     let cboxNode = document.getElementById("cbox");
+
+        //     // 카테고리에 따른 컨텐츠 박스 배열 생성
+        //     let pol_arr = [];
+        //     let eco_arr = [];
+        //     let soc_arr = [];
+        //     let cul_arr = [];
+        //     let spo_arr = [];    
+        //     let ent_arr = [];
+        //     let sci_arr = [];
+        //     let his_arr = [];
+        //     let gam_arr = [];
+        //     let tra_arr = [];
+
+        //     // 각 길이에 맞는 빈 배열 생성
+        //     for(let i = 0; i < games.length; i++ ){pol_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){eco_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){soc_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){cul_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){spo_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){ent_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){sci_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){his_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){gam_arr[i]=''};
+        //     for(let i = 0; i < games.length; i++ ){tra_arr[i]=''};
+
+        //     // 선택된 카테고리 버튼에 해당하는 컨텐츠 박스 배열 생성하기
+        //     let k = 0;
+        //     for( let i = 0; i < games.length; i++ ){ 
+        //         if(cid=='pol'){if(page_cat[i]=='pol'){pol_arr[i]=i; k=page_cat_num.pol;}} 
+        //         if(cid=='eco'){if(page_cat[i]=='eco'){eco_arr[i]=i; k=page_cat_num.eco;}}
+        //         if(cid=='soc'){if(page_cat[i]=='soc'){soc_arr[i]=i; k=page_cat_num.soc;}}
+        //         if(cid=='cul'){if(page_cat[i]=='cul'){cul_arr[i]=i; k=page_cat_num.cul;}}
+        //         if(cid=='spo'){if(page_cat[i]=='spo'){spo_arr[i]=i; k=page_cat_num.spo;}}
+        //         if(cid=='ent'){if(page_cat[i]=='ent'){ent_arr[i]=i; k=page_cat_num.ent;}}
+        //         if(cid=='sci'){if(page_cat[i]=='sci'){sci_arr[i]=i; k=page_cat_num.sci;}}
+        //         if(cid=='his'){if(page_cat[i]=='his'){his_arr[i]=i; k=page_cat_num.his;}}
+        //         if(cid=='gam'){if(page_cat[i]=='gam'){gam_arr[i]=i; k=page_cat_num.gam;}}
+        //         if(cid=='tra'){if(page_cat[i]=='tra'){tra_arr[i]=i; k=page_cat_num.tra;}}
+        //         // cid      : 선택된 카테고리 버튼
+        //         // page_cat : 컨텐츠 박스에 배정될 카테고리 배열 
+        //         // 에시) ['pol' 'ent' 'his' 'ent' 'gam' ...])
+        //         // 주의) 위 배열은 빈 칸이 많이 있는 배열이다.
+        //     }
+
+        //     // 필요한 컨텐츠 박스 생성
+        //     // 빈 칸이 없는 꽉 찬 배열로 만드는 과정
+        //     // for(let i=0; i<real_boxes; i++){original_boxes[i]='';}
+
+
+        //     console.log('cbox_num :'+cbox_num);
+        //     let catBoxes =[];
+
+        //     if(cid=='pol'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(pol_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='eco'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(eco_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='soc'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(soc_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='cul'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(cul_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='spo'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(spo_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='ent'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(ent_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='sci'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(sci_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='his'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(his_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='gam'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(gam_arr[i])){catBoxes+=i;}}}
+        //     if(cid=='tra'){for(let i=0; i<cbox_num; i++){if(Number.isInteger(tra_arr[i])){catBoxes+=i;}}}
+        //     cbox_num = catBoxes.length;
+
+        //     deleteBoxes();
+
+        //     // 카테고리마다 달리 생성되는 컨텐츠 박스 갯수
+
+        //     let new_boxes = [];
+        //     let a = ppp;
+        //     let start = (n-1)*a+1;
+        //     let final = (n*a);
+        //     if (final>cbox_num){final=cbox_num;}
+
+        //     console.log('--------------------');
+        //     console.log('start :'+start);
+        //     console.log('final :'+final);
+        //     console.log('a :'+a);
+        //     console.log('n :'+n);
+        //     console.log('ppp :'+ppp);
+        //     console.log('cbox_num :'+cbox_num);
+        //     console.log('catBoxes[0] :'+catBoxes[0]);
+        //     console.log('catBoxes[1] :'+catBoxes[1]);
+            
+        //     if (final>cbox_num){final=cbox_num;}
+
+        //     // 전체 범위를 돌면서 숫자 값이 있는 경우만 추출하는 방식은 
+        //     // 띄엄띄엄방식이라 인덱스 처리가 어지러음
+        //     // +) start 와 final 을 실제 존재하는 인덱스 값에서 돌리면 할 수 없음
+            
+        //     // 전체 범위를 돌 것이 아니라
+        //     // catBoxes 값만 돌면 어떨까
+
+        //     for(let i=start-1; i<final; i++){
+        //         new_boxes[i]='';
+        //     }
+        //     for(let i=start-1; i<final; i++){
+        //         new_boxes[i] += 
+        //         `
+        //         <div class="cbox sm" id="page${Number(catBoxes[i])+1}" OnClick="location.href='contents/page${Number(catBoxes[i])+1}.html'"><div class="links2">${games[catBoxes[i]]}</div></div>
+        //         `
+        //         cboxNode.innerHTML+=new_boxes[i];
+        //     }
+        //     cbox_num=games.length;
+        // }
     </script>
 </body>
 </html>;
