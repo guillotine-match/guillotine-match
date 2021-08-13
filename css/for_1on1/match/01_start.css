@@ -10,7 +10,7 @@
     left:50%; 
 
     margin-top: 100px;
-    width: 380px;
+    width: 80%;
     line-height:40px;
     height:100px;
     background: antiquewhite;
@@ -26,8 +26,7 @@
     transform:translateX(-50%);
     left:50%; 
 
-    width: 380px;
-
+    width: 80%;
     height:40px;
     line-height:40px;
     background: rgb(228, 215, 199);
@@ -41,6 +40,8 @@
 @media (max-width: 1220px){
     .battleTag{
         margin-top: 100px;
+    }
+    .battleTag_sub{
     }
 }
 
