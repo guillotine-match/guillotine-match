@@ -50,8 +50,8 @@
 
 .winner_portrait_box1 img,
 .winner_portrait_box2 img{
-    width:100%;
-    height:100%;
+    max-width:1500px;
+    max-height:1500px;
     border-radius: 10px;
 }
 
@@ -73,6 +73,11 @@
         height:200px;
     }
 
+    .winner_portrait_box1 img,
+    .winner_portrait_box2 img{
+        max-width:90%;
+        max-height:90%;
+    }
     .winner_portrait_box1, 
     .winner_portrait_box2 { 
         width:90%;

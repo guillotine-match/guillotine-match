@@ -1,0 +1,41 @@
+input {display: none;}
+label {
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+label span {
+    position: relative;
+    line-height: 22px;
+}
+label span:before,
+label span:after {
+content: '';
+}
+label span:before {
+    border: 1px solid #222021;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+label span:after {
+    background: #222021;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    transition: 300ms;
+    opacity: 0;
+}
+label input:checked+span:after {
+    opacity: 1;
+}
+body {
+    background: #fbfbfb;
+    font-family: Arial;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+}

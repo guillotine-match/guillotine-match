@@ -1,4 +1,5 @@
 function make_portrait(){
+    let portrait_temp = document.getElementById("portrait");
     let portrait = `
 
     <div class="winner_portrait_box0" id="portrait_box0_ID">
@@ -24,9 +25,7 @@ function make_portrait(){
                     onclick="doImgPop('../src/img/${page_num}/vic_team2.jpg')"/>
         </div>
     </div>
-
-
     `;
-    document.write(portrait);
+    portrait_temp.innerHTML=portrait;
 }
 make_portrait();
