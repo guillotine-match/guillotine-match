@@ -1,4 +1,5 @@
-// makeList (가능하면 외부 파일로)
+    makeList_sbox();
+
 function makeList_sbox(){
 
     let sbox_title=`
@@ -8,36 +9,79 @@ function makeList_sbox(){
                     <div id=selected_Box></div>
     `;
     document.write(sbox_title);
-    
-    for(let i=0; i<sbox_num; i++){arr[i]='';}
-    for(i=0; i<sbox_num; i++){
-        arr[i] += 
-        `
-        <div class="shifting_boxes" id="${[i]}">
-            <div class="fight_about">
-                ${fight_about[i]}
-            </div>
-            <div class="match_ImageBox">
-                <div class="Left_match_Imgbox">
-                    <img src="../src/img/${page_num}/team1/${i+1}.jpg" 
-                    class="tm1"
-                    onmouseenter="zoomIn(event)" 
-                    onmouseleave="zoomOut(event)" 
-                    onclick="select(this.className)"/>
+
+    // 768px 이하 스크린에서는 확대 버튼이 없음
+    if (matchMedia("screen and (max-width: 768px)").matches) {
+        for(let i=0; i<sbox_num; i++){arr[i]='';}
+        for(i=0; i<sbox_num; i++){
+            arr[i] += 
+            `
+            <div class="shifting_boxes" id="${[i]}">
+                <div class="fight_about">
+                    ${fight_about[i]}
                 </div>
-                <div class="Right_match_Imgbox">
-                    <img src="../src/img/${page_num}/team2/${i+1}.jpg" 
-                    class="tm2"
-                    onmouseenter="zoomIn(event)" 
-                    onmouseleave="zoomOut(event)" 
-                    onclick="select(this.className)"/>
+                <div class="match_ImageBox">
+                    <div class="Left_match_Imgbox">
+                        <img src="../src/img/${page_num}/team1/${i+1}.jpg"
+                        id="p1_${i}"
+                        class="tm1"
+                        onmouseenter="zoomIn(event)" 
+                        onmouseleave="zoomOut(event)" 
+                        onclick="select(this.className)"/>
+                    </div>
+                    <div class="Right_match_Imgbox">
+                        <img src="../src/img/${page_num}/team2/${i+1}.jpg" 
+                        id="p2_${i}"
+                        class="tm2"
+                        onmouseenter="zoomIn(event)" 
+                        onmouseleave="zoomOut(event)" 
+                        onclick="select(this.className)"/>
+                    </div>
                 </div>
+                <div class="Left_palyer_name">  ${LP_name[i]} </div>
+                <div class="Right_palyer_name"> ${RP_name[i]} </div>
             </div>
-            <div class="Left_palyer_name">  ${LP_name[i]} </div>
-            <div class="Right_palyer_name"> ${RP_name[i]} </div>
-        </div>
-        `
-        document.write(arr[i]);
+            `
+            document.write(arr[i]);
+        }
+    }
+
+    // 769px 이상 스크린에서는 확대 버튼이 있음
+    if (matchMedia("screen and (min-width: 769px)").matches) {
+        for(let i=0; i<sbox_num; i++){arr[i]='';}
+        for(i=0; i<sbox_num; i++){
+            arr[i] += 
+            `
+            <div class="shifting_boxes" id="${[i]}">
+                <div class="fight_about">
+                    ${fight_about[i]}
+                </div>
+                <div class="match_ImageBox">
+                    <div class="Left_match_Imgbox">
+                        <div class="popUpIcon1" id="popUpIcon1ID"><img src="../src/img/iconbox/scale-up.png" onclick="LscaleUp(this.id)" id="s1_${i}"></div>
+                        <img src="../src/img/${page_num}/team1/${i+1}.jpg"
+                        id="p1_${i}"
+                        class="tm1"
+                        onmouseenter="zoomIn(event)" 
+                        onmouseleave="zoomOut(event)" 
+                        onclick="select(this.className)"/>
+                    </div>
+                    <div class="Right_match_Imgbox">
+                        <div class="popUpIcon2" id="popUpIcon2ID"><img src="../src/img/iconbox/scale-up.png" onclick="RscaleUp(this.id)" id="s1_${i}"></div>
+                        <img src="../src/img/${page_num}/team2/${i+1}.jpg" 
+                        id="p2_${i}"
+                        class="tm2"
+                        onmouseenter="zoomIn(event)" 
+                        onmouseleave="zoomOut(event)" 
+                        onclick="select(this.className)"/>
+                    </div>
+                </div>
+                <div class="Left_palyer_name">  ${LP_name[i]} </div>
+                <div class="Right_palyer_name"> ${RP_name[i]} </div>
+            </div>
+            `
+            document.write(arr[i]);
+        }
     }
 
     let sbox_bottom=`
@@ -54,5 +98,49 @@ function makeList_sbox(){
     `;
     document.write(sbox_bottom);
 
+    // popup 버튼 클릭시 popup
+    // let s_up1 = document.getElementById('popUpIcon1ID');
+    // let s_up2 = document.getElementById('popUpIcon2ID');
+
+    // s_up1.addEventListener('click', LscaleUp);
+    // s_up2.addEventListener('click', RscaleUp);
+    
+    // function LscaleUp(){
+    //     for(let i=0; i<sbox_num; i++){
+    //         let img_1 = document.getElementById(`p1_${i}`);
+    //         img_1.style.display="none";
+    //     }
+    // }
+    
+    // function RscaleUp(){
+    //     for(let i=0; i<sbox_num; i++){
+    //         let img_2 = document.getElementById(`p2_${i}`);
+    //         img_2.style.display="none";
+    //     }
+    // }
+
 }
-makeList_sbox();
+
+
+let img_1=[];
+let img_2=[];
+let sup_1=[];
+let sup_2=[];
+
+for(let i=0; i<sbox_num; i++){
+    img_1[i] = document.getElementById(`p1_${i}`);
+    img_2[i] = document.getElementById(`p2_${i}`);
+    sup_1[i] = document.getElementById('s1_${i}`');
+    sup_2[i] = document.getElementById('s2_${i}`');
+}
+
+
+function LscaleUp(sid){
+    let tempString = sid.substring(3,);
+    doImgPop(`../src/img/${page_num}/team1/${Number(tempString)+1}.jpg`);
+}
+
+function RscaleUp(sid){
+    let tempString = sid.substring(3,)
+    doImgPop(`../src/img/${page_num}/team2/${Number(tempString)+1}.jpg`);
+}

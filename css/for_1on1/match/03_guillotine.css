@@ -43,6 +43,7 @@
     z-index: 99;
 }
 
+
 /* 사용자 선택 시 계속해서 교체되는 영역 */
 .shifting_boxes{
     position:relative; 
@@ -196,8 +197,24 @@
     .shifting_boxes .match_ImageBox img{
         height: 480px;
     }
-
-
-
 }
-
+.popUpIcon1{
+    position:absolute; 
+    top:3%;
+    left:4%; 
+    z-index: 99;
+}
+.shifting_boxes .match_ImageBox .Left_match_Imgbox .popUpIcon1 >img{
+    width:30px;
+    height:30px;
+}
+.popUpIcon2{
+    position:absolute; 
+    top:3%;
+    right:5%; 
+    z-index: 99;
+}
+.shifting_boxes .match_ImageBox .Right_match_Imgbox .popUpIcon2 >img{
+    width:30px;
+    height:30px;
+}
