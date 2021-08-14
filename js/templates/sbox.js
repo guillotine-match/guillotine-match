@@ -97,43 +97,7 @@ function makeList_sbox(){
 </div>
     `;
     document.write(sbox_bottom);
-
-    // popup 버튼 클릭시 popup
-    // let s_up1 = document.getElementById('popUpIcon1ID');
-    // let s_up2 = document.getElementById('popUpIcon2ID');
-
-    // s_up1.addEventListener('click', LscaleUp);
-    // s_up2.addEventListener('click', RscaleUp);
-    
-    // function LscaleUp(){
-    //     for(let i=0; i<sbox_num; i++){
-    //         let img_1 = document.getElementById(`p1_${i}`);
-    //         img_1.style.display="none";
-    //     }
-    // }
-    
-    // function RscaleUp(){
-    //     for(let i=0; i<sbox_num; i++){
-    //         let img_2 = document.getElementById(`p2_${i}`);
-    //         img_2.style.display="none";
-    //     }
-    // }
-
 }
-
-
-let img_1=[];
-let img_2=[];
-let sup_1=[];
-let sup_2=[];
-
-for(let i=0; i<sbox_num; i++){
-    img_1[i] = document.getElementById(`p1_${i}`);
-    img_2[i] = document.getElementById(`p2_${i}`);
-    sup_1[i] = document.getElementById('s1_${i}`');
-    sup_2[i] = document.getElementById('s2_${i}`');
-}
-
 
 function LscaleUp(sid){
     let tempString = sid.substring(3,);
