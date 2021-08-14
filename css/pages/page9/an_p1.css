@@ -1,0 +1,35 @@
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+}
+@-moz-keyframes AnimationName {
+0%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@-o-keyframes AnimationName {
+0%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
+}
+.asdf{
+    color:greenyellow
+}
+
+.contest {
+    background: linear-gradient(27deg, oldlace, aquamarine,RED,paleturquoise,gold,PURPLE,greenyellow, oldlace , rgb(59, 170, 124));
+    background-size: 400% 400%;
+    animation: AnimationName;
+    animation-duration: 15s;
+    animation-direction: alternate;
+    animation-iteration-count :infinite;
+    text-align: center;
+    animation-timing-function: linear;
+    }
+
+#team1ID {
+    color:rgb(235, 184, 184);
+    font-style: italic;
+}
