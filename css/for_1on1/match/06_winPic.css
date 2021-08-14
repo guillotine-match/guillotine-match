@@ -43,14 +43,14 @@
     position:relative; 
     left:50%; 
     transform:translateX(-50%);
-    width:90%;
+    width:100%;
     text-align: center;
     margin-top:50px;
 }
 
 .winner_portrait_box1 img,
 .winner_portrait_box2 img{
-    max-width:1500px;
+    max-width:1000px;
     max-height:1500px;
     border-radius: 10px;
 }
