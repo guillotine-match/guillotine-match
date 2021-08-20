@@ -52,7 +52,7 @@ function makeList_sbox(){
         for(i=0; i<sbox_num; i++){
             arr[i] += 
             `
-            <div class="shifting_boxes" id="${[i]}">
+            <div class="shifting_boxes" id="${[i]}" style="display:none">
                 <div class="fight_about">
                     ${fight_about[i]}
                 </div>
